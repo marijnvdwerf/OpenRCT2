@@ -11,5 +11,6 @@ TRACK_PAINT_FUNCTION get_track_paint_function_topspin(int trackType, int directi
 TRACK_PAINT_FUNCTION get_track_paint_function_shop(int trackType, int direction);
 TRACK_PAINT_FUNCTION get_track_paint_function_facility(int trackType, int direction);
 TRACK_PAINT_FUNCTION get_track_paint_function_50_52_53_54(int trackType, int direction);
+TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direction);
 
 #endif
