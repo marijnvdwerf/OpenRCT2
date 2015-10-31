@@ -1223,35 +1223,57 @@ TRACK_PAINT_FUNCTION get_track_paint_function_50_52_53_54(int trackType, int dir
 void junior_rc_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement){
 
 	uint32 image_id = 27807 | RCT2_GLOBAL(0x00F44198, uint32);
+	image_id += direction & 1;
 
 	if (mapElement->type & (1 << 7)) {
 		image_id += 106;
 	}
 
+	//di
+	uint8 lengthX = direction & 1 ? 20 : 32;
+	//si
+	uint8 lengthY = direction & 1 ? 32 : 20;
+
+	//al
+	sint8 offsetX = direction & 1 ? 6 : 0;
+	//cl
+	sint8 offsetY = direction & 1 ? 0 : 6;
+
 	RCT2_CALLPROC_X(
 		RCT2_ADDRESS(0x98196C, int)[RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)],
-		0 | (1 << 8),
+		offsetX | (1 << 8),
 		image_id,
-		6,
+		offsetY,
 		height,
-		20,
-		32,
+		lengthY,
+		lengthX,
 		RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)
 		);
 
 	if ((RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && !(RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5))) || 
 		!(RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && (RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5)))) {
-		RCT2_CALLPROC_X(0x00663105, 0, 4, 0, height, 20, 1, RCT2_GLOBAL(0x00F4419C, uint32));
+		int edi = direction & 1 ? 2 : 1;
+		RCT2_CALLPROC_X(0x00663105, 0, 4, 0, height, 20, edi, RCT2_GLOBAL(0x00F4419C, uint32));
 	}
 
-	RCT2_GLOBAL(0x00141E9D0, uint16) = 0xFFFF;
 	RCT2_GLOBAL(0x00141E9C4, uint16) = 0xFFFF;
-	RCT2_GLOBAL(0x00141E9CC, uint16) = 0xFFFF;
-
 	uint32 eax = 0xFFFF0000;
-	eax |= ((height & 0xFF00) >> 4);
-	RCT2_ADDRESS(0x009E3138, uint32)[RCT2_GLOBAL(0x141F56A, uint8) / 2] = eax;
-	RCT2_GLOBAL(0x141F56A, uint8)++;
+	eax |= ((height & 0x0FFF) >> 4);
+
+	if (direction & 1) {
+		RCT2_GLOBAL(0x00141E9D4, uint16) = 0xFFFF;
+		RCT2_GLOBAL(0x00141E9C8, uint16) = 0xFFFF;
+
+		RCT2_ADDRESS(0x009E30B6, uint32)[RCT2_GLOBAL(0x141F56B, uint8) / 2] = eax;
+		RCT2_GLOBAL(0x141F56B, uint8)++;
+	}
+	else {
+		RCT2_GLOBAL(0x00141E9D0, uint16) = 0xFFFF;
+		RCT2_GLOBAL(0x00141E9CC, uint16) = 0xFFFF;
+
+		RCT2_ADDRESS(0x009E3138, uint32)[RCT2_GLOBAL(0x141F56A, uint8) / 2] = eax;
+		RCT2_GLOBAL(0x141F56A, uint8)++;
+	}
 
 	height += 32;
 	if (RCT2_GLOBAL(0x141E9D8, sint16) < height) {
