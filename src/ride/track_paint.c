@@ -1282,11 +1282,70 @@ void junior_rc_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 dire
 	}
 }
 
+/* rct2: 0x00515629 */
+void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement){
+	rct_ride* ride = GET_RIDE(rideIndex);
+
+	uint8 entrance_style = ride->entrance_style;
+
+	uint32 image_id = RideEntranceDefinitions[entrance_style].station_image_id;
+	if (!(RCT2_GLOBAL(0x00F441A0, uint32) & (1 << 29))) {
+		image_id &= 0x7FFFF;
+	}
+
+	RCT2_GLOBAL(0x00F441E8, uint32) = image_id;
+	RCT2_GLOBAL(0x00F441E4, uint32) = image_id;
+
+	image_id = RCT2_GLOBAL(0x00F441A0, uint32);
+	image_id |= 22428;
+	RCT2_GLOBAL(0x009DEA52, sint16) = 0;
+	RCT2_GLOBAL(0x009DEA54, sint16) = 2;
+	RCT2_GLOBAL(0x009DEA56, sint16) = height;
+
+	sub_98197C(0, 1, image_id, 0, height - 2, 28, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+
+	image_id = RCT2_GLOBAL(0x00F44198, uint32);
+	image_id |= 28193;
+
+	if (mapElement->flags & MAP_ELEMENT_FLAG_BROKEN) {
+		image_id += 2;
+	}
+
+	RCT2_GLOBAL(0x009DEA52, sint16) = 0;
+	RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+	RCT2_GLOBAL(0x009DEA56, sint16) = height;
+	sub_98199C(0, 1, image_id, 6, height, 20, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+
+	RCT2_CALLPROC_X(0x00663105, 0, 5, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+
+	RCT2_CALLPROC_X(0x00663105, 0, 8, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+
+	RCT2_GLOBAL(0x141E9B4, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9B8, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9BC, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9C0, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9C4, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9C8, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9CC, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9D0, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9D4, uint16) = 0xFFFF;
+
+	uint32 eax = 0xFFFF0000;
+	eax |= ((height & 0x0FFF) >> 4);
+	eax |= (6 << 8);
+	RCT2_ADDRESS(0x009E3138, uint32)[RCT2_GLOBAL(0x141F56A, uint8) / 2] = eax;
+	RCT2_GLOBAL(0x141F56A, uint8)++;
+	//0x0515791
+	//height + 5
+}
+
 /* 0x008AAA0C */
 TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direction) {
 	switch (trackType) {
 	case 0:
 		return junior_rc_flat_paint_setup;
+	case 1:
+		return junior_rc_end_station_paint_setup;
 	}
 	return NULL;
 }

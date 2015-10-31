@@ -1521,7 +1521,7 @@ void viewport_ride_entrance_exit_paint_setup(uint8 direction, int height, rct_ma
 
 	uint8 colour_1, colour_2;
 	uint32 transparant_image_id = 0, image_id = 0;
-	if (style->flags & (1 << 30)) {
+	if (style->station_image_id & (1 << 30)) {
 		colour_1 = ride->track_colour_main[0] + 0x70;
 		transparant_image_id = (colour_1 << 19) | 0x40000000;
 	}

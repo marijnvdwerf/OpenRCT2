@@ -36,7 +36,7 @@ typedef struct {
 	uint16 height;
 	uint16 scrolling_mode;
 	rct_string_id string_id;
-	uint32 flags;
+	uint32 station_image_id;
 	uint16 colour_use_flags;
 } rct_ride_entrance_definition;
 
