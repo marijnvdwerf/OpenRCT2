@@ -1335,10 +1335,72 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	eax |= (6 << 8);
 	RCT2_ADDRESS(0x009E3138, uint32)[RCT2_GLOBAL(0x141F56A, uint8) / 2] = eax;
 	RCT2_GLOBAL(0x141F56A, uint8)++;
-	//0x0515791
-	//height + 5
-}
 
+	image_id = RCT2_GLOBAL(0x0F4419C, uint32);
+	image_id |= 22388;
+
+	int x = RCT2_GLOBAL(0x009DE56A, sint16) / 32;
+	int y = RCT2_GLOBAL(0x009DE56E, sint16) / 32;
+	uint16 entranceLoc =
+		((x / 32) + RCT2_ADDRESS(0x08AB292, sint8)[get_current_rotation()]) |
+		(((y / 32) + RCT2_ADDRESS(0x08AB292 + 1, sint8)[get_current_rotation()]) << 8);
+
+	uint8 entranceId = (mapElement->properties.track.sequence & 0x70) >> 4;
+	if (ride->entrances[entranceId] != entranceLoc &&
+		ride->exits[entranceId] != entranceLoc) {
+		image_id -= 8;
+		RCT2_GLOBAL(0x00F441E8, uint32)++;
+	}
+
+	if (mapElement->properties.track.sequence & (1 << 7)) {
+		image_id += 2;
+	}
+
+	RCT2_CALLPROC_X(
+		RCT2_ADDRESS(0x98196C, int)[RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)],
+		0 | (1 << 8),
+		image_id,
+		0,
+		height + 5,
+		8,
+		32,
+		RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)
+		);
+	//0x0515791
+
+	image_id = RCT2_GLOBAL(0x00F441E8, uint32);
+	// Entrance style??
+	if (image_id > 32) {
+		if (!(image_id & (1 << 30))) {
+			// Draw support
+			image_id |= RCT2_GLOBAL(0x0F44198, uint32);
+			RCT2_GLOBAL(0x009DEA52, sint16) = 1;
+			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
+
+			sub_98197C(0, 22, image_id, 0, height, 1, 30, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+		}
+		else {
+			RCT2_GLOBAL(0x009DEA52, sint16) = 1;
+			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
+			sub_98197C(0, 22, image_id & ~(1 << 30), 0, height, 1, 30, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+
+			// Just colour 1
+			// Branch before on impossible situation RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000 > 0x1000000
+			image_id |= RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000;
+			image_id += 12;
+			image_id |= 0x3800000;
+
+			RCT2_GLOBAL(0x009DEA52, sint16) = 1;
+			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
+			sub_98199C(0, 1, image_id, 0, height, 1, 30, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+		}
+	}
+	//0x00515926
+	//height+5 after branch
+}
 /* 0x008AAA0C */
 TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direction) {
 	switch (trackType) {
