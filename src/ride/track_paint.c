@@ -1284,7 +1284,7 @@ void junior_rc_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 dire
 
 /* rct2: 0x00515629 */
 void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement){
-	rct_ride* ride = GET_RIDE(rideIndex);
+	rct_ride* ride = get_ride(rideIndex);
 
 	uint8 entrance_style = ride->entrance_style;
 
@@ -1401,6 +1401,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	//0x00515926
 	//height+5 after branch
 }
+
 /* 0x008AAA0C */
 TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direction) {
 	switch (trackType) {
