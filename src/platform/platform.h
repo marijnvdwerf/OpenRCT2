@@ -188,4 +188,8 @@ datetime64 platform_get_datetime_now_utc();
 	HWND windows_get_window_handle();
 #endif // __WINDOWS__
 
+#ifdef __MACOSX__
+	void osx_set_window_no_fullscreen_button(SDL_Window *win);
+#endif
+
 #endif

@@ -22,6 +22,8 @@
 
 @import AppKit;
 @import Foundation;
+#include <SDL.h>
+#include <SDL_syswm.h>
 #include <mach-o/dyld.h>
 #include "platform.h"
 #include "../util/util.h"
@@ -186,6 +188,19 @@ bool platform_get_font_path(TTFFontDescriptor *font, utf8 *buffer)
 			return true;
 		} else {
 			return false;
+		}
+	}
+}
+
+void osx_set_window_no_fullscreen_button(SDL_Window *win) {
+	SDL_SysWMinfo wmi;
+	SDL_VERSION(&wmi.version);
+	if (SDL_GetWindowWMInfo(win, &wmi)) {
+		switch (wmi.subsystem) {
+		case SDL_SYSWM_COCOA:
+			wmi.info.cocoa.window.collectionBehavior = NSWindowCollectionBehaviorFullScreenAuxiliary;
+			break;
+		default: ;
 		}
 	}
 }

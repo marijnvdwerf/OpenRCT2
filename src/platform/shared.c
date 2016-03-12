@@ -772,6 +772,10 @@ static void platform_create_window()
 		log_fatal("SDL_CreateWindow failed %s", SDL_GetError());
 		exit(-1);
 	}
+	
+#ifdef __MACOSX__
+	osx_set_window_no_fullscreen_button(gWindow);
+#endif
 
 	SDL_SetWindowGrab(gWindow, gConfigGeneral.trap_cursor ? SDL_TRUE : SDL_FALSE);
 	SDL_SetWindowMinimumSize(gWindow, 720, 480);
