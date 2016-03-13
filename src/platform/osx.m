@@ -22,11 +22,89 @@
 
 @import AppKit;
 @import Foundation;
+
+@interface RCTWindowDelegate : NSObject <NSWindowDelegate, NSDraggingDestination>
+
+@end
+
 #include <SDL.h>
 #include <SDL_syswm.h>
 #include <mach-o/dyld.h>
 #include "platform.h"
 #include "../util/util.h"
+
+
+@implementation RCTWindowDelegate
+id<NSWindowDelegate> _delegate;
+
+- (id) initWithSDLWindowDelegate: (id<NSWindowDelegate>) delegate
+{
+	self = [super init];
+	
+	if(self) {
+		_delegate = delegate;
+	}
+	
+	return self;
+}
+
+#pragma mark - NSWindowDelegate
+
+#pragma mark Sizing Windows
+- (void)windowDidResize:(NSNotification *)notification { [_delegate windowDidResize:notification]; }
+
+
+#pragma mark Minimizing Windows
+- (void)windowDidMiniaturize:(NSNotification *)notification { [_delegate windowDidMiniaturize:notification]; }
+- (void)windowDidDeminiaturize:(NSNotification *)notification { [_delegate windowDidDeminiaturize:notification]; }
+
+
+#pragma mark Managing Full-Screen Presentation
+
+- (NSSize)window:(NSWindow *)rct_window willUseFullScreenContentSize:(NSSize)proposedSize {
+	//return NSSizeFromCGSize(CGSizeMake(800, 600));
+	return proposedSize;
+}
+
+- (NSApplicationPresentationOptions)window:(NSWindow *)window willUseFullScreenPresentationOptions:(NSApplicationPresentationOptions)proposedOptions {
+	if (true) {
+		return NSApplicationPresentationFullScreen | NSApplicationPresentationHideDock | NSApplicationPresentationHideMenuBar;
+	}
+	
+	// NSApplicationPresentationFullScreen | NSApplicationPresentationAutoHideDock | NSApplicationPresentationAutoHideMenuBar;
+	return proposedOptions;
+}
+
+- (void)windowWillEnterFullScreen:(NSNotification *)notification { [_delegate windowWillEnterFullScreen:notification]; }
+- (void)windowDidEnterFullScreen:(NSNotification *)notification { [_delegate windowDidEnterFullScreen:notification]; }
+- (void)windowWillExitFullScreen:(NSNotification *)notification { [_delegate windowWillExitFullScreen:notification]; }
+- (void)windowDidExitFullScreen:(NSNotification *)notification { [_delegate windowDidExitFullScreen:notification]; }
+
+
+#pragma mark Custom Full-Screen Presentation Animations
+- (void)windowDidFailToEnterFullScreen:(NSWindow *)window { [_delegate windowDidFailToEnterFullScreen:window]; }
+- (void)windowDidFailToExitFullScreen:(NSWindow *)window { [_delegate windowDidFailToExitFullScreen:window]; }
+
+
+#pragma mark Moving Windows
+- (void)windowWillMove:(NSNotification *)notification { [_delegate windowWillMove:notification]; }
+- (void)windowDidMove:(NSNotification *)notification { [_delegate windowDidMove:notification]; }
+- (void)windowDidChangeBackingProperties:(NSNotification *)notification { [_delegate windowDidChangeBackingProperties:notification]; }
+
+
+#pragma mark Closing Windows
+- (BOOL)windowShouldClose:(id)sender {	return [_delegate windowShouldClose:sender]; }
+
+
+#pragma mark Managing Key Status
+- (void)windowDidBecomeKey:(NSNotification *)notification { [_delegate windowDidBecomeKey:notification]; }
+- (void)windowDidResignKey:(NSNotification *)notification { [_delegate windowDidResignKey:notification]; }
+
+
+#pragma mark Exposing Windows
+- (void)windowDidExpose:(NSNotification *)notification { [_delegate windowDidExpose:notification]; }
+
+@end
 
 bool platform_check_steam_overlay_attached() {
 	STUB();
@@ -195,14 +273,19 @@ bool platform_get_font_path(TTFFontDescriptor *font, utf8 *buffer)
 void osx_set_window_no_fullscreen_button(SDL_Window *win) {
 	SDL_SysWMinfo wmi;
 	SDL_VERSION(&wmi.version);
-	if (SDL_GetWindowWMInfo(win, &wmi)) {
-		switch (wmi.subsystem) {
-		case SDL_SYSWM_COCOA:
-			wmi.info.cocoa.window.collectionBehavior = NSWindowCollectionBehaviorFullScreenAuxiliary;
-			break;
-		default: ;
-		}
+	if (!SDL_GetWindowWMInfo(win, &wmi)) {
+		return;
 	}
+	
+	if (wmi.subsystem != SDL_SYSWM_COCOA) {
+		return;
+	}
+	
+	NSWindow *window = wmi.info.cocoa.window;
+	window.delegate = [[RCTWindowDelegate alloc] initWithSDLWindowDelegate:window.delegate];
+	
+	[NSApp setPresentationOptions:NSApplicationPresentationDefault];
 }
+
 
 #endif
