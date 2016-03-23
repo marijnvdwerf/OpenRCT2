@@ -1390,7 +1390,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 			// Branch before on impossible situation RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000 > 0x1000000
 			image_id |= RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000;
 			image_id += 12;
-			image_id |= 0x3800000;
+			image_id += 0x3800000;
 
 			RCT2_GLOBAL(0x009DEA52, sint16) = 1;
 			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
@@ -1398,8 +1398,87 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 			sub_98199C(0, 1, image_id, 0, height, 1, 30, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
 		}
 	}
-	//0x00515926
-	//height+5 after branch
+
+	height += 5;
+
+	image_id = RCT2_GLOBAL(0x0F4419C, uint32);
+	image_id |= 22388;
+	if (mapElement->properties.track.sequence & (1 << 7))
+		image_id += 2;
+
+	RCT2_CALLPROC_X(
+		RCT2_ADDRESS(0x98196C, int)[RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)],
+		0 | (1 << 8),
+		image_id,
+		24,
+		height,
+		8,
+		32,
+		RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)
+		);
+
+	height += 2;
+
+	if (RCT2_GLOBAL(0x0141E9DB, uint8) & 3) {
+		image_id = RCT2_GLOBAL(0x0F4419C, uint32);
+		image_id |= 22370;
+
+		RCT2_CALLPROC_X(
+			RCT2_ADDRESS(0x98196C, int)[RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)],
+			0 | (7 << 8),
+			image_id,
+			31,
+			height,
+			1,
+			32,
+			RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)
+			);
+
+		image_id = RCT2_GLOBAL(0x00F441E4, uint32);
+		if (image_id >= 32) {
+			height -= 7;
+
+			if (image_id & (1 << 30)) {
+				image_id &= ~(1 << 30);
+				image_id += 2;
+
+				RCT2_GLOBAL(0x009DEA52, sint16) = 0;
+				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
+
+				sub_98197C(0, 0, image_id, 0, height, 32, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+
+				image_id = RCT2_GLOBAL(0x00F441E4, uint32);
+				// Just colour 1
+				// Branch before on impossible situation RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000 > 0x1000000
+				image_id |= RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000;
+				image_id += 0x3800000;
+				image_id += 14;
+				
+				RCT2_GLOBAL(0x009DEA52, sint16) = 1;
+				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
+				sub_98199C(0, 0, image_id, 0, height, 32, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+			}
+			else {
+				image_id |= RCT2_GLOBAL(0x00F44198, uint32);
+				image_id += 2;
+				RCT2_GLOBAL(0x009DEA52, sint16) = 0;
+				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
+
+				sub_98197C(0, 0, image_id, 0, height, 32, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+			}
+
+			height += 7;
+		}
+	}
+
+	height += 25;
+	if (RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_PAINT_TILE_MAX_HEIGHT, sint16) < height) {
+		RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_PAINT_TILE_MAX_HEIGHT, sint16) = height;
+		RCT2_GLOBAL(0x00141E9DA, uint8) = 32;
+	}
 }
 
 /* 0x008AAA0C */
