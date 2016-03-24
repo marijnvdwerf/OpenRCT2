@@ -23,6 +23,7 @@
 @import AppKit;
 @import Foundation;
 #import <objc/runtime.h>
+#include <SDL_video.h>
 
 @interface NSObject (RCTSwizzleCategory)
 
@@ -33,7 +34,7 @@
 #include <mach-o/dyld.h>
 #include "platform.h"
 #include "../util/util.h"
-#include "config.h"
+#include "../config.h"
 
 
 @implementation NSObject (RCTSwizzleCategory)
@@ -50,12 +51,11 @@
 #pragma mark Managing Full-Screen Presentation
 
 - (NSApplicationPresentationOptions)rct_window:(NSWindow *)window willUseFullScreenPresentationOptions:(NSApplicationPresentationOptions)proposedOptions {
-	if (gConfigGeneral.fullscreen_mode == 1) {
+	if (gConfigGeneral.fullscreen_mode == 2) {
 		return NSApplicationPresentationFullScreen | NSApplicationPresentationHideDock | NSApplicationPresentationHideMenuBar;
 	}
-	
-	// return NSApplicationPresentationFullScreen | NSApplicationPresentationAutoHideDock | NSApplicationPresentationAutoHideMenuBar;
-	return proposedOptions;
+
+	return NSApplicationPresentationFullScreen | NSApplicationPresentationAutoHideDock | NSApplicationPresentationAutoHideMenuBar;
 }
 
 @end
@@ -224,21 +224,57 @@ bool platform_get_font_path(TTFFontDescriptor *font, utf8 *buffer)
 	}
 }
 
-void osx_set_window_no_fullscreen_button(SDL_Window *win) {
+NSWindow * osx_get_cocoa_window(SDL_Window *win) {
 	SDL_SysWMinfo wmi;
 	SDL_VERSION(&wmi.version);
 	if (!SDL_GetWindowWMInfo(win, &wmi)) {
-		return;
+		return nil;
 	}
 	
 	if (wmi.subsystem != SDL_SYSWM_COCOA) {
+		return nil;
+	}
+
+	return wmi.info.cocoa.window;
+}
+
+void osx_set_fullscreen_mode(int targetMode) {
+	NSWindow * window = osx_get_cocoa_window(gWindow);
+	if (window == nil) {
 		return;
 	}
-	
-	NSWindow *window = wmi.info.cocoa.window;
-	window.delegate = [[RCTWindowDelegate alloc] initWithSDLWindowDelegate:window.delegate];
-	
-	[NSApp setPresentationOptions:NSApplicationPresentationDefault];
+
+	if (window.styleMask & NSFullScreenWindowMask && (targetMode == 0 || targetMode == 2)) {
+		// Is in fullscreen space mode, just switch presentation options
+		if (targetMode == 0) {
+			// Enable window chrome
+			[NSApp setPresentationOptions: NSApplicationPresentationFullScreen | NSApplicationPresentationAutoHideDock | NSApplicationPresentationAutoHideMenuBar];
+		}
+
+		if (targetMode == 2) {
+			// disable window chrome
+			[NSApp setPresentationOptions: NSApplicationPresentationFullScreen | NSApplicationPresentationHideDock | NSApplicationPresentationHideMenuBar];
+		}
+	} else if (window.styleMask & NSFullScreenWindowMask && targetMode == 1) {
+		// Is in space mode, switch to SDL fullscreen
+		int width, height;
+		SDL_SetWindowFullscreen(gWindow, 0);
+		platform_update_fullscreen_resolutions();
+		platform_get_closest_resolution(gConfigGeneral.fullscreen_width, gConfigGeneral.fullscreen_height, &width, &height);
+		SDL_SetWindowSize(gWindow, width, height);
+		SDL_SetWindowFullscreen(gWindow, SDL_WINDOW_FULLSCREEN);
+	} else if(SDL_GetWindowFlags(gWindow) & SDL_WINDOW_FULLSCREEN && targetMode == 1) {
+		// In SDL fullscreen, change resolution
+		int width, height;
+		platform_update_fullscreen_resolutions();
+		platform_get_closest_resolution(gConfigGeneral.fullscreen_width, gConfigGeneral.fullscreen_height, &width, &height);
+		SDL_SetWindowSize(gWindow, width, height);
+	} else if(SDL_GetWindowFlags(gWindow) & SDL_WINDOW_FULLSCREEN && (targetMode == 0 || targetMode == 2)) {
+		// In SDL fullscreen, switch to native fullscreen. Presentation options handled by window delegate
+		SDL_SetWindowFullscreen(gWindow, 0);
+	}
+
+	NSLog(@"Meh");
 }
 
 

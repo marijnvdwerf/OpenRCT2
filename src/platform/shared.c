@@ -774,7 +774,7 @@ static void platform_create_window()
 	}
 	
 #ifdef __MACOSX__
-	osx_set_window_no_fullscreen_button(gWindow);
+	//osx_set_window_no_fullscreen_button(gWindow);
 #endif
 
 	SDL_SetWindowGrab(gWindow, gConfigGeneral.trap_cursor ? SDL_TRUE : SDL_FALSE);
@@ -842,6 +842,10 @@ static void platform_unload_cursors()
 
 void platform_set_fullscreen_mode(int mode)
 {
+#ifdef __MACOSX__
+	return osx_set_fullscreen_mode(mode);
+#endif
+
 	int width, height;
 
 	mode = _fullscreen_modes[mode];

@@ -177,6 +177,9 @@ bool platform_check_steam_overlay_attached();
 
 datetime64 platform_get_datetime_now_utc();
 
+void platform_set_fullscreen_mode(int mode);
+void platform_toggle_fullscreen();
+
 // Windows specific definitions
 #ifdef __WINDOWS__
 	#ifndef WIN32_LEAN_AND_MEAN
@@ -190,6 +193,7 @@ datetime64 platform_get_datetime_now_utc();
 
 #ifdef __MACOSX__
 	void osx_set_window_no_fullscreen_button(SDL_Window *win);
+	void osx_set_fullscreen_mode(int mode);
 #endif
 
 #endif
