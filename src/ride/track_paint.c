@@ -1239,16 +1239,7 @@ void junior_rc_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 dire
 	//cl
 	sint8 offsetY = direction & 1 ? 0 : 6;
 
-	RCT2_CALLPROC_X(
-		RCT2_ADDRESS(0x98196C, int)[RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)],
-		offsetX | (1 << 8),
-		image_id,
-		offsetY,
-		height,
-		lengthY,
-		lengthX,
-		RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)
-		);
+	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
 
 	if ((RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && !(RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5))) || 
 		!(RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && (RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5)))) {
@@ -1302,7 +1293,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	RCT2_GLOBAL(0x009DEA54, sint16) = 2;
 	RCT2_GLOBAL(0x009DEA56, sint16) = height;
 
-	sub_98197C(0, 1, image_id, 0, height - 2, 28, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+	sub_98197C(image_id, 0, 0, 32, 28, 1, height - 2, get_current_rotation());
 
 	image_id = RCT2_GLOBAL(0x00F44198, uint32);
 	image_id |= 28193;
@@ -1314,7 +1305,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	RCT2_GLOBAL(0x009DEA52, sint16) = 0;
 	RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 	RCT2_GLOBAL(0x009DEA56, sint16) = height;
-	sub_98199C(0, 1, image_id, 6, height, 20, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+	sub_98199C(image_id, 0, 6, 32, 20, 1, height, get_current_rotation());
 
 	RCT2_CALLPROC_X(0x00663105, 0, 5, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
 
@@ -1356,16 +1347,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 		image_id += 2;
 	}
 
-	RCT2_CALLPROC_X(
-		RCT2_ADDRESS(0x98196C, int)[RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)],
-		0 | (1 << 8),
-		image_id,
-		0,
-		height + 5,
-		8,
-		32,
-		RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)
-		);
+	sub_98196C(image_id, 0, 0, 32, 8, 1, height + 5, get_current_rotation());
 	//0x0515791
 
 	image_id = RCT2_GLOBAL(0x00F441E8, uint32);
@@ -1378,13 +1360,13 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
 
-			sub_98197C(0, 22, image_id, 0, height, 1, 30, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+			sub_98197C(image_id, 0, 0, 30, 1, 22, height, get_current_rotation());
 		}
 		else {
 			RCT2_GLOBAL(0x009DEA52, sint16) = 1;
 			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
-			sub_98197C(0, 22, image_id & ~(1 << 30), 0, height, 1, 30, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+			sub_98197C(image_id & ~(1 << 30), 0, 0, 30, 1, 22, height, get_current_rotation());
 
 			// Just colour 1
 			// Branch before on impossible situation RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000 > 0x1000000
@@ -1395,7 +1377,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 			RCT2_GLOBAL(0x009DEA52, sint16) = 1;
 			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
-			sub_98199C(0, 1, image_id, 0, height, 1, 30, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+			sub_98199C(image_id, 0, 0, 30, 1, 1, height, get_current_rotation());
 		}
 	}
 
@@ -1406,16 +1388,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	if (mapElement->properties.track.sequence & (1 << 7))
 		image_id += 2;
 
-	RCT2_CALLPROC_X(
-		RCT2_ADDRESS(0x98196C, int)[RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)],
-		0 | (1 << 8),
-		image_id,
-		24,
-		height,
-		8,
-		32,
-		RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)
-		);
+	sub_98196C(image_id, 0, 24, 32, 8, 1, height, get_current_rotation());
 
 	height += 2;
 
@@ -1423,17 +1396,8 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 		image_id = RCT2_GLOBAL(0x0F4419C, uint32);
 		image_id |= 22370;
 
-		RCT2_CALLPROC_X(
-			RCT2_ADDRESS(0x98196C, int)[RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)],
-			0 | (7 << 8),
-			image_id,
-			31,
-			height,
-			1,
-			32,
-			RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32)
-			);
-
+		sub_98196C(image_id, 0, 31, 32, 1, 7, height, get_current_rotation());
+		
 		image_id = RCT2_GLOBAL(0x00F441E4, uint32);
 		if (image_id >= 32) {
 			height -= 7;
@@ -1446,7 +1410,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
 
-				sub_98197C(0, 0, image_id, 0, height, 32, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+				sub_98197C(image_id, 0, 0, 32, 32, 0, height, get_current_rotation());
 
 				image_id = RCT2_GLOBAL(0x00F441E4, uint32);
 				// Just colour 1
@@ -1458,7 +1422,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 				RCT2_GLOBAL(0x009DEA52, sint16) = 1;
 				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
-				sub_98199C(0, 0, image_id, 0, height, 32, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+				sub_98199C(image_id, 0, 0, 32, 32, 0, height, get_current_rotation());
 			}
 			else {
 				image_id |= RCT2_GLOBAL(0x00F44198, uint32);
@@ -1467,7 +1431,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
 
-				sub_98197C(0, 0, image_id, 0, height, 32, 32, RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_ROTATION, uint32));
+				sub_98197C(image_id, 0, 0, 32, 32, 0, height, get_current_rotation());
 			}
 
 			height += 7;
