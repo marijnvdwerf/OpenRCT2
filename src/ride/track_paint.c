@@ -1273,6 +1273,39 @@ void junior_rc_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 dire
 	}
 }
 
+void station_platform_left_paint_setup(rct_ride* ride, uint8 direction, int height, rct_map_element* mapElement) {
+	uint32 image_id = RCT2_GLOBAL(0x0F4419C, uint32);
+	image_id |= direction & 1 ? 22363 : 22388;
+
+	int x = RCT2_GLOBAL(0x009DE56A, sint16) / 32;
+	int y = RCT2_GLOBAL(0x009DE56E, sint16) / 32;
+	uint16 entranceLoc =
+		(x + loc_7667AE[(get_current_rotation() - (direction & 1)) & 3].x) |
+		((y + loc_7667AE[(get_current_rotation() - (direction & 1)) & 3].y) << 8);
+
+	uint8 entranceId = (mapElement->properties.track.sequence & 0x70) >> 4;
+	if (ride->entrances[entranceId] != entranceLoc &&
+		ride->exits[entranceId] != entranceLoc) {
+		if (direction & 1)
+			image_id += 2;
+		else
+			image_id -= 8;
+		RCT2_GLOBAL(0x00F441E8, uint32)++;
+	}
+
+	if (!(direction & 1)) {
+		if (mapElement->properties.track.sequence & (1 << 7)) {
+			image_id += 2;
+		}
+	}
+
+	uint8 lengthX = direction & 1 ? 8 : 32;
+	uint8 lengthY = direction & 1 ? 32 : 8;
+
+	sub_98196C(image_id, 0, 0, lengthX, lengthY, 1, height + 5, get_current_rotation());
+	//0x0515791
+}
+
 /* rct2: 0x00515629 */
 void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement){
 	rct_ride* ride = get_ride(rideIndex);
@@ -1289,14 +1322,21 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 
 	image_id = RCT2_GLOBAL(0x00F441A0, uint32);
 	image_id |= 22428;
-	RCT2_GLOBAL(0x009DEA52, sint16) = 0;
-	RCT2_GLOBAL(0x009DEA54, sint16) = 2;
+	image_id += direction & 1;
+	RCT2_GLOBAL(0x009DEA52, sint16) = direction & 1 ? 2 : 0;
+	RCT2_GLOBAL(0x009DEA54, sint16) = direction & 1 ? 0 : 2;
 	RCT2_GLOBAL(0x009DEA56, sint16) = height;
 
-	sub_98197C(image_id, 0, 0, 32, 28, 1, height - 2, get_current_rotation());
+	//di
+	uint8 lengthX = direction & 1 ? 28 : 32;
+	//si
+	uint8 lengthY = direction & 1 ? 32 : 28;
+
+	sub_98197C(image_id, 0, 0, lengthX, lengthY, 1, height - 2, get_current_rotation());
 
 	image_id = RCT2_GLOBAL(0x00F44198, uint32);
 	image_id |= 28193;
+	image_id += direction & 1;
 
 	if (mapElement->flags & MAP_ELEMENT_FLAG_BROKEN) {
 		image_id += 2;
@@ -1305,11 +1345,18 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	RCT2_GLOBAL(0x009DEA52, sint16) = 0;
 	RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 	RCT2_GLOBAL(0x009DEA56, sint16) = height;
-	sub_98199C(image_id, 0, 6, 32, 20, 1, height, get_current_rotation());
+	lengthX = direction & 1 ? 20 : 32;
+	lengthY = direction & 1 ? 32 : 20;
+	sint8 offsetX = direction & 1 ? 6 : 0;
+	sint8 offsetY = direction & 1 ? 0 : 6;
 
-	RCT2_CALLPROC_X(0x00663105, 0, 5, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+	sub_98199C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
 
-	RCT2_CALLPROC_X(0x00663105, 0, 8, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+	uint8 bl = direction & 1 ? 6 : 5;
+	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+
+	bl = direction & 1 ? 7 : 8;
+	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
 
 	RCT2_GLOBAL(0x141E9B4, uint16) = 0xFFFF;
 	RCT2_GLOBAL(0x141E9B8, uint16) = 0xFFFF;
@@ -1324,30 +1371,16 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	uint32 eax = 0xFFFF0000;
 	eax |= ((height & 0x0FFF) >> 4);
 	eax |= (6 << 8);
-	RCT2_ADDRESS(0x009E3138, uint32)[RCT2_GLOBAL(0x141F56A, uint8) / 2] = eax;
-	RCT2_GLOBAL(0x141F56A, uint8)++;
-
-	image_id = RCT2_GLOBAL(0x0F4419C, uint32);
-	image_id |= 22388;
-
-	int x = RCT2_GLOBAL(0x009DE56A, sint16) / 32;
-	int y = RCT2_GLOBAL(0x009DE56E, sint16) / 32;
-	uint16 entranceLoc =
-		((x / 32) + RCT2_ADDRESS(0x08AB292, sint8)[get_current_rotation()]) |
-		(((y / 32) + RCT2_ADDRESS(0x08AB292 + 1, sint8)[get_current_rotation()]) << 8);
-
-	uint8 entranceId = (mapElement->properties.track.sequence & 0x70) >> 4;
-	if (ride->entrances[entranceId] != entranceLoc &&
-		ride->exits[entranceId] != entranceLoc) {
-		image_id -= 8;
-		RCT2_GLOBAL(0x00F441E8, uint32)++;
+	if (direction & 1) {
+		RCT2_ADDRESS(0x009E30B6, uint32)[RCT2_GLOBAL(0x141F56B, uint8) / 2] = eax;
+		RCT2_GLOBAL(0x141F56B, uint8)++;
+	}
+	else {
+		RCT2_ADDRESS(0x009E3138, uint32)[RCT2_GLOBAL(0x141F56A, uint8) / 2] = eax;
+		RCT2_GLOBAL(0x141F56A, uint8)++;
 	}
 
-	if (mapElement->properties.track.sequence & (1 << 7)) {
-		image_id += 2;
-	}
-
-	sub_98196C(image_id, 0, 0, 32, 8, 1, height + 5, get_current_rotation());
+	station_platform_left_paint_setup(ride, direction, height, mapElement);
 	//0x0515791
 
 	image_id = RCT2_GLOBAL(0x00F441E8, uint32);
