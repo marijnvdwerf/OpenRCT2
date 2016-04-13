@@ -1155,6 +1155,11 @@ static void facility_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 dir
 	}
 }
 
+enum {
+	SPR_JUNIOR_RC_FLAT_NE_SW = 27807,
+	SPR_JUNIOR_RC_FLAT_NW_SE = 27808
+};
+
 /* 0x00762D44 */
 TRACK_PAINT_FUNCTION get_track_paint_function_facility(int trackType, int direction)
 {
@@ -1222,7 +1227,7 @@ TRACK_PAINT_FUNCTION get_track_paint_function_50_52_53_54(int trackType, int dir
 /* rct2: 0x00518394 */
 void junior_rc_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement){
 
-	uint32 image_id = 27807 | RCT2_GLOBAL(0x00F44198, uint32);
+	uint32 image_id = SPR_JUNIOR_RC_FLAT_NE_SW | RCT2_GLOBAL(0x00F44198, uint32);
 	image_id += direction & 1;
 
 	if (mapElement->type & (1 << 7)) {
@@ -1273,9 +1278,31 @@ void junior_rc_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 dire
 	}
 }
 
-void station_platform_left_paint_setup(rct_ride* ride, uint8 direction, int height, rct_map_element* mapElement) {
+enum {
+	SPR_STATION_PLATFORM_ENTRANCE_NE_SW = 22362,
+	SPR_STATION_PLATFORM_ENTRANCE_NW_SE = 22363,
+
+	SPR_STATION_PLATFORM_NE_SW = 22364,
+	SPR_STATION_PLATFORM_NW_SE = 22365,
+
+	SPR_STATION_PLATFORM_LIGHTS_RED_NE_SW = 22380,
+	SPR_STATION_PLATFORM_LIGHTS_RED_NW_SE = 22381,
+	SPR_STATION_PLATFORM_LIGHTS_GREEN_NE_SW = 22382,
+	SPR_STATION_PLATFORM_LIGHTS_GREEN_NW_SE = 22383,
+
+	SPR_STATION_PLATFORM_ENTRANCE_LIGHTS_RED_NE_SW = 22388,
+	SPR_STATION_PLATFORM_ENTRANCE_LIGHTS_RED_NW_SE = 22389,
+	SPR_STATION_PLATFORM_ENTRANCE_LIGHTS_GREEN_NE_SW = 22390,
+	SPR_STATION_PLATFORM_ENTRANCE_LIGHTS_GREEN_NW_SE = 22391,
+};
+
+void station_platform_back_paint_setup(rct_ride* ride, uint8 direction, int height, rct_map_element* mapElement) {
 	uint32 image_id = RCT2_GLOBAL(0x0F4419C, uint32);
-	image_id |= direction & 1 ? 22363 : 22388;
+
+	bool showLights = direction == 0 || direction == 3;
+
+	image_id |= showLights ? SPR_STATION_PLATFORM_ENTRANCE_LIGHTS_RED_NE_SW : SPR_STATION_PLATFORM_ENTRANCE_NE_SW;
+	image_id += direction & 1;
 
 	int x = RCT2_GLOBAL(0x009DE56A, sint16) / 32;
 	int y = RCT2_GLOBAL(0x009DE56E, sint16) / 32;
@@ -1286,14 +1313,13 @@ void station_platform_left_paint_setup(rct_ride* ride, uint8 direction, int heig
 	uint8 entranceId = (mapElement->properties.track.sequence & 0x70) >> 4;
 	if (ride->entrances[entranceId] != entranceLoc &&
 		ride->exits[entranceId] != entranceLoc) {
-		if (direction & 1)
-			image_id += 2;
-		else
-			image_id -= 8;
+		
+		image_id += showLights ? -8 : 2;
+
 		RCT2_GLOBAL(0x00F441E8, uint32)++;
 	}
 
-	if (!(direction & 1)) {
+	if (showLights) {
 		if (mapElement->properties.track.sequence & (1 << 7)) {
 			image_id += 2;
 		}
@@ -1303,7 +1329,28 @@ void station_platform_left_paint_setup(rct_ride* ride, uint8 direction, int heig
 	uint8 lengthY = direction & 1 ? 32 : 8;
 
 	sub_98196C(image_id, 0, 0, lengthX, lengthY, 1, height + 5, get_current_rotation());
-	//0x0515791
+}
+
+void station_platform_front_paint_setup(uint8 direction, int height, rct_map_element* mapElement) {
+	uint32 image_id = RCT2_GLOBAL(0x0F4419C, uint32);
+
+	bool showLights = direction == 0 || direction == 3;
+
+	image_id |= showLights ? SPR_STATION_PLATFORM_ENTRANCE_LIGHTS_RED_NE_SW : SPR_STATION_PLATFORM_ENTRANCE_NE_SW;
+	image_id += direction & 1;
+
+	if (showLights) {
+		if (mapElement->properties.track.sequence & (1 << 7)) {
+			image_id += 2;
+		}
+	}
+
+	uint8 lengthX = direction & 1 ? 8 : 32;
+	uint8 lengthY = direction & 1 ? 32 : 8;
+	sint8 offsetX = direction & 1 ? 24 : 0;
+	sint8 offsetY = direction & 1 ? 0 : 24;
+
+	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
 }
 
 /* rct2: 0x00515629 */
@@ -1380,7 +1427,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 		RCT2_GLOBAL(0x141F56A, uint8)++;
 	}
 
-	station_platform_left_paint_setup(ride, direction, height, mapElement);
+	station_platform_back_paint_setup(ride, direction, height, mapElement);
 	//0x0515791
 
 	image_id = RCT2_GLOBAL(0x00F441E8, uint32);
@@ -1389,17 +1436,28 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 		if (!(image_id & (1 << 30))) {
 			// Draw support
 			image_id |= RCT2_GLOBAL(0x0F44198, uint32);
-			RCT2_GLOBAL(0x009DEA52, sint16) = 1;
-			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+			if (direction & 1)
+				image_id += 3;
+
+			RCT2_GLOBAL(0x009DEA52, sint16) = direction & 1 ? 0 : 1;
+			RCT2_GLOBAL(0x009DEA54, sint16) = direction & 1 ? 1 : 0;
 			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
 
-			sub_98197C(image_id, 0, 0, 30, 1, 22, height, get_current_rotation());
+			lengthX = direction & 1 ? 1 : 30;
+			lengthY = direction & 1 ? 30 : 1;
+			sub_98197C(image_id, 0, 0, lengthX, lengthY, 22, height, get_current_rotation());
 		}
 		else {
-			RCT2_GLOBAL(0x009DEA52, sint16) = 1;
-			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+			if (direction & 1)
+				image_id += 3;
+
+			RCT2_GLOBAL(0x009DEA52, sint16) = direction & 1 ? 0 : 1;
+			RCT2_GLOBAL(0x009DEA54, sint16) = direction & 1 ? 1 : 0;
 			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
-			sub_98197C(image_id & ~(1 << 30), 0, 0, 30, 1, 22, height, get_current_rotation());
+			lengthX = direction & 1 ? 1 : 30;
+			lengthY = direction & 1 ? 30 : 1;
+
+			sub_98197C(image_id & ~(1 << 30), 0, 0, lengthX, lengthY, 22, height, get_current_rotation());
 
 			// Just colour 1
 			// Branch before on impossible situation RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000 > 0x1000000
@@ -1407,24 +1465,19 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 			image_id += 12;
 			image_id += 0x3800000;
 
-			RCT2_GLOBAL(0x009DEA52, sint16) = 1;
-			RCT2_GLOBAL(0x009DEA54, sint16) = 0;
+			RCT2_GLOBAL(0x009DEA52, sint16) = direction & 1 ? 0 : 1;
+			RCT2_GLOBAL(0x009DEA54, sint16) = direction & 1 ? 1 : 0;
 			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
-			sub_98199C(image_id, 0, 0, 30, 1, 1, height, get_current_rotation());
+			sub_98199C(image_id, 0, 0, lengthX, lengthY, 1, height, get_current_rotation());
 		}
 	}
-
+	
 	height += 5;
 
-	image_id = RCT2_GLOBAL(0x0F4419C, uint32);
-	image_id |= 22388;
-	if (mapElement->properties.track.sequence & (1 << 7))
-		image_id += 2;
-
-	sub_98196C(image_id, 0, 24, 32, 8, 1, height, get_current_rotation());
+	station_platform_front_paint_setup(direction, height, mapElement);
 
 	height += 2;
-
+	//51595d
 	if (RCT2_GLOBAL(0x0141E9DB, uint8) & 3) {
 		image_id = RCT2_GLOBAL(0x0F4419C, uint32);
 		image_id |= 22370;
