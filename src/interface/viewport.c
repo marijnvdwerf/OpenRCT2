@@ -2939,12 +2939,12 @@ static bool sub_679074(rct_drawpixelinfo *dpi, int imageId, sint16 x, sint16 y) 
 
 	RCT2_CALLPROC_X(0x00679074, 0, imageId, x, y, 0, (int) dpi, 0);
 	sint16 original_x = RCT2_GLOBAL(0x9ABDAE, sint16);
-	uint8 original_output = RCT2_GLOBAL(0x00141F569, uint8);
+	original_output = RCT2_GLOBAL(0x00141F569, uint8);
 
 	RCT2_GLOBAL(0x9ABDAE, sint16) = before_x;
 	RCT2_GLOBAL(0x00141F569, uint8) = before_output;
 
-	bool new_output = new_sub_679074(dpi, imageId, x, y);
+	new_output = new_sub_679074(dpi, imageId, x, y);
 	sint16 new_x = RCT2_GLOBAL(0x9ABDAE, sint16);
 
 	assert(new_x == original_x);
