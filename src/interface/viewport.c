@@ -2920,34 +2920,17 @@ static bool new_sub_679074(rct_drawpixelinfo *dpi, int imageId, sint16 x, sint16
 }
 
 static bool sub_679074(rct_drawpixelinfo *dpi, int imageId, sint16 x, sint16 y) {
-	if((imageId&0x7FFFF) != 93194) {
-		return false;
-	}
-	rct_g1_element *image = gfx_get_g1_element(imageId & 0x7FFFF);
-
-	bool new_output = sub_67933B_679788_679C4A_67A117(image->offset, 19, 129, 1);
-
-	RCT2_GLOBAL(0xEDF808, sint16) = 129;
-	RCT2_GLOBAL(0xEDF80C, sint16) = 19;
-
-	RCT2_CALLPROC_X(0x67933B, 0x11111111, 0x22222222, 0x33333333, 0x44444444, (int) image->offset,  0xEEEEEEEE, 0xFFFFFFFF);
-	uint8 original_output = RCT2_GLOBAL(0x00141F569, uint8);
-
-	if (new_output != original_output) {
-		log_error("mj: new_output != original_output (was %d, expected %d)", new_output, original_output);
-		exit(0);
-	}
 	sint16 before_x = RCT2_GLOBAL(0x9ABDAE, sint16);
 	uint8 before_output = RCT2_GLOBAL(0x00141F569, uint8);
 
 	RCT2_CALLPROC_X(0x00679074, 0, imageId, x, y, 0, (int) dpi, 0);
 	sint16 original_x = RCT2_GLOBAL(0x9ABDAE, sint16);
-	original_output = RCT2_GLOBAL(0x00141F569, uint8);
+	uint8 original_output = RCT2_GLOBAL(0x00141F569, uint8);
 
 	RCT2_GLOBAL(0x9ABDAE, sint16) = before_x;
 	RCT2_GLOBAL(0x00141F569, uint8) = before_output;
 
-	new_output = new_sub_679074(dpi, imageId, x, y);
+	bool new_output = new_sub_679074(dpi, imageId, x, y);
 	sint16 new_x = RCT2_GLOBAL(0x9ABDAE, sint16);
 
 	assert(new_x == original_x);
