@@ -1370,16 +1370,13 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	image_id = RCT2_GLOBAL(0x00F441A0, uint32);
 	image_id |= 22428;
 	image_id += direction & 1;
-	RCT2_GLOBAL(0x009DEA52, sint16) = direction & 1 ? 2 : 0;
-	RCT2_GLOBAL(0x009DEA54, sint16) = direction & 1 ? 0 : 2;
-	RCT2_GLOBAL(0x009DEA56, sint16) = height;
 
 	//di
 	uint8 lengthX = direction & 1 ? 28 : 32;
 	//si
 	uint8 lengthY = direction & 1 ? 32 : 28;
 
-	sub_98197C(image_id, 0, 0, lengthX, lengthY, 1, height - 2, get_current_rotation());
+	sub_98197C(image_id, 0, 0, lengthX, lengthY, 1, height - 2, direction & 1 ? 2 : 0, direction & 1 ? 0 : 2, height, get_current_rotation());
 
 	image_id = RCT2_GLOBAL(0x00F44198, uint32);
 	image_id |= 28193;
@@ -1389,15 +1386,12 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 		image_id += 2;
 	}
 
-	RCT2_GLOBAL(0x009DEA52, sint16) = 0;
-	RCT2_GLOBAL(0x009DEA54, sint16) = 0;
-	RCT2_GLOBAL(0x009DEA56, sint16) = height;
 	lengthX = direction & 1 ? 20 : 32;
 	lengthY = direction & 1 ? 32 : 20;
 	sint8 offsetX = direction & 1 ? 6 : 0;
 	sint8 offsetY = direction & 1 ? 0 : 6;
 
-	sub_98199C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
+	sub_98199C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, 0, 0, height, get_current_rotation());
 
 	uint8 bl = direction & 1 ? 6 : 5;
 	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
@@ -1439,25 +1433,18 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 			if (direction & 1)
 				image_id += 3;
 
-			RCT2_GLOBAL(0x009DEA52, sint16) = direction & 1 ? 0 : 1;
-			RCT2_GLOBAL(0x009DEA54, sint16) = direction & 1 ? 1 : 0;
-			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
-
 			lengthX = direction & 1 ? 1 : 30;
 			lengthY = direction & 1 ? 30 : 1;
-			sub_98197C(image_id, 0, 0, lengthX, lengthY, 22, height, get_current_rotation());
+			sub_98197C(image_id, 0, 0, lengthX, lengthY, 22, height, direction & 1 ? 0 : 1, direction & 1 ? 1 : 0, height + 1, get_current_rotation());
 		}
 		else {
 			if (direction & 1)
 				image_id += 3;
 
-			RCT2_GLOBAL(0x009DEA52, sint16) = direction & 1 ? 0 : 1;
-			RCT2_GLOBAL(0x009DEA54, sint16) = direction & 1 ? 1 : 0;
-			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
 			lengthX = direction & 1 ? 1 : 30;
 			lengthY = direction & 1 ? 30 : 1;
 
-			sub_98197C(image_id & ~(1 << 30), 0, 0, lengthX, lengthY, 22, height, get_current_rotation());
+			sub_98197C(image_id & ~(1 << 30), 0, 0, lengthX, lengthY, 22, height, direction & 1 ? 0 : 1, direction & 1 ? 1 : 0, height + 1, get_current_rotation());
 
 			// Just colour 1
 			// Branch before on impossible situation RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000 > 0x1000000
@@ -1465,10 +1452,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 			image_id += 12;
 			image_id += 0x3800000;
 
-			RCT2_GLOBAL(0x009DEA52, sint16) = direction & 1 ? 0 : 1;
-			RCT2_GLOBAL(0x009DEA54, sint16) = direction & 1 ? 1 : 0;
-			RCT2_GLOBAL(0x009DEA56, sint16) = height + 1;
-			sub_98199C(image_id, 0, 0, lengthX, lengthY, 1, height, get_current_rotation());
+			sub_98199C(image_id, 0, 0, lengthX, lengthY, 1, height, direction & 1 ? 0 : 1, direction & 1 ? 1 : 0, height + 1, get_current_rotation());
 		}
 	}
 	
@@ -1492,11 +1476,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 				image_id &= ~(1 << 30);
 				image_id += 2;
 
-				RCT2_GLOBAL(0x009DEA52, sint16) = 0;
-				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
-				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
-
-				sub_98197C(image_id, 0, 0, 32, 32, 0, height, get_current_rotation());
+				sub_98197C(image_id, 0, 0, 32, 32, 0, height, 0, 0, height + 23, get_current_rotation());
 
 				image_id = RCT2_GLOBAL(0x00F441E4, uint32);
 				// Just colour 1
@@ -1505,10 +1485,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 				image_id += 0x3800000;
 				image_id += 14;
 				
-				RCT2_GLOBAL(0x009DEA52, sint16) = 1;
-				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
-				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
-				sub_98199C(image_id, 0, 0, 32, 32, 0, height, get_current_rotation());
+				sub_98199C(image_id, 0, 0, 32, 32, 0, height, 1, 0, height + 23, get_current_rotation());
 			}
 			else {
 				image_id |= RCT2_GLOBAL(0x00F44198, uint32);
@@ -1517,7 +1494,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
 
-				sub_98197C(image_id, 0, 0, 32, 32, 0, height, get_current_rotation());
+				sub_98197C(image_id, 0, 0, 32, 32, 0, height, 0, 0, height + 23, get_current_rotation());
 			}
 
 			height += 7;
