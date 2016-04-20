@@ -1717,6 +1717,31 @@ uint32 viewport_surface_paint_setup_get_ebx(rct_map_element *mapElement, int cl)
 }
 
 /**
+ * rct: 0x0065E9FC
+ */
+void viewport_surface_smooth_west_edge() {
+	RCT2_CALLPROC_EBPSAFE(0x0065E9FC);
+}
+/**
+ * rct2: 0x0065EAB2
+ */
+void viewport_surface_smooth_north_edge() {
+	RCT2_CALLPROC_EBPSAFE(0x0065EAB2);
+}
+/**
+ * rct2: 0x0065E890
+ */
+void viewport_surface_smooth_south_edge() {
+	RCT2_CALLPROC_EBPSAFE(0x0065E890);
+}
+/**
+ * rct2: 0x0065E946
+ */
+void viewport_surface_smooth_east_edge() {
+	RCT2_CALLPROC_EBPSAFE(0x0065E946);
+}
+
+/**
  * rct2: 68818E
  *
  * @param image_id (ebx)
@@ -1769,9 +1794,10 @@ void viewport_surface_paint_setup(uint8 direction, uint16 height, rct_map_elemen
 	RCT2_GLOBAL(RCT2_ADDRESS_PAINT_SETUP_CURRENT_TYPE, uint8) = VIEWPORT_INTERACTION_ITEM_TERRAIN;
 	RCT2_GLOBAL(0x9DE57C, uint16) |= 1;
 
-	RCT2_GLOBAL(0x009E3292, uint16) = dpi->zoom_level;
+	uint16 zoomLevel = dpi->zoom_level;
 
 	uint8 cl = get_current_rotation();
+
 	_dword_9E3250 = mapElement;
 	_dword_9E3264 = ((mapElement->type & MAP_ELEMENT_DIRECTION_MASK) << 3) | (mapElement->properties.surface.terrain >> 5);
 	uint32 edi = viewport_surface_paint_setup_get_ebx(mapElement, cl);
@@ -1860,7 +1886,7 @@ void viewport_surface_paint_setup(uint8 direction, uint16 height, rct_map_elemen
 
 	// end loop
 
-	if ((RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_VIEWPORT_FLAGS, uint16) & VIEWPORT_FLAG_LAND_HEIGHTS) && (RCT2_GLOBAL(0x9E3296, uint16) == 0)) {
+	if ((RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_VIEWPORT_FLAGS, uint16) & VIEWPORT_FLAG_LAND_HEIGHTS) && (zoomLevel == 0)) {
 		sint16 x = RCT2_GLOBAL(0x009DE56A, sint16), y = RCT2_GLOBAL(0x009DE56E, sint16);
 
 		int dx = map_element_height(x + 16, y + 16) & 0xFFFF;
@@ -1881,13 +1907,13 @@ void viewport_surface_paint_setup(uint8 direction, uint16 height, rct_map_elemen
 
 	//push ebx + ecx + esi
 
+	bool has_surface = false;
 	uint16 di = RCT2_GLOBAL(0x9E323C, uint8);
 	if (di * 16 == height) {
 		sub_98197C(1575, 0, 0, 1, 30, 39, height, -2, 1, height - 40, get_current_rotation());
 		sub_98197C(1576, 0, 0, 30, 1, 0, height, 1, 31, height, get_current_rotation());
 		sub_98197C(1577, 0, 0, 1, 30, 0, height, 31, 1, height, get_current_rotation());
 		sub_98197C(1578, 0, 0, 30, 1, 39, height, 1, -2, height - 40, get_current_rotation());
-		RCT2_GLOBAL(0x9E329A, uint8) = 0;
 	} else {
 		registers regs;
 
@@ -1896,7 +1922,7 @@ void viewport_surface_paint_setup(uint8 direction, uint16 height, rct_map_elemen
 		int branch = -1;
 		if ((mapElement->properties.surface.terrain & 0xE0) == 0) {
 			if ((mapElement->type & 0x3) == 0) {
-				if ((RCT2_GLOBAL(0x9E3296, uint16) == 0)) {
+				if ((zoomLevel == 0)) {
 					if ((RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_VIEWPORT_FLAGS, uint16) & 0x1001) == 0) {
 						branch = mapElement->properties.surface.grass_length & 0x7;
 					}
@@ -1954,6 +1980,7 @@ void viewport_surface_paint_setup(uint8 direction, uint16 height, rct_map_elemen
 
 		int image_id = base_image + image_offset;
 		sub_98196C(image_id, 0, 0, 32, 32, 255, height, get_current_rotation());
+		has_surface = true;
 	}
 
 	// loc_660D02
@@ -2034,6 +2061,10 @@ void viewport_surface_paint_setup(uint8 direction, uint16 height, rct_map_elemen
 		}
 	}
 
+	// ebx[0] = esi;
+	// ebp[4] = ebp;
+	// ebp[8] = ebx
+
 	if (RCT2_GLOBAL(RCT2_ADDRESS_MAP_SELECTION_FLAGS, uint8) & 1) {
 		// loc_660FB8:
 	}
@@ -2042,8 +2073,16 @@ void viewport_surface_paint_setup(uint8 direction, uint16 height, rct_map_elemen
 		// loc_661132:
 	}
 
-	if (zoomLevel == 0) {
-		// loc_661194:
+	if (zoomLevel == 0
+		&& has_surface
+		&& !(RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_VIEWPORT_FLAGS, uint16) & VIEWPORT_FLAG_UNDERGROUND_INSIDE)
+		&& !(RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_VIEWPORT_FLAGS, uint16) & VIEWPORT_FLAG_HIDE_BASE)
+		&& !(RCT2_GLOBAL(RCT2_ADDRESS_CONFIG_FLAGS, uint8) & CONFIG_FLAG_DISABLE_SMOOTH_LANDSCAPE)) {
+
+		viewport_surface_smooth_west_edge();
+		viewport_surface_smooth_north_edge();
+		viewport_surface_smooth_south_edge();
+		viewport_surface_smooth_east_edge();
 	}
 
 	if (RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_VIEWPORT_FLAGS, uint16) & VIEWPORT_FLAG_UNDERGROUND_INSIDE) {
