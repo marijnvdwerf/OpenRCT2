@@ -1353,6 +1353,35 @@ void station_platform_front_paint_setup(uint8 direction, int height, rct_map_ele
 	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
 }
 
+void station_platform_front_fence_paint_setup(uint8 direction, int height) {
+	uint32 image_id = RCT2_GLOBAL(0x0F4419C, uint32);
+	bool showLights = direction == 1 || direction == 2;
+
+	image_id |= showLights ? 22386 : 22370;
+	image_id += direction & 1;
+
+	uint8 offsetX = direction & 1 ? 31 : 0;
+	uint8 offsetY = direction & 1 ? 0 : 31;
+	sint8 lengthX = direction & 1 ? 1 : 32;
+	sint8 lengthY = direction & 1 ? 32 : 1;
+
+	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 7, height, get_current_rotation());
+}
+
+void station_platform_back_fence_paint_setup(uint8 direction, int height) {
+	bool showLights = direction == 1 || direction == 2;
+	if (!showLights)
+		return;
+
+	uint32 image_id = RCT2_GLOBAL(0x00F4419C, uint32);
+	image_id |= direction & 1 ? 22385 : 22384;
+	uint8 offsetX = direction & 1 ? 0 : 31;
+	uint8 offsetY = direction & 1 ? 31 : 0;
+	sint8 lengthX = direction & 1 ? 8 : 1;
+	sint8 lengthY = direction & 1 ? 1 : 8;
+	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 7, height, get_current_rotation());
+}
+
 /* rct2: 0x00515629 */
 void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement){
 	rct_ride* ride = get_ride(rideIndex);
@@ -1463,11 +1492,9 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	height += 2;
 	//51595d
 	if (RCT2_GLOBAL(0x0141E9DB, uint8) & 3) {
-		image_id = RCT2_GLOBAL(0x0F4419C, uint32);
-		image_id |= 22370;
 
-		sub_98196C(image_id, 0, 31, 32, 1, 7, height, get_current_rotation());
-		
+		station_platform_front_fence_paint_setup(direction, height);
+
 		image_id = RCT2_GLOBAL(0x00F441E4, uint32);
 		if (image_id >= 32) {
 			height -= 7;
@@ -1486,6 +1513,7 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 				image_id += 14;
 				
 				sub_98199C(image_id, 0, 0, 32, 32, 0, height, 1, 0, height + 23, get_current_rotation());
+				
 			}
 			else {
 				image_id |= RCT2_GLOBAL(0x00F44198, uint32);
@@ -1500,6 +1528,10 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 			height += 7;
 		}
 	}
+	else {
+		height += 7;
+	}
+	station_platform_back_fence_paint_setup(direction, height);
 
 	height += 25;
 	if (RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_PAINT_TILE_MAX_HEIGHT, sint16) < height) {
