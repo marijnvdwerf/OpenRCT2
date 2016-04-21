@@ -1350,10 +1350,10 @@ void station_platform_front_paint_setup(uint8 direction, int height, rct_map_ele
 	sint8 offsetX = direction & 1 ? 24 : 0;
 	sint8 offsetY = direction & 1 ? 0 : 24;
 
-	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
+	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height + 5, get_current_rotation());
 }
 
-void station_platform_front_fence_paint_setup(uint8 direction, int height) {
+void station_platform_fence_front_paint_setup(uint8 direction, int height) {
 	uint32 image_id = RCT2_GLOBAL(0x0F4419C, uint32);
 	bool showLights = direction == 1 || direction == 2;
 
@@ -1365,10 +1365,10 @@ void station_platform_front_fence_paint_setup(uint8 direction, int height) {
 	sint8 lengthX = direction & 1 ? 1 : 32;
 	sint8 lengthY = direction & 1 ? 32 : 1;
 
-	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 7, height, get_current_rotation());
+	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 7, height + 7, get_current_rotation());
 }
 
-void station_platform_back_fence_paint_setup(uint8 direction, int height) {
+void station_platform_fence_back_paint_setup(uint8 direction, int height) {
 	bool showLights = direction == 1 || direction == 2;
 	if (!showLights)
 		return;
@@ -1379,7 +1379,7 @@ void station_platform_back_fence_paint_setup(uint8 direction, int height) {
 	uint8 offsetY = direction & 1 ? 31 : 0;
 	sint8 lengthX = direction & 1 ? 8 : 1;
 	sint8 lengthY = direction & 1 ? 1 : 8;
-	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 7, height, get_current_rotation());
+	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 7, height + 7, get_current_rotation());
 }
 
 /* rct2: 0x00515629 */
@@ -1453,55 +1453,56 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	station_platform_back_paint_setup(ride, direction, height, mapElement);
 	//0x0515791
 
-	image_id = RCT2_GLOBAL(0x00F441E8, uint32);
-	// Entrance style??
-	if (image_id > 32) {
-		if (!(image_id & (1 << 30))) {
-			// Draw support
-			image_id |= RCT2_GLOBAL(0x0F44198, uint32);
-			if (direction & 1)
-				image_id += 3;
+	// Note this was missing in original.
+	// would cause small graphical glitch underground
+	if (RCT2_GLOBAL(0x0141E9DB, uint8) & 3) {
+		image_id = RCT2_GLOBAL(0x00F441E8, uint32);
+		// Entrance style??
+		if (image_id > 32) {
+			if (!(image_id & (1 << 30))) {
+				// Draw support
+				image_id |= RCT2_GLOBAL(0x0F44198, uint32);
+				if (direction & 1)
+					image_id += 3;
 
-			lengthX = direction & 1 ? 1 : 30;
-			lengthY = direction & 1 ? 30 : 1;
-			sub_98197C(image_id, 0, 0, lengthX, lengthY, 22, height, direction & 1 ? 0 : 1, direction & 1 ? 1 : 0, height + 1, get_current_rotation());
-		}
-		else {
-			if (direction & 1)
-				image_id += 3;
+				lengthX = direction & 1 ? 1 : 30;
+				lengthY = direction & 1 ? 30 : 1;
+				sub_98197C(image_id, 0, 0, lengthX, lengthY, 22, height, direction & 1 ? 0 : 1, direction & 1 ? 1 : 0, height + 1, get_current_rotation());
+			}
+			else {
+				if (direction & 1)
+					image_id += 3;
 
-			lengthX = direction & 1 ? 1 : 30;
-			lengthY = direction & 1 ? 30 : 1;
+				lengthX = direction & 1 ? 1 : 30;
+				lengthY = direction & 1 ? 30 : 1;
 
-			sub_98197C(image_id & ~(1 << 30), 0, 0, lengthX, lengthY, 22, height, direction & 1 ? 0 : 1, direction & 1 ? 1 : 0, height + 1, get_current_rotation());
+				sub_98197C(image_id & ~(1 << 30), 0, 0, lengthX, lengthY, 22, height, direction & 1 ? 0 : 1, direction & 1 ? 1 : 0, height + 1, get_current_rotation());
 
-			// Just colour 1
-			// Branch before on impossible situation RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000 > 0x1000000
-			image_id |= RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000;
-			image_id += 12;
-			image_id += 0x3800000;
+				// Just colour 1
+				// Branch before on impossible situation RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000 > 0x1000000
+				image_id |= RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000;
+				image_id += 12;
+				image_id += 0x3800000;
 
-			sub_98199C(image_id, 0, 0, lengthX, lengthY, 1, height, direction & 1 ? 0 : 1, direction & 1 ? 1 : 0, height + 1, get_current_rotation());
+				sub_98199C(image_id, 0, 0, lengthX, lengthY, 1, height, direction & 1 ? 0 : 1, direction & 1 ? 1 : 0, height + 1, get_current_rotation());
+			}
 		}
 	}
 	
-	height += 5;
-
 	station_platform_front_paint_setup(direction, height, mapElement);
 
-	height += 2;
+	// Note in vanilla this draw call was after underground check
+	// so it would not be displayed when underground
+	station_platform_fence_front_paint_setup(direction, height);
+
 	//51595d
 	if (RCT2_GLOBAL(0x0141E9DB, uint8) & 3) {
-
-		station_platform_front_fence_paint_setup(direction, height);
-
 		image_id = RCT2_GLOBAL(0x00F441E4, uint32);
 		if (image_id >= 32) {
-			height -= 7;
 
 			if (image_id & (1 << 30)) {
 				image_id &= ~(1 << 30);
-				image_id += 2;
+				image_id += direction & 1 ? 5 : 2;
 
 				sub_98197C(image_id, 0, 0, 32, 32, 0, height, 0, 0, height + 23, get_current_rotation());
 
@@ -1510,14 +1511,14 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 				// Branch before on impossible situation RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000 > 0x1000000
 				image_id |= RCT2_GLOBAL(0x0F44198, uint32) & 0xF80000;
 				image_id += 0x3800000;
-				image_id += 14;
+				image_id += 12 + ((direction & 1) ? 5 : 2);
 				
 				sub_98199C(image_id, 0, 0, 32, 32, 0, height, 1, 0, height + 23, get_current_rotation());
 				
 			}
 			else {
 				image_id |= RCT2_GLOBAL(0x00F44198, uint32);
-				image_id += 2;
+				image_id += direction & 1 ? 5 : 2;
 				RCT2_GLOBAL(0x009DEA52, sint16) = 0;
 				RCT2_GLOBAL(0x009DEA54, sint16) = 0;
 				RCT2_GLOBAL(0x009DEA56, sint16) = height + 23;
@@ -1525,13 +1526,10 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 				sub_98197C(image_id, 0, 0, 32, 32, 0, height, 0, 0, height + 23, get_current_rotation());
 			}
 
-			height += 7;
 		}
 	}
-	else {
-		height += 7;
-	}
-	station_platform_back_fence_paint_setup(direction, height);
+
+	station_platform_fence_back_paint_setup(direction, height);
 
 	height += 25;
 	if (RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_PAINT_TILE_MAX_HEIGHT, sint16) < height) {
