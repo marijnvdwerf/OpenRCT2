@@ -1714,6 +1714,92 @@ void junior_rc_begin_station_paint_setup(uint8 rideIndex, uint8 trackSequence, u
 	}
 }
 
+/* rct2: 0x005151B9 */
+void junior_rc_middle_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+	rct_ride* ride = get_ride(rideIndex);
+
+	uint8 entrance_style = ride->entrance_style;
+
+	uint32 image_id = RideEntranceDefinitions[entrance_style].station_image_id;
+	if (!(RCT2_GLOBAL(0x00F441A0, uint32) & (1 << 29))) {
+		image_id &= 0x7FFFF;
+	}
+
+	RCT2_GLOBAL(0x00F441E8, uint32) = image_id;
+	RCT2_GLOBAL(0x00F441E4, uint32) = image_id;
+
+	image_id = RCT2_GLOBAL(0x00F441A0, uint32);
+	image_id |= 22428;
+	image_id += direction & 1;
+
+	//di
+	uint8 lengthX = direction & 1 ? 28 : 32;
+	//si
+	uint8 lengthY = direction & 1 ? 32 : 28;
+
+	sub_98197C(image_id, 0, 0, lengthX, lengthY, 1, height - 2, direction & 1 ? 2 : 0, direction & 1 ? 0 : 2, height, get_current_rotation());
+
+	image_id = RCT2_GLOBAL(0x00F44198, uint32);
+	image_id |= 28189;
+	image_id += direction & 1;
+
+	lengthX = direction & 1 ? 20 : 32;
+	lengthY = direction & 1 ? 32 : 20;
+	sint8 offsetX = direction & 1 ? 6 : 0;
+	sint8 offsetY = direction & 1 ? 0 : 6;
+
+	sub_98199C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, 0, 0, height, get_current_rotation());
+
+	uint8 bl = direction & 1 ? 6 : 5;
+	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+
+	bl = direction & 1 ? 7 : 8;
+	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+
+	RCT2_GLOBAL(0x141E9B4, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9B8, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9BC, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9C0, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9C4, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9C8, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9CC, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9D0, uint16) = 0xFFFF;
+	RCT2_GLOBAL(0x141E9D4, uint16) = 0xFFFF;
+
+	uint32 eax = 0xFFFF0000;
+	eax |= ((height & 0x0FFF) >> 4);
+	eax |= (6 << 8);
+	if (direction & 1) {
+		RCT2_ADDRESS(0x009E30B6, uint32)[RCT2_GLOBAL(0x141F56B, uint8) / 2] = eax;
+		RCT2_GLOBAL(0x141F56B, uint8)++;
+	}
+	else {
+		RCT2_ADDRESS(0x009E3138, uint32)[RCT2_GLOBAL(0x141F56A, uint8) / 2] = eax;
+		RCT2_GLOBAL(0x141F56A, uint8)++;
+	}
+
+	station_platform_back_paint_setup(ride, direction, height, mapElement, false);
+	//0x0515791
+
+	station_platform_entrance_style_back_paint_setup(direction, height);
+
+	station_platform_front_paint_setup(direction, height, mapElement, false);
+
+	// Note in vanilla this draw call was after underground check
+	// so it would not be displayed when underground
+	station_platform_fence_front_paint_setup(direction, height, false);
+
+	station_platform_entrance_style_front_paint_setup(direction, height);
+
+	station_platform_fence_back_paint_setup(direction, height, false);
+
+	height += 25;
+	if (RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_PAINT_TILE_MAX_HEIGHT, sint16) < height) {
+		RCT2_GLOBAL(RCT2_ADDRESS_CURRENT_PAINT_TILE_MAX_HEIGHT, sint16) = height;
+		RCT2_GLOBAL(0x00141E9DA, uint8) = 32;
+	}
+}
+
 /* 0x008AAA0C */
 TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direction) {
 	switch (trackType) {
@@ -1723,6 +1809,8 @@ TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direc
 		return junior_rc_end_station_paint_setup;
 	case 2:
 		return junior_rc_begin_station_paint_setup;
+	case 3:
+		return junior_rc_middle_station_paint_setup;
 	}
 	return NULL;
 }
