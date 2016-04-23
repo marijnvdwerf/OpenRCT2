@@ -1163,3 +1163,238 @@ TRACK_PAINT_FUNCTION get_track_paint_function_facility(int trackType, int direct
 	}
 	return NULL;
 }
+
+static const uint16 numbers[][2] = {
+	{0, 4549},
+	{0, 4550},
+	{0, 4551},
+	{0, 4552},
+	{0, 4553},
+	{0, 4554},
+	{0, 4555},
+	{0, 4556},
+	{0, 4557},
+	{0, 4558},
+	{4550, 4549},
+	{4550, 4550},
+	{4550, 4551},
+	{4550, 4552},
+	{4550, 4553},
+	{4550, 4554},
+	{4550, 4555},
+};
+
+static void track_identify(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+	if(numbers[trackSequence][0] == 0) {
+		// single digit
+		sub_98196C(numbers[trackSequence][1], 9, 3, 16, 16, 1, height, get_current_rotation());
+	} else {
+		sub_98196C(numbers[trackSequence][0], 12, 2, 16, 16, 1, height, get_current_rotation());
+		sub_98196C(numbers[trackSequence][1], 6, 8, 16, 16, 1, height, get_current_rotation());
+	}
+}
+
+enum {
+	EDGE_TL = (1<<0),
+	EDGE_TR = (1<<1),
+	EDGE_BR = (1<<2),
+	EDGE_BL = (1<<3),
+};
+
+static void track_identify_draw_edges(edges, height)  {
+	if(edges & EDGE_BL) {
+		sub_98197C(20566, 0, 0, 1, 32, 7, height, 30, 0, height + 2, get_current_rotation());
+	}
+	
+	if(edges & EDGE_BR) {
+		sub_98197C(20565, 0, 0, 32, 1, 7, height, 0, 30, height + 2, get_current_rotation());
+	}
+	
+	if(edges & EDGE_TR) {
+		sub_98199C(22146, 0, 0, 1, 32, 7, height, 2, 0, height + 2, get_current_rotation());
+	}
+	
+	if(edges & EDGE_TL) {
+		sub_98199C(22149, 0, 0, 32, 1, 7, height, 0, 2, height + 2, get_current_rotation());
+	}
+}
+
+
+static const uint16 remap_2x2[][4] = {
+	{0, 1, 2, 3},
+	{1, 3, 0, 2},
+	{3, 2, 1, 0},
+	{2, 0, 3, 1},
+};
+
+
+const uint8 edges_2x2[] = {
+	EDGE_TR|EDGE_TL,
+	EDGE_TR|EDGE_BR,
+		EDGE_BL | EDGE_TL,
+	
+	EDGE_BL |EDGE_BR,
+};
+
+static void track_identify_2x2(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+	int segment = remap_2x2[direction][trackSequence];
+	track_identify(rideIndex, segment, direction, height, mapElement);
+	track_identify_draw_edges(edges_2x2[segment], height);
+}
+
+
+static const uint16 remap_3x3[][9] = {
+	{0, 1, 2, 3, 4, 5, 6, 7, 8},
+	{0, 3, 5, 7, 2, 8, 1, 6, 4},
+	{0, 7, 8, 6 ,5, 4, 3, 1, 2},
+	{0, 6, 4, 1, 8, 2, 7, 3, 5},
+};
+
+const uint8 edges_3x3[] = {
+	0,
+	EDGE_TR|EDGE_TL,
+	EDGE_TR,
+	EDGE_TR|EDGE_BR,
+	EDGE_TL,
+	EDGE_BR,
+	EDGE_BL | EDGE_TL,
+	EDGE_BL |EDGE_BR,
+	EDGE_BL,
+};
+
+static void track_identify_3x3(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+	if(mapElement->properties.track.type == TRACK_ELEM_TOWER_SECTION) {
+		return;
+	}
+	
+	int segment = remap_3x3[direction][trackSequence];
+	track_identify(rideIndex, segment, direction, height, mapElement);
+	track_identify_draw_edges(edges_3x3[segment], height);
+}
+
+static const uint16 remap_4x4[][16] = {
+	{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
+	{ 3,  7, 11, 15  ,  2,  6, 10, 14  ,  1,  5,  9, 13  ,  0,  4,  8, 12},
+	{15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0},
+	{12, 8, 4, 0, 13, 9, 5, 1, 14, 10, 6, 2, 15, 11, 7, 3},
+};
+
+const uint8 edges_4x4[] = {
+	EDGE_TL | EDGE_TR,
+	EDGE_TR,
+	EDGE_TR,
+	EDGE_TR | EDGE_BR,
+	EDGE_TL,
+	0,
+	0,
+	EDGE_BR,
+	EDGE_TL,
+	0,
+	0,
+	EDGE_BR,
+	EDGE_TL | EDGE_BL,
+	EDGE_BL,
+	EDGE_BL,
+	EDGE_BL | EDGE_BR
+};
+
+static void track_identify_4x4(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+	if(mapElement->properties.track.type == TRACK_ELEM_TOWER_SECTION) {
+		return;
+	}
+	
+	int segment = remap_4x4[direction][trackSequence];
+	track_identify(rideIndex, segment, direction, height, mapElement);
+	track_identify_draw_edges(edges_4x4[segment], height);
+}
+
+
+
+static const uint16 remap_1x4[][4] = {
+	{0, 1, 2, 3},
+	{0, 1, 2, 3},
+	{2, 3, 0, 1},
+	{2, 3, 0, 1},
+};
+
+static const uint8 edges_1x4[][4] = {
+	{
+		EDGE_TL| EDGE_BR,
+		EDGE_TL| EDGE_TR | EDGE_BR,
+		EDGE_TL| EDGE_BR,
+		EDGE_TL| EDGE_BL | EDGE_BR,
+	},
+	{
+		EDGE_BL| EDGE_TR,
+		EDGE_BL| EDGE_TR | EDGE_BR,
+		EDGE_BL| EDGE_TR,
+		EDGE_BL| EDGE_TR | EDGE_TL,
+	}
+};
+
+
+static void track_identify_1x4(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+	int segment = remap_1x4[direction][trackSequence];
+	track_identify(rideIndex, segment, direction, height, mapElement);
+	track_identify_draw_edges(edges_1x4[direction % 2][segment], height);
+}
+
+static const uint16 remap_1x5[][5] = {
+	{0, 1, 2, 3, 4},
+	{0, 1, 2, 3, 4},
+	{0, 4, 3, 2, 1},
+	{0, 4, 3, 2, 1},
+};
+
+static const uint8 edges_1x5[][5] = {
+	{
+		EDGE_TL| EDGE_BR,
+		EDGE_TL| EDGE_TR | EDGE_BR,
+		EDGE_TL| EDGE_BR,
+		EDGE_TL| EDGE_BR,
+		EDGE_TL| EDGE_BL | EDGE_BR,
+	},
+	{
+		EDGE_BL| EDGE_TR,
+		EDGE_BL| EDGE_TR | EDGE_BR,
+		EDGE_BL| EDGE_TR,
+		EDGE_BL| EDGE_TR,
+		EDGE_BL| EDGE_TR | EDGE_TL,
+	}
+};
+
+static void track_identify_1x5(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+	int segment = remap_1x5[direction][trackSequence];
+	track_identify(rideIndex, segment, direction, height, mapElement);
+	
+	track_identify_draw_edges(edges_1x5[direction % 2][segment], height);
+	
+}
+
+TRACK_PAINT_FUNCTION get_track_paint_function_identify() {
+	return track_identify;
+	
+}
+
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_1x4(){
+	return track_identify_1x4;
+	
+}
+
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_1x5(){
+	return track_identify_1x5;
+	
+}
+
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_2x2() {
+	return track_identify_2x2;
+}
+
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_3x3() {
+	return track_identify_3x3;
+}
+
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_4x4() {
+	return track_identify_4x4;
+}
+

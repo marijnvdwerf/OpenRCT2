@@ -10,5 +10,11 @@ TRACK_PAINT_FUNCTION get_track_paint_function_maze(int trackType, int direction)
 TRACK_PAINT_FUNCTION get_track_paint_function_topspin(int trackType, int direction);
 TRACK_PAINT_FUNCTION get_track_paint_function_shop(int trackType, int direction);
 TRACK_PAINT_FUNCTION get_track_paint_function_facility(int trackType, int direction);
+TRACK_PAINT_FUNCTION get_track_paint_function_identify();
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_1x4();
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_1x5();
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_2x2();
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_3x3();
+TRACK_PAINT_FUNCTION get_track_paint_function_identify_4x4();
 
 #endif
