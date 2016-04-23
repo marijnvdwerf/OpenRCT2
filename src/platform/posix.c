@@ -14,7 +14,7 @@
  *****************************************************************************/
 #pragma endregion
 
-#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
+#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__)) || defined(__IPHONEOS__)
 
 #include <dirent.h>
 #include <errno.h>
@@ -652,6 +652,10 @@ wchar_t *regular_to_wchar(const char* src)
 
 void platform_posix_sub_user_data_path(char *buffer, const char *homedir, const char *separator);
 
+#ifdef __IPHONEOS__
+
+#endif
+
 /**
  * Default directory fallback is:
  *   - (command line argument)
@@ -691,7 +695,7 @@ void platform_resolve_user_data_path()
 	buffer[0] = '\0';
 	log_verbose("buffer = '%s'", buffer);
 
-	const char *homedir = getpwuid(getuid())->pw_dir;
+	const char *homedir = "";
 	platform_posix_sub_user_data_path(buffer, homedir, separator);
 
 	log_verbose("OpenRCT2 user data directory = '%s'", buffer);

@@ -95,49 +95,49 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5BF3B08B122B1B6A0092AE4E /* libpng dynamic (Mac OS X) */;
+			remoteGlobalIDString = 5BF3B08B122B1B6A0092AE4E;
 			remoteInfo = "libpng dynamic (Mac OS X)";
 		};
 		5BF3B115122B1C9B0092AE4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5BF3B10B122B1C070092AE4E /* libpng static (iOS Simulator & Device) */;
+			remoteGlobalIDString = 5BF3B10B122B1C070092AE4E;
 			remoteInfo = "libpng static (iOS Simulator & Device)";
 		};
 		5BF3B117122B1CA50092AE4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC045055464E500DB518D /* libpng static (Mac OS X) */;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
 			remoteInfo = "libpng static (Mac OS X)";
 		};
 		5BF3B119122B1CA50092AE4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5BF3B093122B1B9B0092AE4E /* libpng static (iOS) */;
+			remoteGlobalIDString = 5BF3B093122B1B9B0092AE4E;
 			remoteInfo = "libpng static (iOS)";
 		};
 		5BF3B158122DE5CC0092AE4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5BF3B148122DE51E0092AE4E /* Configure */;
+			remoteGlobalIDString = 5BF3B148122DE51E0092AE4E;
 			remoteInfo = Configure;
 		};
 		5BF3B15A122DE5D20092AE4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5BF3B148122DE51E0092AE4E /* Configure */;
+			remoteGlobalIDString = 5BF3B148122DE51E0092AE4E;
 			remoteInfo = Configure;
 		};
 		5BF3B15C122DE5D80092AE4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5BF3B148122DE51E0092AE4E /* Configure */;
+			remoteGlobalIDString = 5BF3B148122DE51E0092AE4E;
 			remoteInfo = Configure;
 		};
 /* End PBXContainerItemProxy section */
@@ -362,9 +362,15 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libpng" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* png */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -629,7 +635,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/$(PLATFORM_NAME)";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)/$(PLATFORM_NAME)";
 				COPY_PHASE_STRIP = NO;
@@ -639,7 +645,7 @@
 				OTHER_CFLAGS = "-DHAVE_CONFIG_H";
 				PREBINDING = NO;
 				PRODUCT_NAME = png;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -647,7 +653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/$(PLATFORM_NAME)";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)/$(PLATFORM_NAME)";
 				COPY_PHASE_STRIP = YES;
@@ -657,7 +663,7 @@
 				OTHER_CFLAGS = "-DHAVE_CONFIG_H";
 				PREBINDING = NO;
 				PRODUCT_NAME = png;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
 			name = Release;

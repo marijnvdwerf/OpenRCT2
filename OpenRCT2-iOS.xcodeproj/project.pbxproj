@@ -219,7 +219,10 @@
 		C67FD2021CCBC3860030B465 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD1B61CCBC2B50030B465 /* libjansson.a */; };
 		C67FD2051CCBC3860030B465 /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD18D1CCBC2A80030B465 /* libSDL2_ttf.a */; };
 		C67FD20E1CCBC4510030B465 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD20D1CCBC3EB0030B465 /* libSDL2.a */; };
-		C67FD2211CCBC5B70030B465 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD21D1CCBC54B0030B465 /* libpng.a */; };
+		C67FD2451CCBD5970030B465 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD21D1CCBC54B0030B465 /* libpng.a */; };
+		C67FD2471CCBD6500030B465 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD2461CCBD6500030B465 /* libz.tbd */; };
+		C67FD2701CCBDB250030B465 /* ios.m in Sources */ = {isa = PBXBuildFile; fileRef = C67FD26F1CCBDB250030B465 /* ios.m */; };
+		C67FD2721CCBDC9B0030B465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67FD2711CCBDC9B0030B465 /* Main.storyboard */; };
 		C6B5D5F41CCB8ACE00EA35C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B5D5F31CCB8ACE00EA35C4 /* UIKit.framework */; };
 		C6B5D5F61CCB8ADC00EA35C4 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B5D5F51CCB8ADC00EA35C4 /* CoreAudio.framework */; };
 		C6B5D5F91CCB8AFB00EA35C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B5D5F81CCB8AFB00EA35C4 /* QuartzCore.framework */; };
@@ -703,9 +706,11 @@
 		C65BA0171CCB800B008C350A /* water.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = water.h; sourceTree = "<group>"; };
 		C67FD1881CCBC2A80030B465 /* SDL_ttf.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_ttf.xcodeproj; path = "libs-ios/sdl-ttf/Xcode-iOS/SDL_ttf.xcodeproj"; sourceTree = "<group>"; };
 		C67FD19E1CCBC2B50030B465 /* jansson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = jansson.xcodeproj; path = "libs-ios/jansson/jansson.xcodeproj"; sourceTree = "<group>"; };
-		C67FD1FE1CCBC2FE0030B465 /* speexdsp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = speexdsp.xcodeproj; path = "libs-ios/speexdsp/speexdsp.xcodeproj"; sourceTree = "<group>"; };
 		C67FD2071CCBC3EB0030B465 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = "libs-ios/sdl2/Xcode-iOS/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
 		C67FD20F1CCBC54B0030B465 /* libpng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpng.xcodeproj; path = "libs-ios/libpng/projects/xcode/libpng.xcodeproj"; sourceTree = "<group>"; };
+		C67FD2461CCBD6500030B465 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C67FD26F1CCBDB250030B465 /* ios.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ios.m; sourceTree = "<group>"; };
+		C67FD2711CCBDC9B0030B465 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C6B5D5F31CCB8ACE00EA35C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6B5D5F51CCB8ADC00EA35C4 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		C6B5D5F81CCB8AFB00EA35C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -723,7 +728,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C67FD2211CCBC5B70030B465 /* libpng.a in Frameworks */,
+				C67FD2471CCBD6500030B465 /* libz.tbd in Frameworks */,
+				C67FD2451CCBD5970030B465 /* libpng.a in Frameworks */,
 				C67FD20E1CCBC4510030B465 /* libSDL2.a in Frameworks */,
 				C67FD2021CCBC3860030B465 /* libjansson.a in Frameworks */,
 				C67FD2051CCBC3860030B465 /* libSDL2_ttf.a in Frameworks */,
@@ -745,6 +751,7 @@
 		C65B9A361CCB7ADA008C350A = {
 			isa = PBXGroup;
 			children = (
+				C67FD2461CCBD6500030B465 /* libz.tbd */,
 				C65B9EE91CCB800B008C350A /* Sources */,
 				C65B9A411CCB7ADA008C350A /* Resources */,
 				C65BA0CE1CCB8031008C350A /* Libraries */,
@@ -768,6 +775,7 @@
 				C65B9A531CCB7ADA008C350A /* Info.plist */,
 				C65B9A501CCB7ADA008C350A /* LaunchScreen.storyboard */,
 				C65B9A431CCB7ADA008C350A /* main.m */,
+				C67FD2711CCBDC9B0030B465 /* Main.storyboard */,
 			);
 			name = Resources;
 			path = OpenRCT2;
@@ -1112,6 +1120,7 @@
 				C65B9F841CCB800B008C350A /* posix.c */,
 				C65B9F851CCB800B008C350A /* shared.c */,
 				C65B9F861CCB800B008C350A /* windows.c */,
+				C67FD26F1CCBDB250030B465 /* ios.m */,
 			);
 			path = platform;
 			sourceTree = "<group>";
@@ -1295,7 +1304,6 @@
 				C67FD20F1CCBC54B0030B465 /* libpng.xcodeproj */,
 				C67FD1881CCBC2A80030B465 /* SDL_ttf.xcodeproj */,
 				C67FD2071CCBC3EB0030B465 /* SDL.xcodeproj */,
-				C67FD1FE1CCBC2FE0030B465 /* speexdsp.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1326,13 +1334,6 @@
 				C67FD1CE1CCBC2B50030B465 /* test_pack */,
 				C67FD1D01CCBC2B50030B465 /* test_simple */,
 				C67FD1D21CCBC2B50030B465 /* test_unpack */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C67FD1FF1CCBC2FE0030B465 /* Products */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1417,10 +1418,6 @@
 				{
 					ProductGroup = C67FD1891CCBC2A80030B465 /* Products */;
 					ProjectRef = C67FD1881CCBC2A80030B465 /* SDL_ttf.xcodeproj */;
-				},
-				{
-					ProductGroup = C67FD1FF1CCBC2FE0030B465 /* Products */;
-					ProjectRef = C67FD1FE1CCBC2FE0030B465 /* speexdsp.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1614,6 +1611,7 @@
 				C65B9EC61CCB7D84008C350A /* Ill Paradise.sv6 in Resources */,
 				C65B9EC31CCB7D84008C350A /* spanish_sp.txt in Resources */,
 				C65B9EBA1CCB7D84008C350A /* french.txt in Resources */,
+				C67FD2721CCBDC9B0030B465 /* Main.storyboard in Resources */,
 				C65B9EC11CCB7D84008C350A /* portuguese_br.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1712,6 +1710,7 @@
 				C65BA08F1CCB800B008C350A /* loadsave.c in Sources */,
 				C65BA08B1CCB800B008C350A /* guest_list.c in Sources */,
 				C65BA06D1CCB800B008C350A /* ride_ratings.c in Sources */,
+				C67FD2701CCBDB250030B465 /* ios.m in Sources */,
 				C65BA06F1CCB800B008C350A /* track.c in Sources */,
 				C65BA0271CCB800B008C350A /* Path.cpp in Sources */,
 				C65BA0761CCB800B008C350A /* title.c in Sources */,
@@ -1826,7 +1825,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm7;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1881,7 +1880,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm7;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
