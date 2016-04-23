@@ -2023,6 +2023,24 @@ void junior_rc_25_deg_up_to_flat_paint_setup(uint8 rideIndex, uint8 trackSequenc
 	}
 }
 
+/* rct2: 0x005189B0 */
+void junior_rc_25_deg_down_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+
+	junior_rc_25_deg_up_paint_setup(rideIndex, trackSequence, (direction + 2) & 3, height, mapElement);
+}
+
+/* rct2: 0x00518FE8 */
+void junior_rc_flat_to_25_deg_down_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+
+	junior_rc_25_deg_up_to_flat_paint_setup(rideIndex, trackSequence, (direction + 2) & 3, height, mapElement);
+}
+
+/* rct2: 0x00518CCC */
+void junior_rc_25_deg_down_to_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+
+	junior_rc_flat_to_25_deg_up_paint_setup(rideIndex, trackSequence, (direction + 2) & 3, height, mapElement);
+}
+
 /* 0x008AAA0C */
 TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direction) {
 	switch (trackType) {
@@ -2042,6 +2060,39 @@ TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direc
 
 	case TRACK_ELEM_25_DEG_UP_TO_FLAT:
 		return junior_rc_25_deg_up_to_flat_paint_setup;
+	case TRACK_ELEM_25_DEG_DOWN:
+		return junior_rc_25_deg_down_paint_setup;
+
+	case TRACK_ELEM_FLAT_TO_25_DEG_DOWN:
+		return junior_rc_flat_to_25_deg_down_paint_setup;
+
+	case TRACK_ELEM_25_DEG_DOWN_TO_FLAT:
+		return junior_rc_25_deg_down_to_flat_paint_setup;
+	case TRACK_ELEM_LEFT_QUARTER_TURN_5_TILES:
+	case TRACK_ELEM_RIGHT_QUARTER_TURN_5_TILES:
+	case TRACK_ELEM_FLAT_TO_LEFT_BANK:
+	case TRACK_ELEM_FLAT_TO_RIGHT_BANK:
+	case TRACK_ELEM_LEFT_BANK_TO_FLAT:
+	case TRACK_ELEM_RIGHT_BANK_TO_FLAT:
+	case TRACK_ELEM_BANKED_LEFT_QUARTER_TURN_5_TILES:
+	case TRACK_ELEM_BANKED_RIGHT_QUARTER_TURN_5_TILES:
+	case TRACK_ELEM_LEFT_BANK_TO_25_DEG_UP:
+	case TRACK_ELEM_RIGHT_BANK_TO_25_DEG_UP:
+	case TRACK_ELEM_25_DEG_UP_TO_LEFT_BANK:
+	case TRACK_ELEM_25_DEG_UP_TO_RIGHT_BANK:
+	case TRACK_ELEM_LEFT_BANK_TO_25_DEG_DOWN:
+	case TRACK_ELEM_RIGHT_BANK_TO_25_DEG_DOWN:
+	case TRACK_ELEM_25_DEG_DOWN_TO_LEFT_BANK:
+	case TRACK_ELEM_25_DEG_DOWN_TO_RIGHT_BANK:
+	case TRACK_ELEM_LEFT_BANK:
+	case TRACK_ELEM_RIGHT_BANK:
+	case TRACK_ELEM_LEFT_QUARTER_TURN_5_TILES_25_DEG_UP:
+	case TRACK_ELEM_RIGHT_QUARTER_TURN_5_TILES_25_DEG_UP:
+	case TRACK_ELEM_LEFT_QUARTER_TURN_5_TILES_25_DEG_DOWN:
+	case TRACK_ELEM_RIGHT_QUARTER_TURN_5_TILES_25_DEG_DOWN:
+	case TRACK_ELEM_S_BEND_LEFT:
+	case TRACK_ELEM_S_BEND_RIGHT:
+		return NULL;
 	}
 	return NULL;
 }
