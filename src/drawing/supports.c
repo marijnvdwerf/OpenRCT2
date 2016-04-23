@@ -474,7 +474,7 @@ bool metal_a_supports_paint_setup(int supportType, int segment, int special, int
 		image_id |= imageColourFlags;
 
 
-		sub_98197C(image_id, xOffset, yOffset, 0, 0, z - 1, height, boundBoxOffsetX, boundBoxOffsetY, boundBoxOffsetZ, get_current_rotation());
+		sub_98197C(image_id, xOffset, yOffset, 0, 0, 0, height, boundBoxOffsetX, boundBoxOffsetY, boundBoxOffsetZ, get_current_rotation());
 
 		height += z;
 	}

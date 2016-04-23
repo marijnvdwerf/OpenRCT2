@@ -1236,6 +1236,17 @@ TRACK_PAINT_FUNCTION get_track_paint_function_50_52_53_54(int trackType, int dir
 	return NULL;
 }
 
+/* Supports are only placed every 2 tiles for flat pieces*/
+bool junior_rc_support_should_place() {
+	if ((RCT2_GLOBAL(0x009DE56A, sint16) & (1 << 5)) && (RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5)))
+		return true;
+
+	if ((!(RCT2_GLOBAL(0x009DE56A, sint16) & (1 << 5))) && (!(RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5))))
+		return true;
+
+	return false;
+}
+
 /* rct2: 0x00518394 */
 void junior_rc_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement){
 
@@ -1258,10 +1269,9 @@ void junior_rc_flat_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 dire
 
 	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
 
-	if ((RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && !(RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5))) || 
-		!(RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && (RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5)))) {
+	if (junior_rc_support_should_place()) {
 		int edi = direction & 1 ? 2 : 1;
-		RCT2_CALLPROC_X(0x00663105, 0, 4, 0, height, 20, edi, RCT2_GLOBAL(0x00F4419C, uint32));
+		metal_a_supports_paint_setup(edi, 4, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
 	}
 
 	RCT2_GLOBAL(0x00141E9C4, uint16) = 0xFFFF;
@@ -1592,10 +1602,10 @@ void junior_rc_end_station_paint_setup(uint8 rideIndex, uint8 trackSequence, uin
 	sub_98199C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, 0, 0, height, get_current_rotation());
 
 	uint8 bl = direction & 1 ? 6 : 5;
-	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+	metal_a_supports_paint_setup(3, bl, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
 
 	bl = direction & 1 ? 7 : 8;
-	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+	metal_a_supports_paint_setup(3, bl, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
 
 	RCT2_GLOBAL(0x141E9B4, uint16) = 0xFFFF;
 	RCT2_GLOBAL(0x141E9B8, uint16) = 0xFFFF;
@@ -1678,10 +1688,11 @@ void junior_rc_begin_station_paint_setup(uint8 rideIndex, uint8 trackSequence, u
 	sub_98199C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, 0, 0, height, get_current_rotation());
 
 	uint8 bl = direction & 1 ? 6 : 5;
-	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+
+	metal_a_supports_paint_setup(3, bl, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
 
 	bl = direction & 1 ? 7 : 8;
-	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+	metal_a_supports_paint_setup(3, bl, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
 
 	RCT2_GLOBAL(0x141E9B4, uint16) = 0xFFFF;
 	RCT2_GLOBAL(0x141E9B8, uint16) = 0xFFFF;
@@ -1763,10 +1774,10 @@ void junior_rc_middle_station_paint_setup(uint8 rideIndex, uint8 trackSequence, 
 	sub_98199C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, 0, 0, height, get_current_rotation());
 
 	uint8 bl = direction & 1 ? 6 : 5;
-	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+	metal_a_supports_paint_setup(3, bl, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
 
 	bl = direction & 1 ? 7 : 8;
-	RCT2_CALLPROC_X(0x00663105, 0, bl, 0, height, 20, 3, RCT2_GLOBAL(0x00F4419C, uint32));
+	metal_a_supports_paint_setup(3, bl, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
 
 	RCT2_GLOBAL(0x141E9B4, uint16) = 0xFFFF;
 	RCT2_GLOBAL(0x141E9B8, uint16) = 0xFFFF;
@@ -1845,10 +1856,9 @@ void junior_rc_25_deg_up_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8
 
 	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
 
-	if ((RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && !(RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5))) ||
-		!(RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && (RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5)))) {
+	if (junior_rc_support_should_place()) {
 		int edi = direction & 1 ? 2 : 1;
-		RCT2_CALLPROC_X(0x00663105, 8, 4, 0, height, 20, edi, RCT2_GLOBAL(0x00F4419C, uint32));
+		metal_a_supports_paint_setup(edi, 4, 8, height, RCT2_GLOBAL(0x00F4419C, uint32));
 	}
 
 	RCT2_GLOBAL(0x00141E9C4, uint16) = 0xFFFF;
@@ -1911,11 +1921,10 @@ void junior_rc_flat_to_25_deg_up_paint_setup(uint8 rideIndex, uint8 trackSequenc
 
 	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
 
-	if ((RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && !(RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5))) ||
-		!(RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && (RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5)))) {
+	if (junior_rc_support_should_place()) {
 		int edi = direction & 1 ? 2 : 1;
 		uint16 ax = (direction == 0) ? 5 : 3;
-		RCT2_CALLPROC_X(0x00663105, ax, 4, 0, height, 20, edi, RCT2_GLOBAL(0x00F4419C, uint32));
+		metal_a_supports_paint_setup(edi, 4, ax, height, RCT2_GLOBAL(0x00F4419C, uint32));
 	}
 
 	RCT2_GLOBAL(0x00141E9C4, uint16) = 0xFFFF;
@@ -1978,10 +1987,9 @@ void junior_rc_25_deg_up_to_flat_paint_setup(uint8 rideIndex, uint8 trackSequenc
 
 	sub_98196C(image_id, offsetX, offsetY, lengthX, lengthY, 1, height, get_current_rotation());
 
-	if ((RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && !(RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5))) ||
-		!(RCT2_GLOBAL(0x009DE56A, sint16)& (1 << 5) && (RCT2_GLOBAL(0x009DE56E, sint16)& (1 << 5)))) {
+	if (junior_rc_support_should_place()) {
 		int edi = direction & 1 ? 2 : 1;
-		RCT2_CALLPROC_X(0x00663105, 6, 4, 0, height, 20, edi, RCT2_GLOBAL(0x00F4419C, uint32));
+		metal_a_supports_paint_setup(edi, 4, 6, height, RCT2_GLOBAL(0x00F4419C, uint32));
 	}
 
 	RCT2_GLOBAL(0x00141E9C4, uint16) = 0xFFFF;
