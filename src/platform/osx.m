@@ -14,7 +14,7 @@
  *****************************************************************************/
 #pragma endregion
 
-#if defined(__APPLE__) && defined(__MACH__)
+#ifdef __MACOSX__
 
 @import AppKit;
 @import Foundation;
