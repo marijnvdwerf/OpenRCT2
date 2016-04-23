@@ -1,0 +1,202 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		C67FD1D91CCBC2FD0030B465 /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = .DS_Store; sourceTree = "<group>"; };
+		C67FD1DA1CCBC2FD0030B465 /* acinclude.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = acinclude.m4; sourceTree = "<group>"; };
+		C67FD1DB1CCBC2FD0030B465 /* aclocal.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = aclocal.m4; sourceTree = "<group>"; };
+		C67FD1DC1CCBC2FD0030B465 /* AUTHORS */ = {isa = PBXFileReference; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		C67FD1DD1CCBC2FD0030B465 /* ChangeLog */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		C67FD1DE1CCBC2FD0030B465 /* compile */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = compile; sourceTree = "<group>"; };
+		C67FD1DF1CCBC2FD0030B465 /* config.guess */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.guess; sourceTree = "<group>"; };
+		C67FD1E01CCBC2FD0030B465 /* config.h.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.h.in; sourceTree = "<group>"; };
+		C67FD1E11CCBC2FD0030B465 /* config.sub */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config.sub; sourceTree = "<group>"; };
+		C67FD1E21CCBC2FD0030B465 /* configure */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = configure; sourceTree = "<group>"; };
+		C67FD1E31CCBC2FD0030B465 /* configure.ac */ = {isa = PBXFileReference; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
+		C67FD1E41CCBC2FD0030B465 /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		C67FD1E51CCBC2FD0030B465 /* depcomp */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = depcomp; sourceTree = "<group>"; };
+		C67FD1E61CCBC2FD0030B465 /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = doc; sourceTree = "<group>"; };
+		C67FD1E71CCBC2FD0030B465 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		C67FD1E81CCBC2FD0030B465 /* INSTALL */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		C67FD1E91CCBC2FD0030B465 /* install-sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-sh"; sourceTree = "<group>"; };
+		C67FD1EA1CCBC2FD0030B465 /* libspeexdsp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libspeexdsp; sourceTree = "<group>"; };
+		C67FD1EB1CCBC2FD0030B465 /* ltmain.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ltmain.sh; sourceTree = "<group>"; };
+		C67FD1EC1CCBC2FD0030B465 /* m4 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = m4; sourceTree = "<group>"; };
+		C67FD1ED1CCBC2FD0030B465 /* Makefile.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		C67FD1EE1CCBC2FD0030B465 /* Makefile.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		C67FD1EF1CCBC2FD0030B465 /* missing */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = missing; sourceTree = "<group>"; };
+		C67FD1F01CCBC2FD0030B465 /* NEWS */ = {isa = PBXFileReference; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
+		C67FD1F11CCBC2FD0030B465 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		C67FD1F21CCBC2FD0030B465 /* README.blackfin */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.blackfin; sourceTree = "<group>"; };
+		C67FD1F31CCBC2FD0030B465 /* SpeexDSP.kdevelop */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SpeexDSP.kdevelop; sourceTree = "<group>"; };
+		C67FD1F41CCBC2FD0030B465 /* speexdsp.pc.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = speexdsp.pc.in; sourceTree = "<group>"; };
+		C67FD1F51CCBC2FD0030B465 /* SpeexDSP.spec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpeexDSP.spec; sourceTree = "<group>"; };
+		C67FD1F61CCBC2FD0030B465 /* SpeexDSP.spec.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpeexDSP.spec.in; sourceTree = "<group>"; };
+		C67FD1F71CCBC2FD0030B465 /* symbian */ = {isa = PBXFileReference; lastKnownFileType = folder; path = symbian; sourceTree = "<group>"; };
+		C67FD1F81CCBC2FD0030B465 /* ti */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ti; sourceTree = "<group>"; };
+		C67FD1F91CCBC2FD0030B465 /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		C67FD1FA1CCBC2FD0030B465 /* win32 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = win32; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		C67FD1D31CCBC2FD0030B465 = {
+			isa = PBXGroup;
+			children = (
+				C67FD1D91CCBC2FD0030B465 /* .DS_Store */,
+				C67FD1DA1CCBC2FD0030B465 /* acinclude.m4 */,
+				C67FD1DB1CCBC2FD0030B465 /* aclocal.m4 */,
+				C67FD1DC1CCBC2FD0030B465 /* AUTHORS */,
+				C67FD1DD1CCBC2FD0030B465 /* ChangeLog */,
+				C67FD1DE1CCBC2FD0030B465 /* compile */,
+				C67FD1DF1CCBC2FD0030B465 /* config.guess */,
+				C67FD1E01CCBC2FD0030B465 /* config.h.in */,
+				C67FD1E11CCBC2FD0030B465 /* config.sub */,
+				C67FD1E21CCBC2FD0030B465 /* configure */,
+				C67FD1E31CCBC2FD0030B465 /* configure.ac */,
+				C67FD1E41CCBC2FD0030B465 /* COPYING */,
+				C67FD1E51CCBC2FD0030B465 /* depcomp */,
+				C67FD1E61CCBC2FD0030B465 /* doc */,
+				C67FD1E71CCBC2FD0030B465 /* include */,
+				C67FD1E81CCBC2FD0030B465 /* INSTALL */,
+				C67FD1E91CCBC2FD0030B465 /* install-sh */,
+				C67FD1EA1CCBC2FD0030B465 /* libspeexdsp */,
+				C67FD1EB1CCBC2FD0030B465 /* ltmain.sh */,
+				C67FD1EC1CCBC2FD0030B465 /* m4 */,
+				C67FD1ED1CCBC2FD0030B465 /* Makefile.am */,
+				C67FD1EE1CCBC2FD0030B465 /* Makefile.in */,
+				C67FD1EF1CCBC2FD0030B465 /* missing */,
+				C67FD1F01CCBC2FD0030B465 /* NEWS */,
+				C67FD1F11CCBC2FD0030B465 /* README */,
+				C67FD1F21CCBC2FD0030B465 /* README.blackfin */,
+				C67FD1F31CCBC2FD0030B465 /* SpeexDSP.kdevelop */,
+				C67FD1F41CCBC2FD0030B465 /* speexdsp.pc.in */,
+				C67FD1F51CCBC2FD0030B465 /* SpeexDSP.spec */,
+				C67FD1F61CCBC2FD0030B465 /* SpeexDSP.spec.in */,
+				C67FD1F71CCBC2FD0030B465 /* symbian */,
+				C67FD1F81CCBC2FD0030B465 /* ti */,
+				C67FD1F91CCBC2FD0030B465 /* TODO */,
+				C67FD1FA1CCBC2FD0030B465 /* win32 */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		C67FD1D81CCBC2FD0030B465 /* speexdsp */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = C67FD1FB1CCBC2FD0030B465 /* Build configuration list for PBXLegacyTarget "speexdsp" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/speexdsp";
+			dependencies = (
+			);
+			name = speexdsp;
+			passBuildSettingsInEnvironment = 1;
+			productName = speexdsp;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		C67FD1D41CCBC2FD0030B465 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C67FD1D71CCBC2FD0030B465 /* Build configuration list for PBXProject "speexdsp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C67FD1D31CCBC2FD0030B465;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C67FD1D81CCBC2FD0030B465 /* speexdsp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		C67FD1D51CCBC2FD0030B465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C67FD1D61CCBC2FD0030B465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		C67FD1FC1CCBC2FD0030B465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = speexdsp;
+			};
+			name = Debug;
+		};
+		C67FD1FD1CCBC2FD0030B465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = speexdsp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C67FD1D71CCBC2FD0030B465 /* Build configuration list for PBXProject "speexdsp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C67FD1D51CCBC2FD0030B465 /* Debug */,
+				C67FD1D61CCBC2FD0030B465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C67FD1FB1CCBC2FD0030B465 /* Build configuration list for PBXLegacyTarget "speexdsp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C67FD1FC1CCBC2FD0030B465 /* Debug */,
+				C67FD1FD1CCBC2FD0030B465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C67FD1D41CCBC2FD0030B465 /* Project object */;
+}

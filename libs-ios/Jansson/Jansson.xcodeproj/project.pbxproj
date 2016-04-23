@@ -1,0 +1,5199 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		7379FBC453324A93ADC4A503 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 024F720172C74D61AA204D57 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				4B2622DD1E0F4D2E850BA127 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		90EC2B7C8A43428B9863D5A1 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4485B456E3494D0AA7A046AB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				C10B19FA8DBC440F9F7A24A2 /* CMake Rules */,
+			);
+			dependencies = (
+				A44396B2509144649E049F64 /* PBXTargetDependency */,
+				CD2E798CF77849ABAA6C5CC9 /* PBXTargetDependency */,
+				7E1923939FAB427894C921C1 /* PBXTargetDependency */,
+				DF1C531810E346638853D384 /* PBXTargetDependency */,
+				ABAF02505BB9425097BC75EA /* PBXTargetDependency */,
+				3CCC90721C184B7E884B1B30 /* PBXTargetDependency */,
+				CEB164C23546449B92F0A274 /* PBXTargetDependency */,
+				C3376F802D614C9E9E0B5E62 /* PBXTargetDependency */,
+				144EC01DDDFC497A829DED4A /* PBXTargetDependency */,
+				0D484D57D9B749468D4EA2FD /* PBXTargetDependency */,
+				125EC8DBA89142BAA13A3C39 /* PBXTargetDependency */,
+				062A2099B8344779957AEA95 /* PBXTargetDependency */,
+				481DB36436B7419DB5D8B3F6 /* PBXTargetDependency */,
+				7719A3018C7C419FBAFAE4AE /* PBXTargetDependency */,
+				7E96A57721FF4A1FBE3F3FF8 /* PBXTargetDependency */,
+				474AB9FADECE4C4795FD43DC /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		9C12E1707F4A45E6A4833BE2 /* check */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3CAA4174D49941658AD1EF11 /* Build configuration list for PBXAggregateTarget "check" */;
+			buildPhases = (
+				7DCBA643477649BE89BDF1A9 /* CMake Rules */,
+			);
+			dependencies = (
+				5297A277E3C44479A09FFE04 /* PBXTargetDependency */,
+				965BCFB6A52D423B81CED8B0 /* PBXTargetDependency */,
+				086D37F3ED4340349C2F778C /* PBXTargetDependency */,
+				257656009830498D9967F48F /* PBXTargetDependency */,
+				3685B19C7DEB40349F0467DD /* PBXTargetDependency */,
+				0A55C1DF11BC422F9448DC65 /* PBXTargetDependency */,
+				CA974F5755AE406E86F67623 /* PBXTargetDependency */,
+				735D747C56F5432F831ACE48 /* PBXTargetDependency */,
+				57D2C8F406D04B2488ABB101 /* PBXTargetDependency */,
+				D29677E4C9434743B17C70F7 /* PBXTargetDependency */,
+				62C62C0B6EF74318A4CA299B /* PBXTargetDependency */,
+				F2391896736D4E5B89F61CF2 /* PBXTargetDependency */,
+				1A1BD1E50D9443FA9FB26217 /* PBXTargetDependency */,
+				FA9C5CF3AD5B4D18BB929FAC /* PBXTargetDependency */,
+				005FAF0ABBBE4A839C9DA31A /* PBXTargetDependency */,
+			);
+			name = check;
+			productName = check;
+		};
+		A303790769B840498D1384EE /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00255BBB2C9C40A2B78D6CB6 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				B562B8DF46144252A794D0D5 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				470120E490F84CAABF458D14 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		FA118024F3E64AF6AE683CE7 /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C9F67EA16A7A4E1B8C264294 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				E6E7298AF1E84EC6A69AB1A0 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0320844C0367456E8F81A0DF /* pack_unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F57D5825545463992174B2D /* pack_unpack.c */; settings = {COMPILER_FLAGS = ""; }; };
+		0A50D2793F7B48AE9229581E /* hashtable_seed.c in Sources */ = {isa = PBXBuildFile; fileRef = BB6A7F346BAC4A9E954E95EF /* hashtable_seed.c */; settings = {COMPILER_FLAGS = ""; }; };
+		1044F11EF5804C07B2F06672 /* test_dump.c in Sources */ = {isa = PBXBuildFile; fileRef = 55826B6A0C0F43B2B3E4D624 /* test_dump.c */; settings = {COMPILER_FLAGS = ""; }; };
+		1AE0628B02864948AD430C93 /* value.c in Sources */ = {isa = PBXBuildFile; fileRef = 75F972BCB2DD45A498C32AB5 /* value.c */; settings = {COMPILER_FLAGS = ""; }; };
+		24199A9C8D6847FD8BC07ABE /* utf.c in Sources */ = {isa = PBXBuildFile; fileRef = F6042C2F85544D9DBB9F779D /* utf.c */; settings = {COMPILER_FLAGS = ""; }; };
+		2985B54637A14E61AC4EF866 /* test_dump_callback.c in Sources */ = {isa = PBXBuildFile; fileRef = EDAC50C0E8BD493383A308FA /* test_dump_callback.c */; settings = {COMPILER_FLAGS = ""; }; };
+		2E793DD1E32943FB99170381 /* load.c in Sources */ = {isa = PBXBuildFile; fileRef = F6AE13CC402B4649ABC22D9E /* load.c */; settings = {COMPILER_FLAGS = ""; }; };
+		3256C4CECD4E4A61BBFE484C /* strconv.c in Sources */ = {isa = PBXBuildFile; fileRef = C922C3DD4B824318950EFF55 /* strconv.c */; settings = {COMPILER_FLAGS = ""; }; };
+		404209EF470C404889CF26C4 /* test_loadb.c in Sources */ = {isa = PBXBuildFile; fileRef = 688D3FA1B882429AAE021669 /* test_loadb.c */; settings = {COMPILER_FLAGS = ""; }; };
+		44A7A2106CDE47588EFB9CCD /* test_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = E1F3F9F4FF004FC08A16DE22 /* test_copy.c */; settings = {COMPILER_FLAGS = ""; }; };
+		4CBF68D5C3DD4DBCB9D225CE /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDC173CD484E39924FA6D6 /* error.c */; settings = {COMPILER_FLAGS = ""; }; };
+		56ACED43D02F46429B9430C5 /* test_number.c in Sources */ = {isa = PBXBuildFile; fileRef = FBEA142EE5D847FDACAB8BCE /* test_number.c */; settings = {COMPILER_FLAGS = ""; }; };
+		609F91BC8A36445699ED30D0 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB077CD20A54CF8B518C01C /* memory.c */; settings = {COMPILER_FLAGS = ""; }; };
+		6FF80E3562864865BAE58323 /* test_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C839F615A6F48E98A10B311 /* test_object.c */; settings = {COMPILER_FLAGS = ""; }; };
+		7F32FC16ABD94214AB84738A /* json_process.c in Sources */ = {isa = PBXBuildFile; fileRef = DA51B10C06F74D66A2036487 /* json_process.c */; settings = {COMPILER_FLAGS = ""; }; };
+		7F46EFF73F1440A884AEDABD /* test_equal.c in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D8F34F2644D88870801B /* test_equal.c */; settings = {COMPILER_FLAGS = ""; }; };
+		8A75412D05544EDBA6FC87F5 /* test_pack.c in Sources */ = {isa = PBXBuildFile; fileRef = E09CDCCDC3C14F19AD2114E7 /* test_pack.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A15292AD00C44291BE91966A /* strbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = B8A7549152DC415D82E0DD2E /* strbuffer.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A3D310870B0E4CCABCD6F68F /* dump.c in Sources */ = {isa = PBXBuildFile; fileRef = DC0D30939379443A83FBDAAB /* dump.c */; settings = {COMPILER_FLAGS = ""; }; };
+		B9E138D574F5479DA7F685D0 /* test_load.c in Sources */ = {isa = PBXBuildFile; fileRef = FDBFC7A288634AB19BF6745A /* test_load.c */; settings = {COMPILER_FLAGS = ""; }; };
+		D0D47E3D64DE4DE091F33CD3 /* test_unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = AED6E87E440D49B2AD4C0CA1 /* test_unpack.c */; settings = {COMPILER_FLAGS = ""; }; };
+		DC3F4B21DDE84A6A8CBE2E15 /* hashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = 49E0E731F5564BDC99A0F21E /* hashtable.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E5AE077FE39949D0B591013D /* test_simple.c in Sources */ = {isa = PBXBuildFile; fileRef = 65544FD7C6AC4BB49A435A26 /* test_simple.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F04CE7951FA542EF97DF4B9C /* test_memory_funcs.c in Sources */ = {isa = PBXBuildFile; fileRef = D32A91B9A0D54574819E2FE4 /* test_memory_funcs.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F832094080ED4C20B8E23D80 /* test_array.c in Sources */ = {isa = PBXBuildFile; fileRef = C42BA8CE6E3D4CBCBE2F7D41 /* test_array.c */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04CFBB272F5841FCBF78D396 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		070926F9670D4DFD9855EB74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		0CF0B41C0C464F5C92BD6804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3628017399D24488A9080AA4;
+			remoteInfo = test_copy;
+		};
+		11907F1947664E50A0792D3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5CF703EB27460F9E659528;
+			remoteInfo = test_memory_funcs;
+		};
+		13E81823DA354A3A89C230D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		143D7AD2A96049F0A9042CC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2ED675A7264D4B5D9CC2B5C1;
+			remoteInfo = test_load;
+		};
+		29F13FCF84394EBC8FB79FEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		2BB53723282840489926D2F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		2D0DD4A4D2FA44618BE90780 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D3778B3F0AF42A1BA176FF3;
+			remoteInfo = json_process;
+		};
+		2E139B2BE627431DA72010DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		2F25B30C17AA4CC2B296021F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8E45A2BB6A0498F9445B937;
+			remoteInfo = test_number;
+		};
+		2F76DDF8919644E282323218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		3823701D801F4CBAB9ADAACE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3628017399D24488A9080AA4;
+			remoteInfo = test_copy;
+		};
+		39C3AED72FC3496985DB2586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		44334D359E2D4A1C8133EB77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CD100C1DF294DF8BA2BEB39;
+			remoteInfo = test_array;
+		};
+		474F1EF520484D5A96055A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1063BF0E18DD4A7ABC3745EE;
+			remoteInfo = test_equal;
+		};
+		4E6AD805FF9346749AB1245B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBF69D18BCCB44929188FC6D;
+			remoteInfo = test_object;
+		};
+		51C5C3847CD4409B8D057305 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		5ABD208B8B5F4EF9AA4C3FD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		5C240A99854F40F79C7BEEE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2023D95AC7CD4A7596FC732D;
+			remoteInfo = test_unpack;
+		};
+		6589A6BF455E4C03A6829C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8E45A2BB6A0498F9445B937;
+			remoteInfo = test_number;
+		};
+		6A705AEA67A14FC98C07DBB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		6FC3CEF1D8BE4B4390B46161 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		7C6513B3543D483391A4C031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D3778B3F0AF42A1BA176FF3;
+			remoteInfo = json_process;
+		};
+		8C2CEAAEE99A442D97E83EDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F258ED810D5E4A2DB484086A;
+			remoteInfo = test_dump;
+		};
+		8DC1F0FD3676408E837BDFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		924FF077400943448A0B1FB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		966BFE0704D145DEA0096938 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		9C5ECAED600F493B92432DD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1063BF0E18DD4A7ABC3745EE;
+			remoteInfo = test_equal;
+		};
+		9DFCC10EC6964D20BB98CAB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		A1495F88574342A5857C8003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		A2AB10878BC04C949FA756EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90EC2B7C8A43428B9863D5A1;
+			remoteInfo = ALL_BUILD;
+		};
+		A2F9437912CA427C81D5F5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67594C4160DF41A487D2A414;
+			remoteInfo = test_dump_callback;
+		};
+		A54ED13D07134ED7BC70CFD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		AA87486933D54F168C56FEC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		AB752D4740ED443590BC68CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBF69D18BCCB44929188FC6D;
+			remoteInfo = test_object;
+		};
+		ACF3E9F055CB454B9D19926C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2ED675A7264D4B5D9CC2B5C1;
+			remoteInfo = test_load;
+		};
+		B4E877E9F5D6409FB2EA4FE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		B7067FC119BB4BD592214CF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		B8272A28D4524C44976BF5EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 043C00A0E1284BBF838B8CD2;
+			remoteInfo = test_simple;
+		};
+		B836855D27E842B2934339AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6FC7B8D3C674A44A7690483;
+			remoteInfo = test_loadb;
+		};
+		B87A3391EFDE4AE4BCCD7E84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67594C4160DF41A487D2A414;
+			remoteInfo = test_dump_callback;
+		};
+		BA4D69888471497D95D2C5FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F258ED810D5E4A2DB484086A;
+			remoteInfo = test_dump;
+		};
+		BD96B164643A4373895B1416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		C20AA7D7F3B9456DAB32F0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6FC7B8D3C674A44A7690483;
+			remoteInfo = test_loadb;
+		};
+		C4663F3579754D1282B5ABF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		CCD2F004AA24400CA2B0A4BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CD100C1DF294DF8BA2BEB39;
+			remoteInfo = test_array;
+		};
+		CFB4822523434014BBF29028 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		D9AE5F30A03042C78388D094 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCE7BF9ED9364705AC13E99B;
+			remoteInfo = test_pack;
+		};
+		DC6E290E814E46589054A34F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		DD1BF1317A8343D280962208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2023D95AC7CD4A7596FC732D;
+			remoteInfo = test_unpack;
+		};
+		DED45E343B3149C6ACE87F47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		E0CF308B349E46ED9D3356E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5CF703EB27460F9E659528;
+			remoteInfo = test_memory_funcs;
+		};
+		E60766054F26440AA89FEF11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		E6410FB3695B46FA8AB5438F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 043C00A0E1284BBF838B8CD2;
+			remoteInfo = test_simple;
+		};
+		E8C77B410DA7462D84E9B208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7379FBC453324A93ADC4A503;
+			remoteInfo = ZERO_CHECK;
+		};
+		EA1CCBA1CAC345F99D37217C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCE7BF9ED9364705AC13E99B;
+			remoteInfo = test_pack;
+		};
+		EA83480C5ED2497DA3EF650A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		EC256C4F4D8A495781038946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		F7241FB3026244E9B410714E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		F8B986EEBA6342FCBC316FDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7FBC341A044FE0A4DAB623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0319133DBD604A6EA0E4390D /* strbuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = strbuffer.h; path = src/strbuffer.h; sourceTree = SOURCE_ROOT; };
+		03A511E403204D4EBAC41F6A /* utf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = utf.h; path = src/utf.h; sourceTree = SOURCE_ROOT; };
+		0583143205FD426CB98B1149 /* test_object */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_object; sourceTree = BUILT_PRODUCTS_DIR; };
+		08290EEC5AF741FEBF3DBADE /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0C839F615A6F48E98A10B311 /* test_object.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_object.c; path = test/suites/api/test_object.c; sourceTree = SOURCE_ROOT; };
+		1EFDC173CD484E39924FA6D6 /* error.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = error.c; path = src/error.c; sourceTree = SOURCE_ROOT; };
+		27CBC2363FA84DF4A5F033CB /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2CB077CD20A54CF8B518C01C /* memory.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = memory.c; path = src/memory.c; sourceTree = SOURCE_ROOT; };
+		2D98048BC901454EB2001700 /* test_load */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_load; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D4E714B735448DB4642487 /* jansson_private_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jansson_private_config.h; path = private_include/jansson_private_config.h; sourceTree = SOURCE_ROOT; };
+		3F57D5825545463992174B2D /* pack_unpack.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pack_unpack.c; path = src/pack_unpack.c; sourceTree = SOURCE_ROOT; };
+		41AD635B70ED4D8BB4F42EB2 /* jansson.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jansson.h; path = src/jansson.h; sourceTree = SOURCE_ROOT; };
+		470CC47952254793A11E418F /* hashtable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = hashtable.h; path = src/hashtable.h; sourceTree = SOURCE_ROOT; };
+		476DF36D95A94E439BC67033 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		498060144C4C4BA08D371DA3 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		49E0E731F5564BDC99A0F21E /* hashtable.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = hashtable.c; path = src/hashtable.c; sourceTree = SOURCE_ROOT; };
+		4A9C6155A16F48C9BC2E9135 /* test_dump */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_dump; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B426FAF40EF411CBFC392E1 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		55826B6A0C0F43B2B3E4D624 /* test_dump.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_dump.c; path = test/suites/api/test_dump.c; sourceTree = SOURCE_ROOT; };
+		5CC5B3551ECE444FA61844C1 /* test_memory_funcs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_memory_funcs; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D9A2CBF67FA4440B03D24A7 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		65544FD7C6AC4BB49A435A26 /* test_simple.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_simple.c; path = test/suites/api/test_simple.c; sourceTree = SOURCE_ROOT; };
+		688D3FA1B882429AAE021669 /* test_loadb.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_loadb.c; path = test/suites/api/test_loadb.c; sourceTree = SOURCE_ROOT; };
+		70F3D8F34F2644D88870801B /* test_equal.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_equal.c; path = test/suites/api/test_equal.c; sourceTree = SOURCE_ROOT; };
+		73B4E9E68A68460DBA3EB2AC /* libjansson.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libjansson.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		73FDFF676C3E450992AD2B4B /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		75F972BCB2DD45A498C32AB5 /* value.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = value.c; path = src/value.c; sourceTree = SOURCE_ROOT; };
+		792560EA457345138A117E55 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7B75CC3091A0489BBC5E5011 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7FC725318BC042D283706965 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		82DE9AEB8033425598CB4816 /* jansson_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jansson_config.h; path = include/jansson_config.h; sourceTree = SOURCE_ROOT; };
+		94A7C54E61514937BFBCC6C4 /* test_loadb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_loadb; sourceTree = BUILT_PRODUCTS_DIR; };
+		973D61D8C1E841679D49C783 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9B40EA18CFA34A0FB99B3F44 /* test_dump_callback */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_dump_callback; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CD24F208AF74B5F8276CD7A /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9D760B5D71DB4D49AB833A67 /* test_simple */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_simple; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DFABE4DE42D4B068F366AEA /* jansson_private.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jansson_private.h; path = src/jansson_private.h; sourceTree = SOURCE_ROOT; };
+		A058D5FCA3684439B822F397 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		AC009F8ECCCD43B99C882417 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		ADB3BF4FFD8C4261A3CBBCA9 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		AED6E87E440D49B2AD4C0CA1 /* test_unpack.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_unpack.c; path = test/suites/api/test_unpack.c; sourceTree = SOURCE_ROOT; };
+		B462364B996749498810DA88 /* test_pack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_pack; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A7549152DC415D82E0DD2E /* strbuffer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = strbuffer.c; path = src/strbuffer.c; sourceTree = SOURCE_ROOT; };
+		BB6A7F346BAC4A9E954E95EF /* hashtable_seed.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = hashtable_seed.c; path = src/hashtable_seed.c; sourceTree = SOURCE_ROOT; };
+		C42BA8CE6E3D4CBCBE2F7D41 /* test_array.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_array.c; path = test/suites/api/test_array.c; sourceTree = SOURCE_ROOT; };
+		C59DC513A57B49F7A9C1EB3B /* test_unpack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_unpack; sourceTree = BUILT_PRODUCTS_DIR; };
+		C922C3DD4B824318950EFF55 /* strconv.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = strconv.c; path = src/strconv.c; sourceTree = SOURCE_ROOT; };
+		CC211357EED54E25B37EF69C /* test_number */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_number; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32A91B9A0D54574819E2FE4 /* test_memory_funcs.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_memory_funcs.c; path = test/suites/api/test_memory_funcs.c; sourceTree = SOURCE_ROOT; };
+		D5203ECA4DA0411F82EEA9BC /* test_equal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_equal; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA51B10C06F74D66A2036487 /* json_process.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = json_process.c; path = test/bin/json_process.c; sourceTree = SOURCE_ROOT; };
+		DC0D30939379443A83FBDAAB /* dump.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dump.c; path = src/dump.c; sourceTree = SOURCE_ROOT; };
+		E09CDCCDC3C14F19AD2114E7 /* test_pack.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_pack.c; path = test/suites/api/test_pack.c; sourceTree = SOURCE_ROOT; };
+		E1F3F9F4FF004FC08A16DE22 /* test_copy.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_copy.c; path = test/suites/api/test_copy.c; sourceTree = SOURCE_ROOT; };
+		E5EEF6940913498F9BBBCAE6 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		EA8C6A6577D4443DB3E5BD4A /* json_process */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = json_process; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDAC50C0E8BD493383A308FA /* test_dump_callback.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_dump_callback.c; path = test/suites/api/test_dump_callback.c; sourceTree = SOURCE_ROOT; };
+		EDE882F1ECAE48F4A941E922 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F4D11A56574945B78D3147B2 /* test_array */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_array; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6042C2F85544D9DBB9F779D /* utf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = utf.c; path = src/utf.c; sourceTree = SOURCE_ROOT; };
+		F63CE1AB3B304D6ABD8422A4 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F6AE13CC402B4649ABC22D9E /* load.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = load.c; path = src/load.c; sourceTree = SOURCE_ROOT; };
+		FBEA142EE5D847FDACAB8BCE /* test_number.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_number.c; path = test/suites/api/test_number.c; sourceTree = SOURCE_ROOT; };
+		FBFD0E2AA8E14C7992031734 /* test_copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_copy; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBFC7A288634AB19BF6745A /* test_load.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = test_load.c; path = test/suites/api/test_load.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0075A1EF2C1D47188EB5FB6E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				AED6E87E440D49B2AD4C0CA1 /* test_unpack.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		0294CAF71FE24C868D4E9A0C /* Library Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DC0D30939379443A83FBDAAB /* dump.c */,
+				1EFDC173CD484E39924FA6D6 /* error.c */,
+				49E0E731F5564BDC99A0F21E /* hashtable.c */,
+				BB6A7F346BAC4A9E954E95EF /* hashtable_seed.c */,
+				F6AE13CC402B4649ABC22D9E /* load.c */,
+				2CB077CD20A54CF8B518C01C /* memory.c */,
+				3F57D5825545463992174B2D /* pack_unpack.c */,
+				B8A7549152DC415D82E0DD2E /* strbuffer.c */,
+				C922C3DD4B824318950EFF55 /* strconv.c */,
+				F6042C2F85544D9DBB9F779D /* utf.c */,
+				75F972BCB2DD45A498C32AB5 /* value.c */,
+			);
+			name = "Library Sources";
+			sourceTree = "<group>";
+		};
+		03ACDA7430AA44F1BF5CCD43 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		16B1ADE7BC104E259C34E6B0 /* check */ = {
+			isa = PBXGroup;
+			children = (
+				F4D505A4083D401A8360FA4B /* CMake Rules */,
+				ADB3BF4FFD8C4261A3CBBCA9 /* CMakeLists.txt */,
+			);
+			name = check;
+			sourceTree = "<group>";
+		};
+		21688DCAA1B94B41A44F5118 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				03ACDA7430AA44F1BF5CCD43 /* CMake Rules */,
+				792560EA457345138A117E55 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		250A4D7D79B545E19EB53EE1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDBFC7A288634AB19BF6745A /* test_load.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		2CA4D12454C94E68A79713DA /* test_memory_funcs */ = {
+			isa = PBXGroup;
+			children = (
+				7C1070875B254AA58E73E77F /* Source Files */,
+				EDE882F1ECAE48F4A941E922 /* CMakeLists.txt */,
+			);
+			name = test_memory_funcs;
+			sourceTree = "<group>";
+		};
+		325FFDA50A6541AFB4809517 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				55826B6A0C0F43B2B3E4D624 /* test_dump.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		32781AEA107243E699F66EE6 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				688D3FA1B882429AAE021669 /* test_loadb.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		357B13B066E64FD38E6CC9B1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				16B1ADE7BC104E259C34E6B0 /* check */,
+				FB57EA21C9624AC9ADC15D0F /* json_process */,
+				2CA4D12454C94E68A79713DA /* test_memory_funcs */,
+				4B2AA6C3C0F74D81B2725B11 /* test_unpack */,
+				CD7F112A26534A679E05D808 /* test_simple */,
+				CE8F34BDFC67455AA1D24432 /* test_dump */,
+				6C86332340334FA295FCFBED /* test_number */,
+				6ED1F6E2767D44EB9A77F735 /* test_object */,
+				8AC57D445A3B4F21BD5E7005 /* test_load */,
+				749CAD4D6C3D4CD19460D2B8 /* test_dump_callback */,
+				929F220BA51F44B2A7BD45AC /* jansson */,
+				9E62A426DCA04BA58D1B02FB /* test_pack */,
+				EFDC4CCC59134AC2B804D1E8 /* test_loadb */,
+				A0F758941FB6490B9BDB2B6B /* test_equal */,
+				3978A56778BC4DAE8B3B08A8 /* test_copy */,
+				F12C76B59F554F90A7B1EB5D /* test_array */,
+				21688DCAA1B94B41A44F5118 /* ALL_BUILD */,
+				F9E8A07B11F64E55914D64E7 /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		3978A56778BC4DAE8B3B08A8 /* test_copy */ = {
+			isa = PBXGroup;
+			children = (
+				418133B9CBB041A482EB2514 /* Source Files */,
+				476DF36D95A94E439BC67033 /* CMakeLists.txt */,
+			);
+			name = test_copy;
+			sourceTree = "<group>";
+		};
+		418133B9CBB041A482EB2514 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1F3F9F4FF004FC08A16DE22 /* test_copy.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		4B2AA6C3C0F74D81B2725B11 /* test_unpack */ = {
+			isa = PBXGroup;
+			children = (
+				0075A1EF2C1D47188EB5FB6E /* Source Files */,
+				F63CE1AB3B304D6ABD8422A4 /* CMakeLists.txt */,
+			);
+			name = test_unpack;
+			sourceTree = "<group>";
+		};
+		6C86332340334FA295FCFBED /* test_number */ = {
+			isa = PBXGroup;
+			children = (
+				B884B21443FA4AE492263BE5 /* Source Files */,
+				E5EEF6940913498F9BBBCAE6 /* CMakeLists.txt */,
+			);
+			name = test_number;
+			sourceTree = "<group>";
+		};
+		6ED1F6E2767D44EB9A77F735 /* test_object */ = {
+			isa = PBXGroup;
+			children = (
+				D7F5000CEFFF4929A22D8228 /* Source Files */,
+				7FC725318BC042D283706965 /* CMakeLists.txt */,
+			);
+			name = test_object;
+			sourceTree = "<group>";
+		};
+		749CAD4D6C3D4CD19460D2B8 /* test_dump_callback */ = {
+			isa = PBXGroup;
+			children = (
+				D960A78B453C4E3F866B9D47 /* Source Files */,
+				27CBC2363FA84DF4A5F033CB /* CMakeLists.txt */,
+			);
+			name = test_dump_callback;
+			sourceTree = "<group>";
+		};
+		7A2D42CB8AED46E090A1D91D /* Library Private Headers */ = {
+			isa = PBXGroup;
+			children = (
+				30D4E714B735448DB4642487 /* jansson_private_config.h */,
+				470CC47952254793A11E418F /* hashtable.h */,
+				9DFABE4DE42D4B068F366AEA /* jansson_private.h */,
+				0319133DBD604A6EA0E4390D /* strbuffer.h */,
+				03A511E403204D4EBAC41F6A /* utf.h */,
+			);
+			name = "Library Private Headers";
+			sourceTree = "<group>";
+		};
+		7C1070875B254AA58E73E77F /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				D32A91B9A0D54574819E2FE4 /* test_memory_funcs.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		867382577B964E9590DECB9B /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E09CDCCDC3C14F19AD2114E7 /* test_pack.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		8AC57D445A3B4F21BD5E7005 /* test_load */ = {
+			isa = PBXGroup;
+			children = (
+				250A4D7D79B545E19EB53EE1 /* Source Files */,
+				4B426FAF40EF411CBFC392E1 /* CMakeLists.txt */,
+			);
+			name = test_load;
+			sourceTree = "<group>";
+		};
+		90D60DA0273D4DF4BD870582 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA51B10C06F74D66A2036487 /* json_process.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		929F220BA51F44B2A7BD45AC /* jansson */ = {
+			isa = PBXGroup;
+			children = (
+				0294CAF71FE24C868D4E9A0C /* Library Sources */,
+				7A2D42CB8AED46E090A1D91D /* Library Private Headers */,
+				D5B329C125C245BD8AA51009 /* Library Public Headers */,
+				5D9A2CBF67FA4440B03D24A7 /* CMakeLists.txt */,
+			);
+			name = jansson;
+			sourceTree = "<group>";
+		};
+		9E62A426DCA04BA58D1B02FB /* test_pack */ = {
+			isa = PBXGroup;
+			children = (
+				867382577B964E9590DECB9B /* Source Files */,
+				08290EEC5AF741FEBF3DBADE /* CMakeLists.txt */,
+			);
+			name = test_pack;
+			sourceTree = "<group>";
+		};
+		A0F758941FB6490B9BDB2B6B /* test_equal */ = {
+			isa = PBXGroup;
+			children = (
+				C6E005CABF094427A41AAB08 /* Source Files */,
+				498060144C4C4BA08D371DA3 /* CMakeLists.txt */,
+			);
+			name = test_equal;
+			sourceTree = "<group>";
+		};
+		ADDBD919D01F4605965C45B1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				65544FD7C6AC4BB49A435A26 /* test_simple.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B884B21443FA4AE492263BE5 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBEA142EE5D847FDACAB8BCE /* test_number.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		BE126D978618420E951C948C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C6E005CABF094427A41AAB08 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				70F3D8F34F2644D88870801B /* test_equal.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		CD7F112A26534A679E05D808 /* test_simple */ = {
+			isa = PBXGroup;
+			children = (
+				ADDBD919D01F4605965C45B1 /* Source Files */,
+				A058D5FCA3684439B822F397 /* CMakeLists.txt */,
+			);
+			name = test_simple;
+			sourceTree = "<group>";
+		};
+		CE8F34BDFC67455AA1D24432 /* test_dump */ = {
+			isa = PBXGroup;
+			children = (
+				325FFDA50A6541AFB4809517 /* Source Files */,
+				9CD24F208AF74B5F8276CD7A /* CMakeLists.txt */,
+			);
+			name = test_dump;
+			sourceTree = "<group>";
+		};
+		D5B329C125C245BD8AA51009 /* Library Public Headers */ = {
+			isa = PBXGroup;
+			children = (
+				82DE9AEB8033425598CB4816 /* jansson_config.h */,
+				41AD635B70ED4D8BB4F42EB2 /* jansson.h */,
+			);
+			name = "Library Public Headers";
+			sourceTree = "<group>";
+		};
+		D7F5000CEFFF4929A22D8228 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C839F615A6F48E98A10B311 /* test_object.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D960A78B453C4E3F866B9D47 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDAC50C0E8BD493383A308FA /* test_dump_callback.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		E37DE5CCF9F541E48DE1E3C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73B4E9E68A68460DBA3EB2AC /* libjansson.a */,
+				EA8C6A6577D4443DB3E5BD4A /* json_process */,
+				F4D11A56574945B78D3147B2 /* test_array */,
+				FBFD0E2AA8E14C7992031734 /* test_copy */,
+				4A9C6155A16F48C9BC2E9135 /* test_dump */,
+				9B40EA18CFA34A0FB99B3F44 /* test_dump_callback */,
+				D5203ECA4DA0411F82EEA9BC /* test_equal */,
+				2D98048BC901454EB2001700 /* test_load */,
+				94A7C54E61514937BFBCC6C4 /* test_loadb */,
+				5CC5B3551ECE444FA61844C1 /* test_memory_funcs */,
+				CC211357EED54E25B37EF69C /* test_number */,
+				0583143205FD426CB98B1149 /* test_object */,
+				B462364B996749498810DA88 /* test_pack */,
+				9D760B5D71DB4D49AB833A67 /* test_simple */,
+				C59DC513A57B49F7A9C1EB3B /* test_unpack */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8539092A2D040E290E0CB15 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		EFDC4CCC59134AC2B804D1E8 /* test_loadb */ = {
+			isa = PBXGroup;
+			children = (
+				32781AEA107243E699F66EE6 /* Source Files */,
+				7B75CC3091A0489BBC5E5011 /* CMakeLists.txt */,
+			);
+			name = test_loadb;
+			sourceTree = "<group>";
+		};
+		F12C76B59F554F90A7B1EB5D /* test_array */ = {
+			isa = PBXGroup;
+			children = (
+				FDE609BF4E3E4BED967510DD /* Source Files */,
+				973D61D8C1E841679D49C783 /* CMakeLists.txt */,
+			);
+			name = test_array;
+			sourceTree = "<group>";
+		};
+		F4D505A4083D401A8360FA4B /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		F9E8A07B11F64E55914D64E7 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				E8539092A2D040E290E0CB15 /* CMake Rules */,
+				73FDFF676C3E450992AD2B4B /* CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		FB57EA21C9624AC9ADC15D0F /* json_process */ = {
+			isa = PBXGroup;
+			children = (
+				90D60DA0273D4DF4BD870582 /* Source Files */,
+				AC009F8ECCCD43B99C882417 /* CMakeLists.txt */,
+			);
+			name = json_process;
+			sourceTree = "<group>";
+		};
+		FDE609BF4E3E4BED967510DD /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C42BA8CE6E3D4CBCBE2F7D41 /* test_array.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		FF446A97B14C416BB8B3AC79 = {
+			isa = PBXGroup;
+			children = (
+				357B13B066E64FD38E6CC9B1 /* Sources */,
+				BE126D978618420E951C948C /* Resources */,
+				E37DE5CCF9F541E48DE1E3C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		043C00A0E1284BBF838B8CD2 /* test_simple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FCFC171D5B64D7984F89DDC /* Build configuration list for PBXNativeTarget "test_simple" */;
+			buildPhases = (
+				0119B76D778644B8A7FF273B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFDB1B625E354C1491625637 /* PBXTargetDependency */,
+				6E6CDDEDC4734AF3BC67F7AA /* PBXTargetDependency */,
+			);
+			name = test_simple;
+			productName = test_simple;
+			productReference = 9D760B5D71DB4D49AB833A67 /* test_simple */;
+			productType = "com.apple.product-type.tool";
+		};
+		1063BF0E18DD4A7ABC3745EE /* test_equal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 540ED3C87CA14BF29C8ED566 /* Build configuration list for PBXNativeTarget "test_equal" */;
+			buildPhases = (
+				AAF8741FC13D418FAC004315 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD8AAE4F238D44D897597A03 /* PBXTargetDependency */,
+				650FC2C2C8B04AD2A26D2B88 /* PBXTargetDependency */,
+			);
+			name = test_equal;
+			productName = test_equal;
+			productReference = D5203ECA4DA0411F82EEA9BC /* test_equal */;
+			productType = "com.apple.product-type.tool";
+		};
+		2023D95AC7CD4A7596FC732D /* test_unpack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC9B16A66BF4D05B0993DE5 /* Build configuration list for PBXNativeTarget "test_unpack" */;
+			buildPhases = (
+				109E353E108042D285C1C25E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D4732BAB39B4E28A1B584D5 /* PBXTargetDependency */,
+				0E307632D5EE43E4BFABD2F6 /* PBXTargetDependency */,
+			);
+			name = test_unpack;
+			productName = test_unpack;
+			productReference = C59DC513A57B49F7A9C1EB3B /* test_unpack */;
+			productType = "com.apple.product-type.tool";
+		};
+		2ED675A7264D4B5D9CC2B5C1 /* test_load */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B3AB6D332F845E3A71F62D8 /* Build configuration list for PBXNativeTarget "test_load" */;
+			buildPhases = (
+				24EB72F88F5949CBB6C28E71 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				171AB3C6AB7E40408B1927FF /* PBXTargetDependency */,
+				546A655804F94AEE9CDB0A4D /* PBXTargetDependency */,
+			);
+			name = test_load;
+			productName = test_load;
+			productReference = 2D98048BC901454EB2001700 /* test_load */;
+			productType = "com.apple.product-type.tool";
+		};
+		3628017399D24488A9080AA4 /* test_copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21434BB09BA74A0DAD86BADC /* Build configuration list for PBXNativeTarget "test_copy" */;
+			buildPhases = (
+				08815E31CD9C4438920E172A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A44FF0ACC8144C0AAF4508D8 /* PBXTargetDependency */,
+				3BD4F379FD3249859DE76374 /* PBXTargetDependency */,
+			);
+			name = test_copy;
+			productName = test_copy;
+			productReference = FBFD0E2AA8E14C7992031734 /* test_copy */;
+			productType = "com.apple.product-type.tool";
+		};
+		67594C4160DF41A487D2A414 /* test_dump_callback */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD60BDD77F9343588E430E32 /* Build configuration list for PBXNativeTarget "test_dump_callback" */;
+			buildPhases = (
+				FE71E521A8DD4C8482DB382A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCCBB16EB088429D97EBB43B /* PBXTargetDependency */,
+				B45D4E52BAE642E1A58B13F6 /* PBXTargetDependency */,
+			);
+			name = test_dump_callback;
+			productName = test_dump_callback;
+			productReference = 9B40EA18CFA34A0FB99B3F44 /* test_dump_callback */;
+			productType = "com.apple.product-type.tool";
+		};
+		7D5CF703EB27460F9E659528 /* test_memory_funcs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11A82CB1864749A3B9F4EBD9 /* Build configuration list for PBXNativeTarget "test_memory_funcs" */;
+			buildPhases = (
+				09B5BCFC6B17480EB5454D29 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4023AAABE074AF9B2DFAC9B /* PBXTargetDependency */,
+				F79B4B2E9E3D44F98A4F3795 /* PBXTargetDependency */,
+			);
+			name = test_memory_funcs;
+			productName = test_memory_funcs;
+			productReference = 5CC5B3551ECE444FA61844C1 /* test_memory_funcs */;
+			productType = "com.apple.product-type.tool";
+		};
+		8CD100C1DF294DF8BA2BEB39 /* test_array */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E323CC185ED4177B06BD463 /* Build configuration list for PBXNativeTarget "test_array" */;
+			buildPhases = (
+				A4A2582A9C9F4C9780E1CD22 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB1A9A84B33C47EF9D19EB1C /* PBXTargetDependency */,
+				E26DF284C90B436CBD4D451B /* PBXTargetDependency */,
+			);
+			name = test_array;
+			productName = test_array;
+			productReference = F4D11A56574945B78D3147B2 /* test_array */;
+			productType = "com.apple.product-type.tool";
+		};
+		9D3778B3F0AF42A1BA176FF3 /* json_process */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6946B81774294AE6856AD0B3 /* Build configuration list for PBXNativeTarget "json_process" */;
+			buildPhases = (
+				1160D0EE0B4B421CA9340206 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				864FCFB71D104BB2ADC1501D /* PBXTargetDependency */,
+				9D8A22D1C76E4058A7FE56D4 /* PBXTargetDependency */,
+			);
+			name = json_process;
+			productName = json_process;
+			productReference = EA8C6A6577D4443DB3E5BD4A /* json_process */;
+			productType = "com.apple.product-type.tool";
+		};
+		A8E45A2BB6A0498F9445B937 /* test_number */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB73BDAC386247959A2B289E /* Build configuration list for PBXNativeTarget "test_number" */;
+			buildPhases = (
+				DB0449AAE1A5497B8A7E9CF6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C30BF0FE69F44626B05B3763 /* PBXTargetDependency */,
+				2C60513F9F60439198493F42 /* PBXTargetDependency */,
+			);
+			name = test_number;
+			productName = test_number;
+			productReference = CC211357EED54E25B37EF69C /* test_number */;
+			productType = "com.apple.product-type.tool";
+		};
+		CBF69D18BCCB44929188FC6D /* test_object */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80BCA4629DA4568A6ECB3D1 /* Build configuration list for PBXNativeTarget "test_object" */;
+			buildPhases = (
+				9EFB5FB709E340429B15D85C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBE1F1CB27D54CE1A16D4949 /* PBXTargetDependency */,
+				C1CAAD3DD5894E64B36DD3EE /* PBXTargetDependency */,
+			);
+			name = test_object;
+			productName = test_object;
+			productReference = 0583143205FD426CB98B1149 /* test_object */;
+			productType = "com.apple.product-type.tool";
+		};
+		DCE7BF9ED9364705AC13E99B /* test_pack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 306412C7A507491AA7D1C74E /* Build configuration list for PBXNativeTarget "test_pack" */;
+			buildPhases = (
+				6D9208E37C92497E9A43E681 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6ABAE13E357840A39854FB63 /* PBXTargetDependency */,
+				F8202DDC29EA407C8E18CF84 /* PBXTargetDependency */,
+			);
+			name = test_pack;
+			productName = test_pack;
+			productReference = B462364B996749498810DA88 /* test_pack */;
+			productType = "com.apple.product-type.tool";
+		};
+		EC72B7C7DF034C94B6E845AB /* jansson */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEE2750109144DF289C9095B /* Build configuration list for PBXNativeTarget "jansson" */;
+			buildPhases = (
+				3188831A76A743F78DF528A7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C18A21E0B00C4C4282E44389 /* PBXTargetDependency */,
+			);
+			name = jansson;
+			productName = jansson;
+			productReference = 73B4E9E68A68460DBA3EB2AC /* libjansson.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F258ED810D5E4A2DB484086A /* test_dump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C25B74C430F4915BC1F5ABB /* Build configuration list for PBXNativeTarget "test_dump" */;
+			buildPhases = (
+				29FB2C04C11A4511AA91748E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F79D84C53D334FD380AE7C05 /* PBXTargetDependency */,
+				E4A41D8BD1FE4E349349AA10 /* PBXTargetDependency */,
+			);
+			name = test_dump;
+			productName = test_dump;
+			productReference = 4A9C6155A16F48C9BC2E9135 /* test_dump */;
+			productType = "com.apple.product-type.tool";
+		};
+		F6FC7B8D3C674A44A7690483 /* test_loadb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61E717786765405EA853D50C /* Build configuration list for PBXNativeTarget "test_loadb" */;
+			buildPhases = (
+				134A59C5B6FB49EAB28C9359 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BA38969CB5D4027B0ABDC38 /* PBXTargetDependency */,
+				638746F4244F4C938500A2F9 /* PBXTargetDependency */,
+			);
+			name = test_loadb;
+			productName = test_loadb;
+			productReference = 94A7C54E61514937BFBCC6C4 /* test_loadb */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC7FBC341A044FE0A4DAB623 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0730;
+			};
+			buildConfigurationList = 968771AC68E040AD82CC7E82 /* Build configuration list for PBXProject "jansson" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FF446A97B14C416BB8B3AC79;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90EC2B7C8A43428B9863D5A1 /* ALL_BUILD */,
+				FA118024F3E64AF6AE683CE7 /* RUN_TESTS */,
+				7379FBC453324A93ADC4A503 /* ZERO_CHECK */,
+				9C12E1707F4A45E6A4833BE2 /* check */,
+				A303790769B840498D1384EE /* install */,
+				EC72B7C7DF034C94B6E845AB /* jansson */,
+				9D3778B3F0AF42A1BA176FF3 /* json_process */,
+				8CD100C1DF294DF8BA2BEB39 /* test_array */,
+				3628017399D24488A9080AA4 /* test_copy */,
+				F258ED810D5E4A2DB484086A /* test_dump */,
+				67594C4160DF41A487D2A414 /* test_dump_callback */,
+				1063BF0E18DD4A7ABC3745EE /* test_equal */,
+				2ED675A7264D4B5D9CC2B5C1 /* test_load */,
+				F6FC7B8D3C674A44A7690483 /* test_loadb */,
+				7D5CF703EB27460F9E659528 /* test_memory_funcs */,
+				A8E45A2BB6A0498F9445B937 /* test_number */,
+				CBF69D18BCCB44929188FC6D /* test_object */,
+				DCE7BF9ED9364705AC13E99B /* test_pack */,
+				043C00A0E1284BBF838B8CD2 /* test_simple */,
+				2023D95AC7CD4A7596FC732D /* test_unpack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B2622DD1E0F4D2E850BA127 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson -f /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		7DCBA643477649BE89BDF1A9 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson -f /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/CMakeScripts/check_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		B562B8DF46144252A794D0D5 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson -f /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		C10B19FA8DBC440F9F7A24A2 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson -f /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E6E7298AF1E84EC6A69AB1A0 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson -f /Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0119B76D778644B8A7FF273B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5AE077FE39949D0B591013D /* test_simple.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08815E31CD9C4438920E172A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44A7A2106CDE47588EFB9CCD /* test_copy.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B5BCFC6B17480EB5454D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F04CE7951FA542EF97DF4B9C /* test_memory_funcs.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		109E353E108042D285C1C25E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D47E3D64DE4DE091F33CD3 /* test_unpack.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1160D0EE0B4B421CA9340206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F32FC16ABD94214AB84738A /* json_process.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		134A59C5B6FB49EAB28C9359 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404209EF470C404889CF26C4 /* test_loadb.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24EB72F88F5949CBB6C28E71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E138D574F5479DA7F685D0 /* test_load.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29FB2C04C11A4511AA91748E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1044F11EF5804C07B2F06672 /* test_dump.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3188831A76A743F78DF528A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D310870B0E4CCABCD6F68F /* dump.c in Sources */,
+				4CBF68D5C3DD4DBCB9D225CE /* error.c in Sources */,
+				DC3F4B21DDE84A6A8CBE2E15 /* hashtable.c in Sources */,
+				0A50D2793F7B48AE9229581E /* hashtable_seed.c in Sources */,
+				2E793DD1E32943FB99170381 /* load.c in Sources */,
+				609F91BC8A36445699ED30D0 /* memory.c in Sources */,
+				0320844C0367456E8F81A0DF /* pack_unpack.c in Sources */,
+				A15292AD00C44291BE91966A /* strbuffer.c in Sources */,
+				3256C4CECD4E4A61BBFE484C /* strconv.c in Sources */,
+				24199A9C8D6847FD8BC07ABE /* utf.c in Sources */,
+				1AE0628B02864948AD430C93 /* value.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D9208E37C92497E9A43E681 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A75412D05544EDBA6FC87F5 /* test_pack.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EFB5FB709E340429B15D85C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FF80E3562864865BAE58323 /* test_object.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4A2582A9C9F4C9780E1CD22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F832094080ED4C20B8E23D80 /* test_array.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF8741FC13D418FAC004315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F46EFF73F1440A884AEDABD /* test_equal.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0449AAE1A5497B8A7E9CF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56ACED43D02F46429B9430C5 /* test_number.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE71E521A8DD4C8482DB382A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2985B54637A14E61AC4EF866 /* test_dump_callback.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		005FAF0ABBBE4A839C9DA31A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = BD96B164643A4373895B1416 /* PBXContainerItemProxy */;
+		};
+		062A2099B8344779957AEA95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6FC7B8D3C674A44A7690483 /* test_loadb */;
+			targetProxy = C20AA7D7F3B9456DAB32F0A5 /* PBXContainerItemProxy */;
+		};
+		086D37F3ED4340349C2F778C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2023D95AC7CD4A7596FC732D /* test_unpack */;
+			targetProxy = DD1BF1317A8343D280962208 /* PBXContainerItemProxy */;
+		};
+		0A55C1DF11BC422F9448DC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8E45A2BB6A0498F9445B937 /* test_number */;
+			targetProxy = 6589A6BF455E4C03A6829C72 /* PBXContainerItemProxy */;
+		};
+		0D484D57D9B749468D4EA2FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = 966BFE0704D145DEA0096938 /* PBXContainerItemProxy */;
+		};
+		0E307632D5EE43E4BFABD2F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 29F13FCF84394EBC8FB79FEB /* PBXContainerItemProxy */;
+		};
+		125EC8DBA89142BAA13A3C39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCE7BF9ED9364705AC13E99B /* test_pack */;
+			targetProxy = EA1CCBA1CAC345F99D37217C /* PBXContainerItemProxy */;
+		};
+		144EC01DDDFC497A829DED4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67594C4160DF41A487D2A414 /* test_dump_callback */;
+			targetProxy = B87A3391EFDE4AE4BCCD7E84 /* PBXContainerItemProxy */;
+		};
+		171AB3C6AB7E40408B1927FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = 51C5C3847CD4409B8D057305 /* PBXContainerItemProxy */;
+		};
+		1A1BD1E50D9443FA9FB26217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3628017399D24488A9080AA4 /* test_copy */;
+			targetProxy = 3823701D801F4CBAB9ADAACE /* PBXContainerItemProxy */;
+		};
+		257656009830498D9967F48F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 043C00A0E1284BBF838B8CD2 /* test_simple */;
+			targetProxy = B8272A28D4524C44976BF5EE /* PBXContainerItemProxy */;
+		};
+		2C60513F9F60439198493F42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 6FC3CEF1D8BE4B4390B46161 /* PBXContainerItemProxy */;
+		};
+		3685B19C7DEB40349F0467DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F258ED810D5E4A2DB484086A /* test_dump */;
+			targetProxy = 8C2CEAAEE99A442D97E83EDE /* PBXContainerItemProxy */;
+		};
+		3BD4F379FD3249859DE76374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 8DC1F0FD3676408E837BDFF7 /* PBXContainerItemProxy */;
+		};
+		3CCC90721C184B7E884B1B30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8E45A2BB6A0498F9445B937 /* test_number */;
+			targetProxy = 2F25B30C17AA4CC2B296021F /* PBXContainerItemProxy */;
+		};
+		470120E490F84CAABF458D14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90EC2B7C8A43428B9863D5A1 /* ALL_BUILD */;
+			targetProxy = A2AB10878BC04C949FA756EA /* PBXContainerItemProxy */;
+		};
+		474AB9FADECE4C4795FD43DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = A54ED13D07134ED7BC70CFD2 /* PBXContainerItemProxy */;
+		};
+		481DB36436B7419DB5D8B3F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1063BF0E18DD4A7ABC3745EE /* test_equal */;
+			targetProxy = 474F1EF520484D5A96055A06 /* PBXContainerItemProxy */;
+		};
+		5297A277E3C44479A09FFE04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D3778B3F0AF42A1BA176FF3 /* json_process */;
+			targetProxy = 7C6513B3543D483391A4C031 /* PBXContainerItemProxy */;
+		};
+		546A655804F94AEE9CDB0A4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 13E81823DA354A3A89C230D5 /* PBXContainerItemProxy */;
+		};
+		57D2C8F406D04B2488ABB101 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67594C4160DF41A487D2A414 /* test_dump_callback */;
+			targetProxy = A2F9437912CA427C81D5F5B0 /* PBXContainerItemProxy */;
+		};
+		62C62C0B6EF74318A4CA299B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6FC7B8D3C674A44A7690483 /* test_loadb */;
+			targetProxy = B836855D27E842B2934339AA /* PBXContainerItemProxy */;
+		};
+		638746F4244F4C938500A2F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = A1495F88574342A5857C8003 /* PBXContainerItemProxy */;
+		};
+		650FC2C2C8B04AD2A26D2B88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 5ABD208B8B5F4EF9AA4C3FD6 /* PBXContainerItemProxy */;
+		};
+		6ABAE13E357840A39854FB63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = 924FF077400943448A0B1FB8 /* PBXContainerItemProxy */;
+		};
+		6BA38969CB5D4027B0ABDC38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = CFB4822523434014BBF29028 /* PBXContainerItemProxy */;
+		};
+		6E6CDDEDC4734AF3BC67F7AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 04CFBB272F5841FCBF78D396 /* PBXContainerItemProxy */;
+		};
+		735D747C56F5432F831ACE48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2ED675A7264D4B5D9CC2B5C1 /* test_load */;
+			targetProxy = 143D7AD2A96049F0A9042CC2 /* PBXContainerItemProxy */;
+		};
+		7719A3018C7C419FBAFAE4AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3628017399D24488A9080AA4 /* test_copy */;
+			targetProxy = 0CF0B41C0C464F5C92BD6804 /* PBXContainerItemProxy */;
+		};
+		7E1923939FAB427894C921C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2023D95AC7CD4A7596FC732D /* test_unpack */;
+			targetProxy = 5C240A99854F40F79C7BEEE9 /* PBXContainerItemProxy */;
+		};
+		7E96A57721FF4A1FBE3F3FF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CD100C1DF294DF8BA2BEB39 /* test_array */;
+			targetProxy = 44334D359E2D4A1C8133EB77 /* PBXContainerItemProxy */;
+		};
+		864FCFB71D104BB2ADC1501D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = F8B986EEBA6342FCBC316FDF /* PBXContainerItemProxy */;
+		};
+		965BCFB6A52D423B81CED8B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D5CF703EB27460F9E659528 /* test_memory_funcs */;
+			targetProxy = 11907F1947664E50A0792D3B /* PBXContainerItemProxy */;
+		};
+		9D4732BAB39B4E28A1B584D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = C4663F3579754D1282B5ABF7 /* PBXContainerItemProxy */;
+		};
+		9D8A22D1C76E4058A7FE56D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = E8C77B410DA7462D84E9B208 /* PBXContainerItemProxy */;
+		};
+		A44396B2509144649E049F64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D3778B3F0AF42A1BA176FF3 /* json_process */;
+			targetProxy = 2D0DD4A4D2FA44618BE90780 /* PBXContainerItemProxy */;
+		};
+		A44FF0ACC8144C0AAF4508D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = EA83480C5ED2497DA3EF650A /* PBXContainerItemProxy */;
+		};
+		ABAF02505BB9425097BC75EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F258ED810D5E4A2DB484086A /* test_dump */;
+			targetProxy = BA4D69888471497D95D2C5FA /* PBXContainerItemProxy */;
+		};
+		B45D4E52BAE642E1A58B13F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 6A705AEA67A14FC98C07DBB1 /* PBXContainerItemProxy */;
+		};
+		C18A21E0B00C4C4282E44389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 2E139B2BE627431DA72010DB /* PBXContainerItemProxy */;
+		};
+		C1CAAD3DD5894E64B36DD3EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = AA87486933D54F168C56FEC5 /* PBXContainerItemProxy */;
+		};
+		C30BF0FE69F44626B05B3763 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = E60766054F26440AA89FEF11 /* PBXContainerItemProxy */;
+		};
+		C3376F802D614C9E9E0B5E62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2ED675A7264D4B5D9CC2B5C1 /* test_load */;
+			targetProxy = ACF3E9F055CB454B9D19926C /* PBXContainerItemProxy */;
+		};
+		CA974F5755AE406E86F67623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBF69D18BCCB44929188FC6D /* test_object */;
+			targetProxy = 4E6AD805FF9346749AB1245B /* PBXContainerItemProxy */;
+		};
+		CCCBB16EB088429D97EBB43B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = F7241FB3026244E9B410714E /* PBXContainerItemProxy */;
+		};
+		CD2E798CF77849ABAA6C5CC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D5CF703EB27460F9E659528 /* test_memory_funcs */;
+			targetProxy = E0CF308B349E46ED9D3356E1 /* PBXContainerItemProxy */;
+		};
+		CEB164C23546449B92F0A274 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBF69D18BCCB44929188FC6D /* test_object */;
+			targetProxy = AB752D4740ED443590BC68CA /* PBXContainerItemProxy */;
+		};
+		D29677E4C9434743B17C70F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCE7BF9ED9364705AC13E99B /* test_pack */;
+			targetProxy = D9AE5F30A03042C78388D094 /* PBXContainerItemProxy */;
+		};
+		DF1C531810E346638853D384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 043C00A0E1284BBF838B8CD2 /* test_simple */;
+			targetProxy = E6410FB3695B46FA8AB5438F /* PBXContainerItemProxy */;
+		};
+		DFDB1B625E354C1491625637 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = EC256C4F4D8A495781038946 /* PBXContainerItemProxy */;
+		};
+		E26DF284C90B436CBD4D451B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 9DFCC10EC6964D20BB98CAB2 /* PBXContainerItemProxy */;
+		};
+		E4023AAABE074AF9B2DFAC9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = B7067FC119BB4BD592214CF6 /* PBXContainerItemProxy */;
+		};
+		E4A41D8BD1FE4E349349AA10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 2F76DDF8919644E282323218 /* PBXContainerItemProxy */;
+		};
+		EB1A9A84B33C47EF9D19EB1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = 070926F9670D4DFD9855EB74 /* PBXContainerItemProxy */;
+		};
+		EBE1F1CB27D54CE1A16D4949 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = 39C3AED72FC3496985DB2586 /* PBXContainerItemProxy */;
+		};
+		F2391896736D4E5B89F61CF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1063BF0E18DD4A7ABC3745EE /* test_equal */;
+			targetProxy = 9C5ECAED600F493B92432DD6 /* PBXContainerItemProxy */;
+		};
+		F79B4B2E9E3D44F98A4F3795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = 2BB53723282840489926D2F6 /* PBXContainerItemProxy */;
+		};
+		F79D84C53D334FD380AE7C05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = B4E877E9F5D6409FB2EA4FE2 /* PBXContainerItemProxy */;
+		};
+		F8202DDC29EA407C8E18CF84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7379FBC453324A93ADC4A503 /* ZERO_CHECK */;
+			targetProxy = DC6E290E814E46589054A34F /* PBXContainerItemProxy */;
+		};
+		FA9C5CF3AD5B4D18BB929FAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CD100C1DF294DF8BA2BEB39 /* test_array */;
+			targetProxy = CCD2F004AA24400CA2B0A4BB /* PBXContainerItemProxy */;
+		};
+		FD8AAE4F238D44D897597A03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC72B7C7DF034C94B6E845AB /* jansson */;
+			targetProxy = DED45E343B3149C6ACE87F47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E0A654E6AD4AA78637ABBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_dump;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		08F5ADD2AECC46E595ED5471 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_number;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		092D8661092548069EC56B1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		0EBF84692EB9449BBE8FC8C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = json_process;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		1244F51D64764A8A925DAC72 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_array;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		1312BE8C73FD460EB9BA899A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_number;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		1407CC446C284B2D9E3B8A18 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		15186BA3B3134C809D81932A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/build";
+			};
+			name = Release;
+		};
+		1BD5A037AFA742FABC1643DC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_dump;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		1D4D550EE40A4BB6B679E83C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		1F785ADD9676497CA65EF939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/build";
+			};
+			name = Debug;
+		};
+		2B4CF6A461AA4D01BEE124E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = json_process;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		319B3F1DC2C64AF1834C1B33 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_loadb;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		328D57E9771E4DBEA5A3E21D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_dump;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		352173EB797A4B36842C4CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_number;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		389E69288AFC4004BB7A97B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_copy;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		39E118649E38412BB2B4EAD4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_dump_callback;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		3CC559ECD79A4A73A3AE085D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_memory_funcs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		3F3845DD499F4349B6A95B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_object;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		3F959E627CB14B4192CFAB95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = check;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		49566C98A58A4F3F90C979A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_array;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		4D7D938ACF794540BCCB1FD4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_load;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		5457856611C04BDEA4DE021E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_array;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		573D38BE91C549119559DB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		58CDD5A1C72344389E784E9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		5A4E672B0BBD49E09679FDB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_dump_callback;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		5D6E6B49780C40FE8F65086F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_pack;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		5F821CDD9DBA4497B40D2188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_equal;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		62D5849BD57D4051A18E97C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_copy;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		670B7CC080CC43279BC4103D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		671F2147BA064E5FBBBE76C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_pack;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		687C743C361741BDBB5FCAFE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_simple;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		6CD4A3E75C8C4CC8AE266751 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = json_process;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		6CE5FB2AC5FF44539B4217E8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_load;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		70FF930649C844F8912B293A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		746AB357CD03447BBB03DC19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_load;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		7951F5E8BB89420299A63961 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_memory_funcs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		7E53B7622F144691A1278416 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_pack;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		7F0651D14E6C4B5EA926898B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_object;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		7F2D9F61827840B79A2018BF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_object;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		7F456EFCCE00433F8FADF490 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_simple;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		7FA7F0058E4944F3896F8902 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_dump_callback;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		8184A9E731BB4C7CBEB4E80C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		82BB4855BA684BCE9B39AFCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = check;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		8402FCAEE4354A80BFF244CC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_memory_funcs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		8B52E9BD9196430E94F30994 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = jansson;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		8D2C9CEAADA8491CA1593AFA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = jansson;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		8F45AA4FD5F442129B59A142 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_unpack;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		901EFA5625F747129E48E9EA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_equal;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		92021DFB961D4AE28661AE55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_loadb;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		93F9CDD115054490A193EE6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		95938F69114D4B168BD9860D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_unpack;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		96F85E800FF8426DB3C1D1E2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		982BF92797AB4DA0B7AA5324 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		994E03C6B52847C3836D5F9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_load;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		9AE5DDBE47EE47B5B8521DC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		9C542DD9D6494E7B826705C9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_object;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		9C712650C76340D3A780A295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_unpack;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		9D75BADE85C64DA291820364 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = json_process;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		9D9A43367AB44D288C2AD3AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_loadb;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		ACFE756E783140B1AD311DA1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_unpack;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		B33E78927C1245CB8E8AF73D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_pack;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		B9EB138E80204E95A00412A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_memory_funcs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		C020775770864CAAA4A49558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		C03831D4C8A24BAA8FCA7513 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_number;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		C0E7E75E0C054ADFAE155866 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_equal;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		C41FEDA0A7F44CA49FA6CE50 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = check;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		C6BF7AEABD59430AA49D7129 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_loadb;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		C85F8467A09C4016835F6944 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_dump;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		C8B4497DA280494BA596C9A1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		D68CEDBE8ED04F55A8F9CAAE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = check;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		DB36B5152FC14ACAB2D4ECFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_dump_callback;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		DE9CD1A9214D47B4A97D6C71 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		DFB11A91A2414EB7848FE328 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		E4387682D6F341CAB367D240 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/build";
+			};
+			name = MinSizeRel;
+		};
+		E9FBB21E8CB340908DE43331 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_copy;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		EB2386D9C47C404FB3EE20C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_equal;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		F0E0B76059534B2CA4764AAA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/build";
+			};
+			name = RelWithDebInfo;
+		};
+		F11ECA55862545EB9FA334F3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/MinSizeRel/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_array;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		F353698BA2AB46D18068DDE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_simple;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		F59F8B2299EC4811B84CA5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = jansson;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		FDF569B476D7493BB15325ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = jansson;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		FF1045BA8B3E4B2BAA21376F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/RelWithDebInfo/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_copy;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		FFD0CBECF3EB400085D69067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/bin/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					JANSSON_USING_CMAKE,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/include",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/private_include",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/lib/Debug/libjansson.a",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_simple;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00255BBB2C9C40A2B78D6CB6 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93F9CDD115054490A193EE6D /* Debug */,
+				9AE5DDBE47EE47B5B8521DC8 /* Release */,
+				8184A9E731BB4C7CBEB4E80C /* MinSizeRel */,
+				DE9CD1A9214D47B4A97D6C71 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		024F720172C74D61AA204D57 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58CDD5A1C72344389E784E9A /* Debug */,
+				1D4D550EE40A4BB6B679E83C /* Release */,
+				1407CC446C284B2D9E3B8A18 /* MinSizeRel */,
+				70FF930649C844F8912B293A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0B3AB6D332F845E3A71F62D8 /* Build configuration list for PBXNativeTarget "test_load" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				994E03C6B52847C3836D5F9E /* Debug */,
+				746AB357CD03447BBB03DC19 /* Release */,
+				6CE5FB2AC5FF44539B4217E8 /* MinSizeRel */,
+				4D7D938ACF794540BCCB1FD4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		11A82CB1864749A3B9F4EBD9 /* Build configuration list for PBXNativeTarget "test_memory_funcs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9EB138E80204E95A00412A2 /* Debug */,
+				7951F5E8BB89420299A63961 /* Release */,
+				8402FCAEE4354A80BFF244CC /* MinSizeRel */,
+				3CC559ECD79A4A73A3AE085D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		21434BB09BA74A0DAD86BADC /* Build configuration list for PBXNativeTarget "test_copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62D5849BD57D4051A18E97C6 /* Debug */,
+				389E69288AFC4004BB7A97B3 /* Release */,
+				E9FBB21E8CB340908DE43331 /* MinSizeRel */,
+				FF1045BA8B3E4B2BAA21376F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		306412C7A507491AA7D1C74E /* Build configuration list for PBXNativeTarget "test_pack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				671F2147BA064E5FBBBE76C7 /* Debug */,
+				B33E78927C1245CB8E8AF73D /* Release */,
+				7E53B7622F144691A1278416 /* MinSizeRel */,
+				5D6E6B49780C40FE8F65086F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3CAA4174D49941658AD1EF11 /* Build configuration list for PBXAggregateTarget "check" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82BB4855BA684BCE9B39AFCA /* Debug */,
+				3F959E627CB14B4192CFAB95 /* Release */,
+				D68CEDBE8ED04F55A8F9CAAE /* MinSizeRel */,
+				C41FEDA0A7F44CA49FA6CE50 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4485B456E3494D0AA7A046AB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C020775770864CAAA4A49558 /* Debug */,
+				092D8661092548069EC56B1B /* Release */,
+				DFB11A91A2414EB7848FE328 /* MinSizeRel */,
+				C8B4497DA280494BA596C9A1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		540ED3C87CA14BF29C8ED566 /* Build configuration list for PBXNativeTarget "test_equal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F821CDD9DBA4497B40D2188 /* Debug */,
+				EB2386D9C47C404FB3EE20C3 /* Release */,
+				C0E7E75E0C054ADFAE155866 /* MinSizeRel */,
+				901EFA5625F747129E48E9EA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		61E717786765405EA853D50C /* Build configuration list for PBXNativeTarget "test_loadb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92021DFB961D4AE28661AE55 /* Debug */,
+				9D9A43367AB44D288C2AD3AD /* Release */,
+				319B3F1DC2C64AF1834C1B33 /* MinSizeRel */,
+				C6BF7AEABD59430AA49D7129 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6946B81774294AE6856AD0B3 /* Build configuration list for PBXNativeTarget "json_process" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EBF84692EB9449BBE8FC8C0 /* Debug */,
+				2B4CF6A461AA4D01BEE124E1 /* Release */,
+				9D75BADE85C64DA291820364 /* MinSizeRel */,
+				6CD4A3E75C8C4CC8AE266751 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6FCFC171D5B64D7984F89DDC /* Build configuration list for PBXNativeTarget "test_simple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFD0CBECF3EB400085D69067 /* Debug */,
+				F353698BA2AB46D18068DDE4 /* Release */,
+				7F456EFCCE00433F8FADF490 /* MinSizeRel */,
+				687C743C361741BDBB5FCAFE /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7C25B74C430F4915BC1F5ABB /* Build configuration list for PBXNativeTarget "test_dump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85F8467A09C4016835F6944 /* Debug */,
+				00E0A654E6AD4AA78637ABBF /* Release */,
+				1BD5A037AFA742FABC1643DC /* MinSizeRel */,
+				328D57E9771E4DBEA5A3E21D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7E323CC185ED4177B06BD463 /* Build configuration list for PBXNativeTarget "test_array" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5457856611C04BDEA4DE021E /* Debug */,
+				49566C98A58A4F3F90C979A1 /* Release */,
+				F11ECA55862545EB9FA334F3 /* MinSizeRel */,
+				1244F51D64764A8A925DAC72 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		968771AC68E040AD82CC7E82 /* Build configuration list for PBXProject "jansson" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F785ADD9676497CA65EF939 /* Debug */,
+				15186BA3B3134C809D81932A /* Release */,
+				E4387682D6F341CAB367D240 /* MinSizeRel */,
+				F0E0B76059534B2CA4764AAA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BD60BDD77F9343588E430E32 /* Build configuration list for PBXNativeTarget "test_dump_callback" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A4E672B0BBD49E09679FDB3 /* Debug */,
+				DB36B5152FC14ACAB2D4ECFC /* Release */,
+				7FA7F0058E4944F3896F8902 /* MinSizeRel */,
+				39E118649E38412BB2B4EAD4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C9F67EA16A7A4E1B8C264294 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				573D38BE91C549119559DB12 /* Debug */,
+				670B7CC080CC43279BC4103D /* Release */,
+				982BF92797AB4DA0B7AA5324 /* MinSizeRel */,
+				96F85E800FF8426DB3C1D1E2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DB73BDAC386247959A2B289E /* Build configuration list for PBXNativeTarget "test_number" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				352173EB797A4B36842C4CD2 /* Debug */,
+				1312BE8C73FD460EB9BA899A /* Release */,
+				C03831D4C8A24BAA8FCA7513 /* MinSizeRel */,
+				08F5ADD2AECC46E595ED5471 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DEE2750109144DF289C9095B /* Build configuration list for PBXNativeTarget "jansson" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F59F8B2299EC4811B84CA5B1 /* Debug */,
+				FDF569B476D7493BB15325ED /* Release */,
+				8B52E9BD9196430E94F30994 /* MinSizeRel */,
+				8D2C9CEAADA8491CA1593AFA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F80BCA4629DA4568A6ECB3D1 /* Build configuration list for PBXNativeTarget "test_object" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F0651D14E6C4B5EA926898B /* Debug */,
+				3F3845DD499F4349B6A95B9B /* Release */,
+				9C542DD9D6494E7B826705C9 /* MinSizeRel */,
+				7F2D9F61827840B79A2018BF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FCC9B16A66BF4D05B0993DE5 /* Build configuration list for PBXNativeTarget "test_unpack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C712650C76340D3A780A295 /* Debug */,
+				95938F69114D4B168BD9860D /* Release */,
+				ACFE756E783140B1AD311DA1 /* MinSizeRel */,
+				8F45AA4FD5F442129B59A142 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC7FBC341A044FE0A4DAB623 /* Project object */;
+}

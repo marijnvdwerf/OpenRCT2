@@ -1,0 +1,7 @@
+/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/libpng/CMakeFiles/RUN_TESTS.dir
+/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/libpng/CMakeFiles/install.dir
+/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/libpng/CMakeFiles/pngtest.dir
+/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/libpng/CMakeFiles/png14_static.dir
+/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/libpng/CMakeFiles/png14.dir
+/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/libpng/CMakeFiles/ALL_BUILD.dir
+/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/libpng/CMakeFiles/ZERO_CHECK.dir
