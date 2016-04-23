@@ -2094,6 +2094,7 @@
 		15186BA3B3134C809D81932A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/build";
@@ -2174,6 +2175,7 @@
 		1F785ADD9676497CA65EF939 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/build";
@@ -4616,6 +4618,7 @@
 		E4387682D6F341CAB367D240 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/build";
@@ -4709,6 +4712,7 @@
 		F0E0B76059534B2CA4764AAA /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SYMROOT = "/Users/Marijn/Projects/OpenRCT2/Main/libs-ios/jansson/build";

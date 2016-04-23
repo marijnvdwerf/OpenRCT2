@@ -1364,6 +1364,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C65B9A561CCB7ADA008C350A /* Build configuration list for PBXNativeTarget "OpenRCT2" */;
 			buildPhases = (
+				C67FD2731CCC05760030B465 /* Create Segment Files */,
 				C65B9A3B1CCB7ADA008C350A /* Sources */,
 				C65B9A3C1CCB7ADA008C350A /* Frameworks */,
 				C65B9A3D1CCB7ADA008C350A /* Resources */,
@@ -1618,6 +1619,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C67FD2731CCC05760030B465 /* Create Segment Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/openrct2.exe",
+			);
+			name = "Create Segment Files";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/openrct2_text",
+				"$(DERIVED_FILE_DIR)/openrct2_data",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "dd if=\"${SRCROOT}/openrct2.exe\" of=\"${DERIVED_FILE_DIR}/openrct2_text\" bs=4096 skip=1 count=1187\ndd if=\"${SRCROOT}/openrct2.exe\" of=\"${DERIVED_FILE_DIR}/openrct2_data\" bs=4096 skip=1188 count=318\ndd if=/dev/zero of=\"${DERIVED_FILE_DIR}/openrct2_data\" bs=4096 seek=318 count=2630 conv=notrunc\ndd if=\"${SRCROOT}/openrct2.exe\" of=\"${DERIVED_FILE_DIR}/openrct2_data\" bs=4096 skip=1506 seek=2948 count=1 conv=notrunc";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C65B9A3B1CCB7ADA008C350A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1825,12 +1846,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1869,10 +1890,12 @@
 					"\"$(SRCROOT)/libs-ios/speexdsp/include\"/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_NO_PIE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
@@ -1880,12 +1903,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1916,10 +1939,12 @@
 					"\"$(SRCROOT)/libs-ios/speexdsp/include\"/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_NO_PIE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};
@@ -1931,6 +1956,30 @@
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/distribution/ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					rct2_text,
+					__text,
+					"$(DERIVED_FILE_DIR)/openrct2_text",
+					"-segaddr",
+					rct2_text,
+					0x401000,
+					"-segprot",
+					rct2_text,
+					rwx,
+					rx,
+					"-sectcreate",
+					rct2_data,
+					__data,
+					"${DERIVED_FILE_DIR}/openrct2_data",
+					"-segaddr",
+					rct2_data,
+					0x8a4000,
+					"-segprot",
+					rct2_data,
+					rw,
+					rw,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = website.openrct2.OpenRCT2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1943,6 +1992,30 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/distribution/ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					rct2_text,
+					__text,
+					"$(DERIVED_FILE_DIR)/openrct2_text",
+					"-segaddr",
+					rct2_text,
+					0x401000,
+					"-segprot",
+					rct2_text,
+					rwx,
+					rx,
+					"-sectcreate",
+					rct2_data,
+					__data,
+					"${DERIVED_FILE_DIR}/build/openrct2_data",
+					"-segaddr",
+					rct2_data,
+					0x8a4000,
+					"-segprot",
+					rct2_data,
+					rw,
+					rw,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = website.openrct2.OpenRCT2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
