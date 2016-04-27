@@ -45,32 +45,33 @@
 rct_viewport g_viewport_list[MAX_VIEWPORT_COUNT];
 
 typedef struct paint_struct paint_struct;
+typedef struct attached_paint_struct attached_paint_struct;
+
+struct attached_paint_struct {
+	uint32 image_id;		// 0x00
+	uint32 var_04;
+	uint16 x;		// 0x08
+	uint16 y;		// 0x0A
+	uint8 var_0C;
+	uint8 pad_0D;
+	attached_paint_struct* next;	//0x0E
+};
 
 struct paint_struct{
 	uint32 image_id;		// 0x00
 	uint32 var_04;
-	uint16 attached_x;		// 0x08
-	uint16 attached_y;		// 0x0A
-	union {
-		struct {
-			uint8 var_0C;
-			uint8 pad_0D;
-			paint_struct* next_attached_ps;	//0x0E
-			uint16 pad_12;
-		};
-		struct {
-			uint16 attached_z; // 0x0C
-			uint16 attached_z_end; // 0x0E
-			uint16 attached_x_end; // 0x10
-			uint16 attached_y_end; // 0x12
-		};
-	};
+	uint16 bound_box_x;		// 0x08
+	uint16 bound_box_y;		// 0x0A
+	uint16 bound_box_z; // 0x0C
+	uint16 bound_box_z_end; // 0x0E
+	uint16 bound_box_x_end; // 0x10
+	uint16 bound_box_y_end; // 0x12
 	uint16 x;				// 0x14
 	uint16 y;				// 0x16
 	uint16 var_18;
 	uint8 var_1A;
 	uint8 var_1B;
-	paint_struct* attached_ps;	//0x1C
+	attached_paint_struct* attached_ps;	//0x1C
 	paint_struct* var_20;
 	paint_struct* next_quadrant_ps; // 0x24
 	uint8 sprite_type;		//0x28
@@ -758,10 +759,10 @@ void painter_setup(){
  *  rct2: 0x00688596
  *  Part of 0x688485
  */
-void paint_attached_ps(paint_struct* ps, paint_struct* attached_ps, rct_drawpixelinfo* dpi){
-	for (; attached_ps; attached_ps = attached_ps->next_attached_ps){
-		sint16 x = attached_ps->attached_x + ps->x;
-		sint16 y = attached_ps->attached_y + ps->y;
+void paint_attached_ps(paint_struct* ps, attached_paint_struct* attached_ps, rct_drawpixelinfo* dpi){
+	for (; attached_ps; attached_ps = attached_ps->next){
+		sint16 x = attached_ps->x + ps->x;
+		sint16 y = attached_ps->y + ps->y;
 
 		int image_id = attached_ps->image_id;
 		if (gCurrentViewportFlags & VIEWPORT_FLAG_SEETHROUGH_RIDES) {
@@ -949,8 +950,7 @@ bool sub_98197C(
 	sint16 bound_box_offset_x, sint16 bound_box_offset_y, sint16 bound_box_offset_z,
 	uint32 rotation
 ) {
-	int ebp = bound_box_length_z + bound_box_offset_z;
-
+	
 	RCT2_GLOBAL(0xF1AD28, paint_struct*) = 0;
 	RCT2_GLOBAL(0xF1AD2C, uint32) = 0;
 
@@ -1042,13 +1042,14 @@ bool sub_98197C(
 		break;
 	}
 
-	ps->attached_x_end = boundBox.x + boundBoxOffset.x + RCT2_GLOBAL(0x9DE568, sint16);
-	ps->attached_z = bound_box_offset_z;
-	ps->attached_z_end = ebp;
-	ps->attached_y_end = boundBox.y + boundBoxOffset.y + RCT2_GLOBAL(0x009DE56C, sint16);
+	ps->bound_box_x_end = boundBox.x + boundBoxOffset.x + RCT2_GLOBAL(0x9DE568, sint16);
+	ps->bound_box_z = bound_box_offset_z;
+	int boundBoxZEnd = bound_box_length_z + bound_box_offset_z;
+	ps->bound_box_z_end = boundBoxZEnd;
+	ps->bound_box_y_end = boundBox.y + boundBoxOffset.y + RCT2_GLOBAL(0x009DE56C, sint16);
 	ps->var_1A = 0;
-	ps->attached_x = boundBoxOffset.x + RCT2_GLOBAL(0x9DE568, sint16);
-	ps->attached_y = boundBoxOffset.y + RCT2_GLOBAL(0x009DE56C, sint16);
+	ps->bound_box_x = boundBoxOffset.x + RCT2_GLOBAL(0x9DE568, sint16);
+	ps->bound_box_y = boundBoxOffset.y + RCT2_GLOBAL(0x009DE56C, sint16);
 	ps->attached_ps = NULL;
 	ps->var_20 = NULL;
 	ps->sprite_type = RCT2_GLOBAL(RCT2_ADDRESS_PAINT_SETUP_CURRENT_TYPE, uint8);
@@ -1060,8 +1061,8 @@ bool sub_98197C(
 	RCT2_GLOBAL(0xF1AD28, paint_struct*) = ps;
 
 	rct_xy16 attach = {
-		.x = ps->attached_x,
-		.y = ps->attached_y
+		.x = ps->bound_box_x,
+		.y = ps->bound_box_y
 	};
 
 	rotate_map_coordinates(&attach.x, &attach.y, rotation);
@@ -1099,7 +1100,7 @@ bool sub_98197C(
 		RCT2_GLOBAL(0x00F1AD10, uint32) = di;
 	}
 
-	RCT2_GLOBAL(0xEE7888, paint_struct*) += 1;
+	RCT2_GLOBAL(0xEE7888, paint_struct*)++;
 	return true;
 }
 
@@ -2225,12 +2226,24 @@ void sub_688217_helper(uint16 ax, uint8 flag)
 		ps_next->var_1B &= ~(1 << 0);
 		ps_temp = ps;
 
-		uint16 my_attached_x = ps_next->attached_x;
-		uint16 my_attached_y = ps_next->attached_y;
-		uint16 my_some_x = ps_next->attached_z;
-		uint16 my_some_y = ps_next->attached_z_end;
-		uint16 my_other_x = ps_next->attached_x_end;
-		uint16 my_other_y = ps_next->attached_y_end;
+		typedef struct bound_box {
+			uint16 x;
+			uint16 y;
+			uint16 z;
+			uint16 x_end;
+			uint16 y_end;
+			uint16 z_end;
+		} bound_box;
+
+		bound_box initialBBox = {
+			.x = ps_next->bound_box_x,
+			.y = ps_next->bound_box_y,
+			.z = ps_next->bound_box_z,
+			.x_end = ps_next->bound_box_x_end,
+			.y_end = ps_next->bound_box_y_end,
+			.z_end = ps_next->bound_box_z_end
+		};
+
 
 		while (true) {
 			ps = ps_next;
@@ -2242,23 +2255,23 @@ void sub_688217_helper(uint16 ax, uint8 flag)
 			int yes = 0;
 			switch (rotation) {
 			case 0:
-				if (my_some_y >= ps_next->attached_z && my_other_y >= ps_next->attached_y && my_other_x >= ps_next->attached_x
-					&& !(my_some_x < ps_next->attached_z_end && my_attached_y < ps_next->attached_y_end && my_attached_x < ps_next->attached_x_end))
+				if (initialBBox.z_end >= ps_next->bound_box_z && initialBBox.y_end >= ps_next->bound_box_y && initialBBox.x_end >= ps_next->bound_box_x
+					&& !(initialBBox.z < ps_next->bound_box_z_end && initialBBox.y < ps_next->bound_box_y_end && initialBBox.x < ps_next->bound_box_x_end))
 					yes = 1;
 				break;
 			case 1:
-				if (my_some_y >= ps_next->attached_z && my_other_y >= ps_next->attached_y && my_other_x < ps_next->attached_x
-					&& !(my_some_x < ps_next->attached_z_end && my_attached_y < ps_next->attached_y_end && my_attached_x >= ps_next->attached_x_end))
+				if (initialBBox.z_end >= ps_next->bound_box_z && initialBBox.y_end >= ps_next->bound_box_y && initialBBox.x_end < ps_next->bound_box_x
+					&& !(initialBBox.z < ps_next->bound_box_z_end && initialBBox.y < ps_next->bound_box_y_end && initialBBox.x >= ps_next->bound_box_x_end))
 					yes = 1;
 				break;
 			case 2:
-				if (my_some_y >= ps_next->attached_z && my_other_y < ps_next->attached_y && my_other_x < ps_next->attached_x
-					&& !(my_some_x < ps_next->attached_z_end && my_attached_y >= ps_next->attached_y_end && my_attached_x >= ps_next->attached_x_end))
+				if (initialBBox.z_end >= ps_next->bound_box_z && initialBBox.y_end < ps_next->bound_box_y && initialBBox.x_end < ps_next->bound_box_x
+					&& !(initialBBox.z < ps_next->bound_box_z_end && initialBBox.y >= ps_next->bound_box_y_end && initialBBox.x >= ps_next->bound_box_x_end))
 					yes = 1;
 				break;
 			case 3:
-				if (my_some_y >= ps_next->attached_z && my_other_y < ps_next->attached_y && my_other_x >= ps_next->attached_x
-					&& !(my_some_x < ps_next->attached_z_end && my_attached_y >= ps_next->attached_y_end && my_attached_x < ps_next->attached_x_end))
+				if (initialBBox.z_end >= ps_next->bound_box_z && initialBBox.y_end < ps_next->bound_box_y && initialBBox.x_end >= ps_next->bound_box_x
+					&& !(initialBBox.z < ps_next->bound_box_z_end && initialBBox.y >= ps_next->bound_box_y_end && initialBBox.x < ps_next->bound_box_x_end))
 					yes = 1;
 				break;
 			}
@@ -2284,7 +2297,7 @@ void sub_688217()
 {
 	paint_struct *ps = RCT2_GLOBAL(0x00EE7888, paint_struct*);
 	paint_struct *ps_next;
-	RCT2_GLOBAL(0x00EE7888, uint32) += 0x34; // 0x34 is size of paint_struct?
+	RCT2_GLOBAL(0x00EE7888, paint_struct*)++;
 	RCT2_GLOBAL(0x00EE7884, paint_struct*) = ps;
 	ps->next_quadrant_ps = NULL;
 	uint32 edi = RCT2_GLOBAL(0x00F1AD0C, uint32);
@@ -3034,7 +3047,8 @@ void sub_679023(rct_drawpixelinfo *dpi, int imageId, int x, int y)
 void sub_68862C()
 {
 	rct_drawpixelinfo *dpi = RCT2_GLOBAL(0x0140E9A8, rct_drawpixelinfo*);
-	paint_struct *ps = RCT2_GLOBAL(0x00EE7884, paint_struct*), *old_ps, *next_ps, *attached_ps;
+	paint_struct *ps = RCT2_GLOBAL(0x00EE7884, paint_struct*), *old_ps, *next_ps;
+	attached_paint_struct* attached_ps;
 
 	while ((ps = ps->next_quadrant_ps) != NULL) {
 		old_ps = ps;
@@ -3048,17 +3062,14 @@ void sub_68862C()
 			next_ps = ps->var_20;
 		}
 
-		attached_ps = ps->attached_ps;
-		while (attached_ps != NULL) {
+		for (attached_ps = ps->attached_ps; attached_ps != NULL; attached_ps = attached_ps->next) {
 			sub_679023(
 				dpi,
 				attached_ps->image_id,
-				(attached_ps->attached_x + ps->x) & 0xFFFF,
-				(attached_ps->attached_y + ps->y) & 0xFFFF
+				(attached_ps->x + ps->x) & 0xFFFF,
+				(attached_ps->y + ps->y) & 0xFFFF
 			);
 			store_interaction_info(ps);
-
-			attached_ps = attached_ps->next_attached_ps;
 		}
 
 		ps = old_ps;
