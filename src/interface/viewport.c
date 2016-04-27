@@ -49,17 +49,25 @@ typedef struct attached_paint_struct attached_paint_struct;
 
 struct attached_paint_struct {
 	uint32 image_id;		// 0x00
-	uint32 var_04;
+	union {
+		uint32 tertiary_colour;
+		// If masked image_id is masked_id
+		uint32 colour_image_id;
+	};
 	uint16 x;		// 0x08
 	uint16 y;		// 0x0A
-	uint8 var_0C;
+	uint8 flags;
 	uint8 pad_0D;
 	attached_paint_struct* next;	//0x0E
 };
 
 struct paint_struct{
 	uint32 image_id;		// 0x00
-	uint32 var_04;
+	union {
+		uint32 tertiary_colour;
+		// If masked image_id is masked_id
+		uint32 colour_image_id; 
+	};
 	uint16 bound_box_x;		// 0x08
 	uint16 bound_box_y;		// 0x0A
 	uint16 bound_box_z; // 0x0C
@@ -69,7 +77,7 @@ struct paint_struct{
 	uint16 x;				// 0x14
 	uint16 y;				// 0x16
 	uint16 var_18;
-	uint8 var_1A;
+	uint8 flags;
 	uint8 var_1B;
 	attached_paint_struct* attached_ps;	//0x1C
 	paint_struct* var_20;
@@ -80,6 +88,10 @@ struct paint_struct{
 	uint16 map_x;			// 0x2C
 	uint16 map_y;			// 0x2E
 	rct_map_element *mapElement; // 0x30 (or sprite pointer)
+};
+
+enum PAINT_STRUCT_FLAGS {
+	PAINT_STRUCT_FLAG_IS_MASKED = (1 << 0)
 };
 
 /**
@@ -783,10 +795,10 @@ void paint_attached_ps(paint_struct* ps, attached_paint_struct* attached_ps, rct
 			}
 		}
 
-		if (attached_ps->var_0C & 1) {
-			gfx_draw_sprite_raw_masked(dpi, x, y, image_id, attached_ps->var_04);
+		if (attached_ps->flags & PAINT_STRUCT_FLAG_IS_MASKED) {
+			gfx_draw_sprite_raw_masked(dpi, x, y, image_id, attached_ps->colour_image_id);
 		} else {
-			gfx_draw_sprite(dpi, image_id, x, y, ps->var_04);
+			gfx_draw_sprite(dpi, image_id, x, y, ps->tertiary_colour);
 		}
 	}
 }
@@ -835,10 +847,10 @@ void sub_688485(){
 			}
 		}
 
-		if (ps->var_1A & 1)
-			gfx_draw_sprite_raw_masked(dpi, x, y, image_id, ps->var_04);
+		if (ps->flags & PAINT_STRUCT_FLAG_IS_MASKED)
+			gfx_draw_sprite_raw_masked(dpi, x, y, image_id, ps->colour_image_id);
 		else
-			gfx_draw_sprite(dpi, image_id, x, y, ps->var_04);
+			gfx_draw_sprite(dpi, image_id, x, y, ps->tertiary_colour);
 
 		if (ps->var_20 != 0){
 			ps = ps->var_20;
@@ -1047,7 +1059,7 @@ bool sub_98197C(
 	int boundBoxZEnd = bound_box_length_z + bound_box_offset_z;
 	ps->bound_box_z_end = boundBoxZEnd;
 	ps->bound_box_y_end = boundBox.y + boundBoxOffset.y + RCT2_GLOBAL(0x009DE56C, sint16);
-	ps->var_1A = 0;
+	ps->flags = 0;
 	ps->bound_box_x = boundBoxOffset.x + RCT2_GLOBAL(0x9DE568, sint16);
 	ps->bound_box_y = boundBoxOffset.y + RCT2_GLOBAL(0x009DE56C, sint16);
 	ps->attached_ps = NULL;
