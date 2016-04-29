@@ -37,6 +37,7 @@
 #include "../world/footpath.h"
 #include "../world/scenery.h"
 #include "colour.h"
+#include "paint.h"
 #include "viewport.h"
 #include "window.h"
 
@@ -45,21 +46,6 @@
 rct_viewport g_viewport_list[MAX_VIEWPORT_COUNT];
 
 typedef struct paint_struct paint_struct;
-typedef struct attached_paint_struct attached_paint_struct;
-
-struct attached_paint_struct {
-	uint32 image_id;		// 0x00
-	union {
-		uint32 tertiary_colour;
-		// If masked image_id is masked_id
-		uint32 colour_image_id;
-	};
-	uint16 x;		// 0x08
-	uint16 y;		// 0x0A
-	uint8 flags;
-	uint8 pad_0D;
-	attached_paint_struct* next;	//0x0E
-};
 
 struct paint_struct{
 	uint32 image_id;		// 0x00
