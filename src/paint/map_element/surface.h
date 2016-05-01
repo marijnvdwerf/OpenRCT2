@@ -17,8 +17,8 @@
 #ifndef _PAINT_SURFACE_H
 #define _PAINT_SURFACE_H
 
-#include "../common.h"
-#include "../world/map.h"
+#include "../../common.h"
+#include "../../world/map.h"
 
 enum
 {
