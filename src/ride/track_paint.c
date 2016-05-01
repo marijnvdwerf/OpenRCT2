@@ -2048,7 +2048,7 @@ void junior_rc_left_quarter_turn_5_tiles_paint_setup(uint8 rideIndex, uint8 trac
 	case 0:
 		//51974e
 		image_id = RCT2_GLOBAL(0x00F44198, uint32);
-		image_id |= 27842;//27847
+		image_id |= 27842;//27847 27852 27832
 		sub_98196C(image_id, 0, 6, 32, 20, 1, height, get_current_rotation());
 		metal_a_supports_paint_setup(1, 4, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
 
@@ -2066,15 +2066,15 @@ void junior_rc_left_quarter_turn_5_tiles_paint_setup(uint8 rideIndex, uint8 trac
 		if (direction & 1) {
 			RCT2_GLOBAL(0x00141E9D4, uint16) = 0xFFFF;
 			RCT2_GLOBAL(0x00141E9C8, uint16) = 0xFFFF;
-			RCT2_GLOBAL(0x00141E9BC, uint16) = 0xFFFF;
+			RCT2_GLOBAL(0x00141E9BC, uint16) = 0xFFFF;//Changes each rot
 
-			RCT2_ADDRESS(0x009E30B6, uint32)[RCT2_GLOBAL(0x141F56B, uint8) / 2] = eax;
-			RCT2_GLOBAL(0x141F56B, uint8)++;
+			//RCT2_ADDRESS(0x009E30B6, uint32)[RCT2_GLOBAL(0x141F56B, uint8) / 2] = eax;
+			//RCT2_GLOBAL(0x141F56B, uint8)++; only rot 3
 		}
 		else {
 			RCT2_GLOBAL(0x00141E9D0, uint16) = 0xFFFF;
 			RCT2_GLOBAL(0x00141E9CC, uint16) = 0xFFFF;
-			RCT2_GLOBAL(0x00141E9B4, uint16) = 0xFFFF;
+			RCT2_GLOBAL(0x00141E9B4, uint16) = 0xFFFF;//Changes each rot
 
 			RCT2_ADDRESS(0x009E3138, uint32)[RCT2_GLOBAL(0x141F56A, uint8) / 2] = eax;
 			RCT2_GLOBAL(0x141F56A, uint8)++;
