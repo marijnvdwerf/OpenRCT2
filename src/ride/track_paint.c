@@ -2041,6 +2041,72 @@ void junior_rc_25_deg_down_to_flat_paint_setup(uint8 rideIndex, uint8 trackSeque
 	junior_rc_flat_to_25_deg_up_paint_setup(rideIndex, trackSequence, (direction + 2) & 3, height, mapElement);
 }
 
+/* rct2: 0x0051917A */
+void junior_rc_left_quarter_turn_5_tiles_paint_setup(uint8 rideIndex, uint8 trackSequence, uint8 direction, int height, rct_map_element* mapElement) {
+	uint32 image_id;
+	switch (trackSequence) {
+	case 0:
+		//51974e
+		image_id = RCT2_GLOBAL(0x00F44198, uint32);
+		image_id |= 27842;//27847
+		sub_98196C(image_id, 0, 6, 32, 20, 1, height, get_current_rotation());
+		metal_a_supports_paint_setup(1, 4, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
+
+		RCT2_GLOBAL(0x00141E9C4, uint16) = 0xFFFF;
+		
+
+		uint32 eax = 0xFFFF0000;
+		if (direction == 1 || direction == 2) {
+			eax |= 0xC00 | (height >> 4);
+		}
+		else {
+			eax |= 0x000 | (height >> 4);
+		}
+
+		if (direction & 1) {
+			RCT2_GLOBAL(0x00141E9D4, uint16) = 0xFFFF;
+			RCT2_GLOBAL(0x00141E9C8, uint16) = 0xFFFF;
+			RCT2_GLOBAL(0x00141E9BC, uint16) = 0xFFFF;
+
+			RCT2_ADDRESS(0x009E30B6, uint32)[RCT2_GLOBAL(0x141F56B, uint8) / 2] = eax;
+			RCT2_GLOBAL(0x141F56B, uint8)++;
+		}
+		else {
+			RCT2_GLOBAL(0x00141E9D0, uint16) = 0xFFFF;
+			RCT2_GLOBAL(0x00141E9CC, uint16) = 0xFFFF;
+			RCT2_GLOBAL(0x00141E9B4, uint16) = 0xFFFF;
+
+			RCT2_ADDRESS(0x009E3138, uint32)[RCT2_GLOBAL(0x141F56A, uint8) / 2] = eax;
+			RCT2_GLOBAL(0x141F56A, uint8)++;
+		}
+
+		height += 32;
+		if (RCT2_GLOBAL(0x141E9D8, sint16) < height) {
+			RCT2_GLOBAL(0x141E9D8, sint16) = height;
+			RCT2_GLOBAL(0x141E9DA, uint8) = 32;
+		}
+		break;
+	case 1:
+		//5196B7
+		break;
+	case 2:
+		//5196D4
+		break;
+	case 3:
+		//51964F
+		break;
+	case 4:
+		//5195B8
+		break;
+	case 5:
+		//5195D5
+		break;
+	case 6:
+		//519534
+		break;
+	}
+}
+
 /* 0x008AAA0C */
 TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direction) {
 	switch (trackType) {
@@ -2069,6 +2135,7 @@ TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direc
 	case TRACK_ELEM_25_DEG_DOWN_TO_FLAT:
 		return junior_rc_25_deg_down_to_flat_paint_setup;
 	case TRACK_ELEM_LEFT_QUARTER_TURN_5_TILES:
+		return junior_rc_left_quarter_turn_5_tiles_paint_setup;
 	case TRACK_ELEM_RIGHT_QUARTER_TURN_5_TILES:
 	case TRACK_ELEM_FLAT_TO_LEFT_BANK:
 	case TRACK_ELEM_FLAT_TO_RIGHT_BANK:
