@@ -21,6 +21,7 @@
 #include "../../world/map.h"
 
 void map_element_paint_setup(int x, int y);
+
 void entrance_paint(uint8 direction, int height, rct_map_element* map_element);
 void banner_paint(uint8 direction, int height, rct_map_element* map_element);
 void surface_paint(uint8 direction, uint16 height, rct_map_element *mapElement);
@@ -28,5 +29,6 @@ void path_paint(uint8 direction, uint16 height, rct_map_element *mapElement);
 void scenery_paint(uint8 direction, int height, rct_map_element* mapElement);
 void fence_paint(uint8 direction, int height, rct_map_element* mapElement);
 void scenery_multiple_paint(uint8 direction, uint16 height, rct_map_element *mapElement);
+void track_paint(uint8 direction, int height, rct_map_element *mapElement);
 
 #endif
