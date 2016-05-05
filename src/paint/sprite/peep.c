@@ -23,7 +23,7 @@
  *
  *  rct2: 0x0068F0FB
  */
-void viewport_peep_paint_setup(rct_peep * peep, int imageDirection)
+void peep_paint(rct_peep * peep, int imageDirection)
 {
 	rct_drawpixelinfo * dpi = RCT2_GLOBAL(0x140E9A8, rct_drawpixelinfo*);
 	if (dpi->zoom_level > 2) {

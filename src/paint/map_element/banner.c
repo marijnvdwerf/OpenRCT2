@@ -27,7 +27,7 @@
  *
  *  rct2: 0x006B9CC4
  */
-void viewport_banner_paint_setup(uint8 direction, int height, rct_map_element* map_element)
+void banner_paint(uint8 direction, int height, rct_map_element* map_element)
 {
 	uint16 boundBoxOffsetX, boundBoxOffsetY, boundBoxOffsetZ;
 	rct_drawpixelinfo* dpi = RCT2_GLOBAL(0x140E9A8, rct_drawpixelinfo*);

@@ -21,10 +21,7 @@
 #include "../../ride/ride_data.h"
 #include "../../interface/viewport.h"
 
-void viewport_misc_paint_setup(rct_sprite *misc, int imageDirection);
-void viewport_litter_paint_setup(rct_litter *litter, int imageDirection);
-void viewport_peep_paint_setup(rct_peep *peep, int imageDirection);
-void viewport_vehicle_paint_setup(rct_vehicle *vehicle, int imageDirection);
+
 
 // To be moved
 void vehicle_visual_roto_drop(int x, int imageDirection, int y, int z, rct_vehicle *vehicle, const rct_ride_entry_vehicle *vehicleEntry);
@@ -76,16 +73,16 @@ void sprite_paint_setup(const uint16 eax, const uint16 ecx) {
 
 		switch (spr->unknown.sprite_identifier) {
 		case SPRITE_IDENTIFIER_VEHICLE:
-			viewport_vehicle_paint_setup((rct_vehicle*)spr, image_direction);
+			vehicle_paint((rct_vehicle*)spr, image_direction);
 			break;
 		case SPRITE_IDENTIFIER_PEEP:
-			viewport_peep_paint_setup((rct_peep*)spr, image_direction);
+			peep_paint((rct_peep*)spr, image_direction);
 			break;
 		case SPRITE_IDENTIFIER_MISC:
-			viewport_misc_paint_setup(spr, image_direction);
+			misc_paint(spr, image_direction);
 			break;
 		case SPRITE_IDENTIFIER_LITTER:
-			viewport_litter_paint_setup((rct_litter*)spr, image_direction);
+			litter_paint((rct_litter*)spr, image_direction);
 			break;
 		default:
 			assert(false);
@@ -98,7 +95,7 @@ void sprite_paint_setup(const uint16 eax, const uint16 ecx) {
  *
  *  rct2: 0x006D4244
  */
-void viewport_vehicle_paint_setup(rct_vehicle *vehicle, int imageDirection)
+void vehicle_paint(rct_vehicle *vehicle, int imageDirection)
 {
 	rct_ride_entry *rideEntry;
 	const rct_ride_entry_vehicle *vehicleEntry;

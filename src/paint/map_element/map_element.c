@@ -35,7 +35,7 @@
 
 static void viewport_blank_tiles_paint_setup(int x, int y);
 static void sub_68B3FB(int x, int y);
-void viewport_track_paint_setup(uint8 direction, int height, rct_map_element *mapElement);
+void track_paint(uint8 direction, int height, rct_map_element *mapElement);
 
 /**
  *
@@ -251,28 +251,28 @@ static void sub_68B3FB(int x, int y)
 		switch (map_element_get_type(map_element))
 		{
 		case MAP_ELEMENT_TYPE_SURFACE:
-			RCT2_CALLPROC_X(0x66062C, 0, 0, direction, height, (int)map_element, 0, 0);
+			surface_paint(direction, height, map_element);
 			break;
 		case MAP_ELEMENT_TYPE_PATH:
-			RCT2_CALLPROC_X(0x6A3590, 0, 0, direction, height, (int)map_element, 0, 0);
+			path_paint(direction, height, map_element);
 			break;
 		case MAP_ELEMENT_TYPE_TRACK:
-			viewport_track_paint_setup(direction, height, map_element);
+			track_paint(direction, height, map_element);
 			break;
 		case MAP_ELEMENT_TYPE_SCENERY:
-			RCT2_CALLPROC_X(0x6DFF47, 0, 0, direction, height, (int)map_element, 0, 0);
+			scenery_paint(direction, height, map_element);
 			break;
 		case MAP_ELEMENT_TYPE_ENTRANCE:
-			viewport_entrance_paint_setup(direction, height, map_element);
+			entrance_paint(direction, height, map_element);
 			break;
 		case MAP_ELEMENT_TYPE_FENCE:
-			RCT2_CALLPROC_X(0x6E44B0, 0, 0, direction, height, (int)map_element, 0, 0);
+			fence_paint(direction, height, map_element);
 			break;
 		case MAP_ELEMENT_TYPE_SCENERY_MULTIPLE:
-			RCT2_CALLPROC_X(0x6B7F0C, 0, 0, direction, height, (int)map_element, 0, 0);
+			scenery_multiple_paint(direction, height, map_element);
 			break;
 		case MAP_ELEMENT_TYPE_BANNER:
-			viewport_banner_paint_setup(direction, height, map_element);
+			banner_paint(direction, height, map_element);
 			break;
 		// A corrupt element inserted by OpenRCT2 itself, which skips the drawing of the next element only.
 		case MAP_ELEMENT_TYPE_CORRUPT:
@@ -292,7 +292,7 @@ static void sub_68B3FB(int x, int y)
  *
  *  rct2: 0x006C4794
  */
-void viewport_track_paint_setup(uint8 direction, int height, rct_map_element *mapElement)
+void track_paint(uint8 direction, int height, rct_map_element *mapElement)
 {
 	rct_drawpixelinfo *dpi = RCT2_GLOBAL(0x0140E9A8, rct_drawpixelinfo*);
 	rct_ride *ride;

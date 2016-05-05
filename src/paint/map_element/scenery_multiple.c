@@ -13,3 +13,11 @@
 * A full copy of the GNU General Public License can be found in licence.txt
 *****************************************************************************/
 #pragma endregion
+
+#include "map_element.h"
+#include "../../addresses.h"
+#include "../../world/map.h"
+
+void scenery_multiple_paint(uint8 direction, uint16 height, rct_map_element *mapElement) {
+	RCT2_CALLPROC_X(0x6B7F0C, 0, 0, direction, height, (int)mapElement, 0, 0);
+}

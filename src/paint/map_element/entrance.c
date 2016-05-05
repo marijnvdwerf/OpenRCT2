@@ -29,7 +29,7 @@
  *
  *  rct2: 0x0066508C, 0x00665540
  */
-void viewport_ride_entrance_exit_paint_setup(uint8 direction, int height, rct_map_element* map_element)
+void ride_entrance_exit_paint(uint8 direction, int height, rct_map_element* map_element)
 {
 	rct_drawpixelinfo* dpi = RCT2_GLOBAL(0x140E9A8, rct_drawpixelinfo*);
 	uint8 is_exit = map_element->properties.entrance.type == ENTRANCE_TYPE_RIDE_EXIT;
@@ -174,7 +174,7 @@ void viewport_ride_entrance_exit_paint_setup(uint8 direction, int height, rct_ma
  *
  *  rct2: 0x006658ED
  */
-void viewport_park_entrance_paint_setup(uint8 direction, int height, rct_map_element* map_element){
+void park_entrance_paint(uint8 direction, int height, rct_map_element* map_element){
 	if (RCT2_GLOBAL(0x9DEA6F, uint8_t) & 1)
 		return;
 
@@ -271,7 +271,7 @@ void viewport_park_entrance_paint_setup(uint8 direction, int height, rct_map_ele
  *
  *  rct2: 0x00664FD4
  */
-void viewport_entrance_paint_setup(uint8 direction, int height, rct_map_element* map_element){
+void entrance_paint(uint8 direction, int height, rct_map_element* map_element){
 	RCT2_GLOBAL(RCT2_ADDRESS_PAINT_SETUP_CURRENT_TYPE, uint8_t) = VIEWPORT_INTERACTION_ITEM_LABEL;
 
 	rct_drawpixelinfo* dpi = RCT2_GLOBAL(0x140E9A8, rct_drawpixelinfo*);
@@ -299,10 +299,10 @@ void viewport_entrance_paint_setup(uint8 direction, int height, rct_map_element*
 	switch (map_element->properties.entrance.type){
 	case ENTRANCE_TYPE_RIDE_ENTRANCE:
 	case ENTRANCE_TYPE_RIDE_EXIT:
-		viewport_ride_entrance_exit_paint_setup(direction, height, map_element);
+		ride_entrance_exit_paint(direction, height, map_element);
 		break;
 	case ENTRANCE_TYPE_PARK_ENTRANCE:
-		viewport_park_entrance_paint_setup(direction, height, map_element);
+		park_entrance_paint(direction, height, map_element);
 		break;
 	}
 }

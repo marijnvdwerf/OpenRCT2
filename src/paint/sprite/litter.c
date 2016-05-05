@@ -23,7 +23,7 @@
  * Litter Paint Setup
  *  rct2: 0x006736FC
  */
-void viewport_litter_paint_setup(rct_litter *litter, int imageDirection)
+void litter_paint(rct_litter *litter, int imageDirection)
 {
 	rct_drawpixelinfo *dpi;
 

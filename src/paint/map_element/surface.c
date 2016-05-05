@@ -1004,7 +1004,7 @@ void viewport_surface_draw_water_side_bottom(enum edge edge, uint8 height, uint8
  * @param height (dx)
  * @param map_element (esi)
  */
-void viewport_surface_paint_setup(uint8 direction, uint16 height, rct_map_element * mapElement)
+void surface_paint(uint8 direction, uint16 height, rct_map_element * mapElement)
 {
 	rct_drawpixelinfo * dpi = RCT2_GLOBAL(0x0140E9A8, rct_drawpixelinfo*);
 	RCT2_GLOBAL(RCT2_ADDRESS_PAINT_SETUP_CURRENT_TYPE, uint8) = VIEWPORT_INTERACTION_ITEM_TERRAIN;

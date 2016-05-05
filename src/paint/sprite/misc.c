@@ -21,7 +21,7 @@
  *
  *  rct2: 0x00672AC9
  */
-void viewport_misc_paint_setup(rct_sprite *misc, int imageDirection)
+void misc_paint(rct_sprite *misc, int imageDirection)
 {
 	RCT2_CALLPROC_X(0x00672AC9, misc->unknown.x, imageDirection, misc->unknown.y, misc->unknown.z, (int)misc, 0, 0);
 }
