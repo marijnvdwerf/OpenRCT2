@@ -10,33 +10,6 @@
 		C65B9A4F1CCB7ADA008C350A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65B9A4E1CCB7ADA008C350A /* Assets.xcassets */; };
 		C65B9A521CCB7ADA008C350A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65B9A501CCB7ADA008C350A /* LaunchScreen.storyboard */; };
 		C65B9EB21CCB7D84008C350A /* g2.dat in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E8F1CCB7D84008C350A /* g2.dat */; };
-		C65B9EB31CCB7D84008C350A /* chinese_simplified.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E911CCB7D84008C350A /* chinese_simplified.txt */; };
-		C65B9EB41CCB7D84008C350A /* chinese_traditional.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E921CCB7D84008C350A /* chinese_traditional.txt */; };
-		C65B9EB51CCB7D84008C350A /* czech.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E931CCB7D84008C350A /* czech.txt */; };
-		C65B9EB61CCB7D84008C350A /* dutch.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E941CCB7D84008C350A /* dutch.txt */; };
-		C65B9EB71CCB7D84008C350A /* english_uk.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E951CCB7D84008C350A /* english_uk.txt */; };
-		C65B9EB81CCB7D84008C350A /* english_us.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E961CCB7D84008C350A /* english_us.txt */; };
-		C65B9EB91CCB7D84008C350A /* finnish.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E971CCB7D84008C350A /* finnish.txt */; };
-		C65B9EBA1CCB7D84008C350A /* french.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E981CCB7D84008C350A /* french.txt */; };
-		C65B9EBB1CCB7D84008C350A /* german.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E991CCB7D84008C350A /* german.txt */; };
-		C65B9EBC1CCB7D84008C350A /* hungarian.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E9A1CCB7D84008C350A /* hungarian.txt */; };
-		C65B9EBD1CCB7D84008C350A /* italian.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E9B1CCB7D84008C350A /* italian.txt */; };
-		C65B9EBE1CCB7D84008C350A /* japanese.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E9C1CCB7D84008C350A /* japanese.txt */; };
-		C65B9EBF1CCB7D84008C350A /* korean.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E9D1CCB7D84008C350A /* korean.txt */; };
-		C65B9EC01CCB7D84008C350A /* polish.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E9E1CCB7D84008C350A /* polish.txt */; };
-		C65B9EC11CCB7D84008C350A /* portuguese_br.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9E9F1CCB7D84008C350A /* portuguese_br.txt */; };
-		C65B9EC21CCB7D84008C350A /* russian.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EA01CCB7D84008C350A /* russian.txt */; };
-		C65B9EC31CCB7D84008C350A /* spanish_sp.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EA11CCB7D84008C350A /* spanish_sp.txt */; };
-		C65B9EC41CCB7D84008C350A /* swedish.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EA21CCB7D84008C350A /* swedish.txt */; };
-		C65B9EC51CCB7D84008C350A /* Cypress Grove Title.sv6 in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EA51CCB7D84008C350A /* Cypress Grove Title.sv6 */; };
-		C65B9EC61CCB7D84008C350A /* Ill Paradise.sv6 in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EA61CCB7D84008C350A /* Ill Paradise.sv6 */; };
-		C65B9EC71CCB7D84008C350A /* script.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EA71CCB7D84008C350A /* script.txt */; };
-		C65B9EC81CCB7D84008C350A /* TaCW.sv6 in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EA81CCB7D84008C350A /* TaCW.sv6 */; };
-		C65B9EC91CCB7D84008C350A /* Title Sequence Park 1.sv6 in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EA91CCB7D84008C350A /* Title Sequence Park 1.sv6 */; };
-		C65B9ECA1CCB7D84008C350A /* script.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EAB1CCB7D84008C350A /* script.txt */; };
-		C65B9ECB1CCB7D84008C350A /* script.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EAD1CCB7D84008C350A /* script.txt */; };
-		C65B9ECC1CCB7D84008C350A /* script.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EAF1CCB7D84008C350A /* script.txt */; };
-		C65B9ECD1CCB7D84008C350A /* script.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65B9EB11CCB7D84008C350A /* script.txt */; };
 		C65BA0181CCB800B008C350A /* addresses.c in Sources */ = {isa = PBXBuildFile; fileRef = C65B9EEA1CCB800B008C350A /* addresses.c */; };
 		C65BA0191CCB800B008C350A /* audio.c in Sources */ = {isa = PBXBuildFile; fileRef = C65B9EED1CCB800B008C350A /* audio.c */; };
 		C65BA01A1CCB800B008C350A /* mixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C65B9EEF1CCB800B008C350A /* mixer.cpp */; };
@@ -67,7 +40,6 @@
 		C65BA0331CCB800B008C350A /* scrolling_text.c in Sources */ = {isa = PBXBuildFile; fileRef = C65B9F271CCB800B008C350A /* scrolling_text.c */; };
 		C65BA0341CCB800B008C350A /* sprite.c in Sources */ = {isa = PBXBuildFile; fileRef = C65B9F281CCB800B008C350A /* sprite.c */; };
 		C65BA0351CCB800B008C350A /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = C65B9F291CCB800B008C350A /* string.c */; };
-		C65BA0361CCB800B008C350A /* supports.c in Sources */ = {isa = PBXBuildFile; fileRef = C65B9F2A1CCB800B008C350A /* supports.c */; };
 		C65BA0371CCB800B008C350A /* editor.c in Sources */ = {isa = PBXBuildFile; fileRef = C65B9F2C1CCB800B008C350A /* editor.c */; };
 		C65BA0381CCB800B008C350A /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = C65B9F2E1CCB800B008C350A /* game.c */; };
 		C65BA0391CCB800B008C350A /* hook.c in Sources */ = {isa = PBXBuildFile; fileRef = C65B9F301CCB800B008C350A /* hook.c */; };
@@ -216,9 +188,9 @@
 		C65BA0CB1CCB800B008C350A /* particle.c in Sources */ = {isa = PBXBuildFile; fileRef = C65BA0121CCB800B008C350A /* particle.c */; };
 		C65BA0CC1CCB800B008C350A /* scenery.c in Sources */ = {isa = PBXBuildFile; fileRef = C65BA0131CCB800B008C350A /* scenery.c */; };
 		C65BA0CD1CCB800B008C350A /* sprite.c in Sources */ = {isa = PBXBuildFile; fileRef = C65BA0151CCB800B008C350A /* sprite.c */; };
+		C670814B1CF33B4A0082221D /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C670814A1CF33B4A0082221D /* libSDL2.a */; };
 		C67FD2021CCBC3860030B465 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD1B61CCBC2B50030B465 /* libjansson.a */; };
 		C67FD2051CCBC3860030B465 /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD18D1CCBC2A80030B465 /* libSDL2_ttf.a */; };
-		C67FD20E1CCBC4510030B465 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD20D1CCBC3EB0030B465 /* libSDL2.a */; };
 		C67FD2451CCBD5970030B465 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD21D1CCBC54B0030B465 /* libpng.a */; };
 		C67FD2471CCBD6500030B465 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C67FD2461CCBD6500030B465 /* libz.tbd */; };
 		C67FD2701CCBDB250030B465 /* ios.m in Sources */ = {isa = PBXBuildFile; fileRef = C67FD26F1CCBDB250030B465 /* ios.m */; };
@@ -232,9 +204,141 @@
 		C6B5D6011CCB8C4D00EA35C4 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B5D6001CCB8C4D00EA35C4 /* CoreMotion.framework */; };
 		C6B5D6031CCB8C5500EA35C4 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B5D6021CCB8C5500EA35C4 /* GameController.framework */; };
 		C6B5D6071CCB8C7400EA35C4 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B5D6061CCB8C7400EA35C4 /* libiconv.tbd */; };
+		C6BE74D71CF32903009F072E /* air_powered_vertical_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74871CF32903009F072E /* air_powered_vertical_coaster.c */; };
+		C6BE74D81CF32903009F072E /* bobsleigh_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74881CF32903009F072E /* bobsleigh_coaster.c */; };
+		C6BE74D91CF32903009F072E /* compact_inverted_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74891CF32903009F072E /* compact_inverted_coaster.c */; };
+		C6BE74DA1CF32903009F072E /* corkscrew_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE748A1CF32903009F072E /* corkscrew_roller_coaster.c */; };
+		C6BE74DB1CF32903009F072E /* flying_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE748B1CF32903009F072E /* flying_roller_coaster.c */; };
+		C6BE74DC1CF32903009F072E /* giga_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE748C1CF32903009F072E /* giga_coaster.c */; };
+		C6BE74DD1CF32903009F072E /* heartline_twister_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE748D1CF32903009F072E /* heartline_twister_coaster.c */; };
+		C6BE74DE1CF32903009F072E /* inverted_hairpin_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE748E1CF32903009F072E /* inverted_hairpin_coaster.c */; };
+		C6BE74DF1CF32903009F072E /* inverted_impulse_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE748F1CF32903009F072E /* inverted_impulse_coaster.c */; };
+		C6BE74E01CF32903009F072E /* inverted_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74901CF32903009F072E /* inverted_roller_coaster.c */; };
+		C6BE74E11CF32903009F072E /* junior_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74911CF32903009F072E /* junior_roller_coaster.c */; };
+		C6BE74E21CF32903009F072E /* lay_down_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74921CF32903009F072E /* lay_down_roller_coaster.c */; };
+		C6BE74E31CF32903009F072E /* lim_launched_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74931CF32903009F072E /* lim_launched_roller_coaster.c */; };
+		C6BE74E41CF32903009F072E /* looping_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74941CF32903009F072E /* looping_roller_coaster.c */; };
+		C6BE74E51CF32903009F072E /* mine_ride.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74951CF32903009F072E /* mine_ride.c */; };
+		C6BE74E61CF32903009F072E /* mine_train_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74961CF32903009F072E /* mine_train_coaster.c */; };
+		C6BE74E71CF32903009F072E /* mini_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74971CF32903009F072E /* mini_roller_coaster.c */; };
+		C6BE74E81CF32903009F072E /* mini_suspended_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74981CF32903009F072E /* mini_suspended_coaster.c */; };
+		C6BE74E91CF32903009F072E /* multi_dimension_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74991CF32903009F072E /* multi_dimension_roller_coaster.c */; };
+		C6BE74EA1CF32903009F072E /* reverse_freefall_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE749A1CF32903009F072E /* reverse_freefall_coaster.c */; };
+		C6BE74EB1CF32903009F072E /* reverser_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE749B1CF32903009F072E /* reverser_roller_coaster.c */; };
+		C6BE74EC1CF32903009F072E /* side_friction_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE749C1CF32903009F072E /* side_friction_roller_coaster.c */; };
+		C6BE74ED1CF32903009F072E /* spiral_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE749D1CF32903009F072E /* spiral_roller_coaster.c */; };
+		C6BE74EE1CF32903009F072E /* stand_up_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE749E1CF32903009F072E /* stand_up_roller_coaster.c */; };
+		C6BE74EF1CF32903009F072E /* steeplechase.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE749F1CF32903009F072E /* steeplechase.c */; };
+		C6BE74F01CF32903009F072E /* suspended_swinging_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74A01CF32903009F072E /* suspended_swinging_coaster.c */; };
+		C6BE74F11CF32903009F072E /* twister_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74A11CF32903009F072E /* twister_roller_coaster.c */; };
+		C6BE74F21CF32903009F072E /* vertical_drop_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74A21CF32903009F072E /* vertical_drop_roller_coaster.c */; };
+		C6BE74F31CF32903009F072E /* virginia_reel.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74A31CF32903009F072E /* virginia_reel.c */; };
+		C6BE74F41CF32903009F072E /* wild_mouse.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74A41CF32903009F072E /* wild_mouse.c */; };
+		C6BE74F51CF32903009F072E /* wooden_roller_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74A51CF32903009F072E /* wooden_roller_coaster.c */; };
+		C6BE74F61CF32903009F072E /* wooden_wild_mouse.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74A61CF32903009F072E /* wooden_wild_mouse.c */; };
+		C6BE74F71CF32903009F072E /* car_ride.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74A81CF32903009F072E /* car_ride.c */; };
+		C6BE74F81CF32903009F072E /* circus_show.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74A91CF32903009F072E /* circus_show.c */; };
+		C6BE74F91CF32903009F072E /* crooked_house.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74AA1CF32903009F072E /* crooked_house.c */; };
+		C6BE74FA1CF32903009F072E /* dodgems.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74AB1CF32903009F072E /* dodgems.c */; };
+		C6BE74FB1CF32903009F072E /* ferris_wheel.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74AC1CF32903009F072E /* ferris_wheel.c */; };
+		C6BE74FC1CF32903009F072E /* flying_saucers.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74AD1CF32903009F072E /* flying_saucers.c */; };
+		C6BE74FD1CF32903009F072E /* ghost_train.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74AE1CF32903009F072E /* ghost_train.c */; };
+		C6BE74FE1CF32903009F072E /* haunted_house.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74AF1CF32903009F072E /* haunted_house.c */; };
+		C6BE74FF1CF32903009F072E /* maze.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74B01CF32903009F072E /* maze.c */; };
+		C6BE75001CF32903009F072E /* merry_go_round.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74B11CF32903009F072E /* merry_go_round.c */; };
+		C6BE75011CF32903009F072E /* mini_golf.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74B21CF32903009F072E /* mini_golf.c */; };
+		C6BE75021CF32903009F072E /* mini_helicopters.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74B31CF32903009F072E /* mini_helicopters.c */; };
+		C6BE75031CF32903009F072E /* monorail_cycles.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74B41CF32903009F072E /* monorail_cycles.c */; };
+		C6BE75041CF32903009F072E /* observation_tower.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74B51CF32903009F072E /* observation_tower.c */; };
+		C6BE75051CF32903009F072E /* space_rings.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74B61CF32903009F072E /* space_rings.c */; };
+		C6BE75061CF32903009F072E /* spiral_slide.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74B71CF32903009F072E /* spiral_slide.c */; };
+		C6BE75071CF32903009F072E /* facility.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74B91CF32903009F072E /* facility.c */; };
+		C6BE75081CF32903009F072E /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74BA1CF32903009F072E /* misc.c */; };
+		C6BE75091CF32903009F072E /* shop.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74BB1CF32903009F072E /* shop.c */; };
+		C6BE750A1CF32903009F072E /* 3d_cinema.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74BD1CF32903009F072E /* 3d_cinema.c */; };
+		C6BE750B1CF32903009F072E /* enterprise.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74BE1CF32903009F072E /* enterprise.c */; };
+		C6BE750C1CF32903009F072E /* go_karts.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74BF1CF32903009F072E /* go_karts.c */; };
+		C6BE750D1CF32903009F072E /* launched_freefall.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74C01CF32903009F072E /* launched_freefall.c */; };
+		C6BE750E1CF32903009F072E /* magic_carpet.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74C11CF32903009F072E /* magic_carpet.c */; };
+		C6BE750F1CF32903009F072E /* motion_simulator.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74C21CF32903009F072E /* motion_simulator.c */; };
+		C6BE75101CF32903009F072E /* pirate_ship.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74C31CF32903009F072E /* pirate_ship.c */; };
+		C6BE75111CF32903009F072E /* roto_drop.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74C41CF32903009F072E /* roto_drop.c */; };
+		C6BE75121CF32903009F072E /* swinging_inverter_ship.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74C51CF32903009F072E /* swinging_inverter_ship.c */; };
+		C6BE75131CF32903009F072E /* top_spin.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74C61CF32903009F072E /* top_spin.c */; };
+		C6BE75141CF32903009F072E /* twist.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74C71CF32903009F072E /* twist.c */; };
+		C6BE75151CF32903009F072E /* chairlift.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74C91CF32903009F072E /* chairlift.c */; };
+		C6BE75161CF32903009F072E /* lift.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74CA1CF32903009F072E /* lift.c */; };
+		C6BE75171CF32903009F072E /* minature_railway.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74CB1CF32903009F072E /* minature_railway.c */; };
+		C6BE75181CF32903009F072E /* monorail.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74CC1CF32903009F072E /* monorail.c */; };
+		C6BE75191CF32903009F072E /* suspended_monorail.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74CD1CF32903009F072E /* suspended_monorail.c */; };
+		C6BE751A1CF32903009F072E /* boat_ride.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74CF1CF32903009F072E /* boat_ride.c */; };
+		C6BE751B1CF32903009F072E /* dingy_slide.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74D01CF32903009F072E /* dingy_slide.c */; };
+		C6BE751C1CF32903009F072E /* log_flume.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74D11CF32903009F072E /* log_flume.c */; };
+		C6BE751D1CF32903009F072E /* river_rafts.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74D21CF32903009F072E /* river_rafts.c */; };
+		C6BE751E1CF32903009F072E /* river_rapids.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74D31CF32903009F072E /* river_rapids.c */; };
+		C6BE751F1CF32903009F072E /* splash_boats.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74D41CF32903009F072E /* splash_boats.c */; };
+		C6BE75201CF32903009F072E /* submarine_ride.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74D51CF32903009F072E /* submarine_ride.c */; };
+		C6BE75211CF32903009F072E /* water_coaster.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE74D61CF32903009F072E /* water_coaster.c */; };
+		C6BE75381CF32913009F072E /* banner.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75241CF32913009F072E /* banner.c */; };
+		C6BE75391CF32913009F072E /* entrance.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75251CF32913009F072E /* entrance.c */; };
+		C6BE753A1CF32913009F072E /* fence.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75261CF32913009F072E /* fence.c */; };
+		C6BE753B1CF32913009F072E /* map_element.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75271CF32913009F072E /* map_element.c */; };
+		C6BE753C1CF32913009F072E /* path.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75291CF32913009F072E /* path.c */; };
+		C6BE753D1CF32913009F072E /* scenery.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE752A1CF32913009F072E /* scenery.c */; };
+		C6BE753E1CF32913009F072E /* scenery_multiple.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE752B1CF32913009F072E /* scenery_multiple.c */; };
+		C6BE753F1CF32913009F072E /* surface.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE752C1CF32913009F072E /* surface.c */; };
+		C6BE75401CF32913009F072E /* paint.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE752E1CF32913009F072E /* paint.c */; };
+		C6BE75411CF32913009F072E /* litter.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75311CF32913009F072E /* litter.c */; };
+		C6BE75421CF32913009F072E /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75321CF32913009F072E /* misc.c */; };
+		C6BE75431CF32913009F072E /* peep.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75331CF32913009F072E /* peep.c */; };
+		C6BE75441CF32913009F072E /* sprite.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75341CF32913009F072E /* sprite.c */; };
+		C6BE75451CF32913009F072E /* supports.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75361CF32913009F072E /* supports.c */; };
+		C6BE75481CF32952009F072E /* vehicle_paint.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75461CF32951009F072E /* vehicle_paint.c */; };
+		C6BE754D1CF32990009F072E /* track_design_index.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75491CF32990009F072E /* track_design_index.c */; };
+		C6BE754E1CF32990009F072E /* track_design_save.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE754A1CF32990009F072E /* track_design_save.c */; };
+		C6BE754F1CF32990009F072E /* track_design.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BE754B1CF32990009F072E /* track_design.c */; };
+		C6BE75551CF329B6009F072E /* S6Exporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75511CF329B6009F072E /* S6Exporter.cpp */; };
+		C6BE75561CF329B6009F072E /* S6Importer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6BE75531CF329B6009F072E /* S6Importer.cpp */; };
+		C6BE757B1CF32A22009F072E /* title in Resources */ = {isa = PBXBuildFile; fileRef = C6BE757A1CF32A22009F072E /* title */; };
+		C6BE757D1CF32A28009F072E /* language in Resources */ = {isa = PBXBuildFile; fileRef = C6BE757C1CF32A28009F072E /* language */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C67081491CF33B4A0082221D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C67FD2071CCBC3EB0030B465 /* SDL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD6526630DE8FCCB002AD96B;
+			remoteInfo = libSDL;
+		};
+		C67081671CF33B5F0082221D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C67FD19E1CCBC2B50030B465 /* jansson.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EC72B7C7DF034C94B6E845AB;
+			remoteInfo = jansson;
+		};
+		C670816B1CF33B680082221D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C67FD1881CCBC2A80030B465 /* SDL_ttf.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE48FD6807AFA17000BB41DA;
+			remoteInfo = "Static Library";
+		};
+		C670816D1CF33B6C0082221D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C67FD2071CCBC3EB0030B465 /* SDL.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD6526620DE8FCCB002AD96B;
+			remoteInfo = libSDL;
+		};
+		C670816F1CF33B900082221D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C67FD20F1CCBC54B0030B465 /* libpng.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BF3B093122B1B9B0092AE4E;
+			remoteInfo = "libpng static (iOS)";
+		};
 		C67FD18C1CCBC2A80030B465 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C67FD1881CCBC2A80030B465 /* SDL_ttf.xcodeproj */;
@@ -347,13 +451,6 @@
 			remoteGlobalIDString = C59DC513A57B49F7A9C1EB3B;
 			remoteInfo = test_unpack;
 		};
-		C67FD20C1CCBC3EB0030B465 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C67FD2071CCBC3EB0030B465 /* SDL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD6526630DE8FCCB002AD96B;
-			remoteInfo = libSDL;
-		};
 		C67FD2181CCBC54B0030B465 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C67FD20F1CCBC54B0030B465 /* libpng.xcodeproj */;
@@ -391,33 +488,6 @@
 		C65B9A511CCB7ADA008C350A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C65B9A531CCB7ADA008C350A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../distribution/ios/Info.plist; sourceTree = "<group>"; };
 		C65B9E8F1CCB7D84008C350A /* g2.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = g2.dat; sourceTree = "<group>"; };
-		C65B9E911CCB7D84008C350A /* chinese_simplified.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chinese_simplified.txt; sourceTree = "<group>"; };
-		C65B9E921CCB7D84008C350A /* chinese_traditional.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chinese_traditional.txt; sourceTree = "<group>"; };
-		C65B9E931CCB7D84008C350A /* czech.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = czech.txt; sourceTree = "<group>"; };
-		C65B9E941CCB7D84008C350A /* dutch.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dutch.txt; sourceTree = "<group>"; };
-		C65B9E951CCB7D84008C350A /* english_uk.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = english_uk.txt; sourceTree = "<group>"; };
-		C65B9E961CCB7D84008C350A /* english_us.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = english_us.txt; sourceTree = "<group>"; };
-		C65B9E971CCB7D84008C350A /* finnish.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = finnish.txt; sourceTree = "<group>"; };
-		C65B9E981CCB7D84008C350A /* french.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = french.txt; sourceTree = "<group>"; };
-		C65B9E991CCB7D84008C350A /* german.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = german.txt; sourceTree = "<group>"; };
-		C65B9E9A1CCB7D84008C350A /* hungarian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hungarian.txt; sourceTree = "<group>"; };
-		C65B9E9B1CCB7D84008C350A /* italian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = italian.txt; sourceTree = "<group>"; };
-		C65B9E9C1CCB7D84008C350A /* japanese.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = japanese.txt; sourceTree = "<group>"; };
-		C65B9E9D1CCB7D84008C350A /* korean.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = korean.txt; sourceTree = "<group>"; };
-		C65B9E9E1CCB7D84008C350A /* polish.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polish.txt; sourceTree = "<group>"; };
-		C65B9E9F1CCB7D84008C350A /* portuguese_br.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = portuguese_br.txt; sourceTree = "<group>"; };
-		C65B9EA01CCB7D84008C350A /* russian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = russian.txt; sourceTree = "<group>"; };
-		C65B9EA11CCB7D84008C350A /* spanish_sp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spanish_sp.txt; sourceTree = "<group>"; };
-		C65B9EA21CCB7D84008C350A /* swedish.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swedish.txt; sourceTree = "<group>"; };
-		C65B9EA51CCB7D84008C350A /* Cypress Grove Title.sv6 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cypress Grove Title.sv6"; sourceTree = "<group>"; };
-		C65B9EA61CCB7D84008C350A /* Ill Paradise.sv6 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ill Paradise.sv6"; sourceTree = "<group>"; };
-		C65B9EA71CCB7D84008C350A /* script.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.txt; sourceTree = "<group>"; };
-		C65B9EA81CCB7D84008C350A /* TaCW.sv6 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TaCW.sv6; sourceTree = "<group>"; };
-		C65B9EA91CCB7D84008C350A /* Title Sequence Park 1.sv6 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Title Sequence Park 1.sv6"; sourceTree = "<group>"; };
-		C65B9EAB1CCB7D84008C350A /* script.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.txt; sourceTree = "<group>"; };
-		C65B9EAD1CCB7D84008C350A /* script.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.txt; sourceTree = "<group>"; };
-		C65B9EAF1CCB7D84008C350A /* script.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.txt; sourceTree = "<group>"; };
-		C65B9EB11CCB7D84008C350A /* script.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.txt; sourceTree = "<group>"; };
 		C65B9EEA1CCB800B008C350A /* addresses.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = addresses.c; sourceTree = "<group>"; };
 		C65B9EEB1CCB800B008C350A /* addresses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addresses.h; sourceTree = "<group>"; };
 		C65B9EED1CCB800B008C350A /* audio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = audio.c; sourceTree = "<group>"; };
@@ -478,8 +548,6 @@
 		C65B9F271CCB800B008C350A /* scrolling_text.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scrolling_text.c; sourceTree = "<group>"; };
 		C65B9F281CCB800B008C350A /* sprite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sprite.c; sourceTree = "<group>"; };
 		C65B9F291CCB800B008C350A /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string.c; sourceTree = "<group>"; };
-		C65B9F2A1CCB800B008C350A /* supports.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = supports.c; sourceTree = "<group>"; };
-		C65B9F2B1CCB800B008C350A /* supports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = supports.h; sourceTree = "<group>"; };
 		C65B9F2C1CCB800B008C350A /* editor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = editor.c; sourceTree = "<group>"; };
 		C65B9F2D1CCB800B008C350A /* editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editor.h; sourceTree = "<group>"; };
 		C65B9F2E1CCB800B008C350A /* game.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = game.c; sourceTree = "<group>"; };
@@ -721,6 +789,113 @@
 		C6B5D6021CCB8C5500EA35C4 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		C6B5D6041CCB8C6300EA35C4 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
 		C6B5D6061CCB8C7400EA35C4 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		C6BE74871CF32903009F072E /* air_powered_vertical_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = air_powered_vertical_coaster.c; sourceTree = "<group>"; };
+		C6BE74881CF32903009F072E /* bobsleigh_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bobsleigh_coaster.c; sourceTree = "<group>"; };
+		C6BE74891CF32903009F072E /* compact_inverted_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compact_inverted_coaster.c; sourceTree = "<group>"; };
+		C6BE748A1CF32903009F072E /* corkscrew_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = corkscrew_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE748B1CF32903009F072E /* flying_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = flying_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE748C1CF32903009F072E /* giga_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = giga_coaster.c; sourceTree = "<group>"; };
+		C6BE748D1CF32903009F072E /* heartline_twister_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = heartline_twister_coaster.c; sourceTree = "<group>"; };
+		C6BE748E1CF32903009F072E /* inverted_hairpin_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inverted_hairpin_coaster.c; sourceTree = "<group>"; };
+		C6BE748F1CF32903009F072E /* inverted_impulse_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inverted_impulse_coaster.c; sourceTree = "<group>"; };
+		C6BE74901CF32903009F072E /* inverted_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inverted_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE74911CF32903009F072E /* junior_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = junior_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE74921CF32903009F072E /* lay_down_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lay_down_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE74931CF32903009F072E /* lim_launched_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lim_launched_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE74941CF32903009F072E /* looping_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = looping_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE74951CF32903009F072E /* mine_ride.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mine_ride.c; sourceTree = "<group>"; };
+		C6BE74961CF32903009F072E /* mine_train_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mine_train_coaster.c; sourceTree = "<group>"; };
+		C6BE74971CF32903009F072E /* mini_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mini_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE74981CF32903009F072E /* mini_suspended_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mini_suspended_coaster.c; sourceTree = "<group>"; };
+		C6BE74991CF32903009F072E /* multi_dimension_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = multi_dimension_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE749A1CF32903009F072E /* reverse_freefall_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = reverse_freefall_coaster.c; sourceTree = "<group>"; };
+		C6BE749B1CF32903009F072E /* reverser_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = reverser_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE749C1CF32903009F072E /* side_friction_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = side_friction_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE749D1CF32903009F072E /* spiral_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spiral_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE749E1CF32903009F072E /* stand_up_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stand_up_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE749F1CF32903009F072E /* steeplechase.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = steeplechase.c; sourceTree = "<group>"; };
+		C6BE74A01CF32903009F072E /* suspended_swinging_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = suspended_swinging_coaster.c; sourceTree = "<group>"; };
+		C6BE74A11CF32903009F072E /* twister_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = twister_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE74A21CF32903009F072E /* vertical_drop_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vertical_drop_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE74A31CF32903009F072E /* virginia_reel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = virginia_reel.c; sourceTree = "<group>"; };
+		C6BE74A41CF32903009F072E /* wild_mouse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wild_mouse.c; sourceTree = "<group>"; };
+		C6BE74A51CF32903009F072E /* wooden_roller_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wooden_roller_coaster.c; sourceTree = "<group>"; };
+		C6BE74A61CF32903009F072E /* wooden_wild_mouse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wooden_wild_mouse.c; sourceTree = "<group>"; };
+		C6BE74A81CF32903009F072E /* car_ride.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = car_ride.c; sourceTree = "<group>"; };
+		C6BE74A91CF32903009F072E /* circus_show.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = circus_show.c; sourceTree = "<group>"; };
+		C6BE74AA1CF32903009F072E /* crooked_house.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crooked_house.c; sourceTree = "<group>"; };
+		C6BE74AB1CF32903009F072E /* dodgems.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dodgems.c; sourceTree = "<group>"; };
+		C6BE74AC1CF32903009F072E /* ferris_wheel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ferris_wheel.c; sourceTree = "<group>"; };
+		C6BE74AD1CF32903009F072E /* flying_saucers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = flying_saucers.c; sourceTree = "<group>"; };
+		C6BE74AE1CF32903009F072E /* ghost_train.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ghost_train.c; sourceTree = "<group>"; };
+		C6BE74AF1CF32903009F072E /* haunted_house.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = haunted_house.c; sourceTree = "<group>"; };
+		C6BE74B01CF32903009F072E /* maze.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = maze.c; sourceTree = "<group>"; };
+		C6BE74B11CF32903009F072E /* merry_go_round.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = merry_go_round.c; sourceTree = "<group>"; };
+		C6BE74B21CF32903009F072E /* mini_golf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mini_golf.c; sourceTree = "<group>"; };
+		C6BE74B31CF32903009F072E /* mini_helicopters.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mini_helicopters.c; sourceTree = "<group>"; };
+		C6BE74B41CF32903009F072E /* monorail_cycles.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = monorail_cycles.c; sourceTree = "<group>"; };
+		C6BE74B51CF32903009F072E /* observation_tower.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = observation_tower.c; sourceTree = "<group>"; };
+		C6BE74B61CF32903009F072E /* space_rings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = space_rings.c; sourceTree = "<group>"; };
+		C6BE74B71CF32903009F072E /* spiral_slide.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spiral_slide.c; sourceTree = "<group>"; };
+		C6BE74B91CF32903009F072E /* facility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = facility.c; sourceTree = "<group>"; };
+		C6BE74BA1CF32903009F072E /* misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = misc.c; sourceTree = "<group>"; };
+		C6BE74BB1CF32903009F072E /* shop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = shop.c; sourceTree = "<group>"; };
+		C6BE74BD1CF32903009F072E /* 3d_cinema.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 3d_cinema.c; sourceTree = "<group>"; };
+		C6BE74BE1CF32903009F072E /* enterprise.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = enterprise.c; sourceTree = "<group>"; };
+		C6BE74BF1CF32903009F072E /* go_karts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = go_karts.c; sourceTree = "<group>"; };
+		C6BE74C01CF32903009F072E /* launched_freefall.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = launched_freefall.c; sourceTree = "<group>"; };
+		C6BE74C11CF32903009F072E /* magic_carpet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = magic_carpet.c; sourceTree = "<group>"; };
+		C6BE74C21CF32903009F072E /* motion_simulator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = motion_simulator.c; sourceTree = "<group>"; };
+		C6BE74C31CF32903009F072E /* pirate_ship.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pirate_ship.c; sourceTree = "<group>"; };
+		C6BE74C41CF32903009F072E /* roto_drop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = roto_drop.c; sourceTree = "<group>"; };
+		C6BE74C51CF32903009F072E /* swinging_inverter_ship.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swinging_inverter_ship.c; sourceTree = "<group>"; };
+		C6BE74C61CF32903009F072E /* top_spin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = top_spin.c; sourceTree = "<group>"; };
+		C6BE74C71CF32903009F072E /* twist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = twist.c; sourceTree = "<group>"; };
+		C6BE74C91CF32903009F072E /* chairlift.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chairlift.c; sourceTree = "<group>"; };
+		C6BE74CA1CF32903009F072E /* lift.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lift.c; sourceTree = "<group>"; };
+		C6BE74CB1CF32903009F072E /* minature_railway.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = minature_railway.c; sourceTree = "<group>"; };
+		C6BE74CC1CF32903009F072E /* monorail.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = monorail.c; sourceTree = "<group>"; };
+		C6BE74CD1CF32903009F072E /* suspended_monorail.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = suspended_monorail.c; sourceTree = "<group>"; };
+		C6BE74CF1CF32903009F072E /* boat_ride.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = boat_ride.c; sourceTree = "<group>"; };
+		C6BE74D01CF32903009F072E /* dingy_slide.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dingy_slide.c; sourceTree = "<group>"; };
+		C6BE74D11CF32903009F072E /* log_flume.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = log_flume.c; sourceTree = "<group>"; };
+		C6BE74D21CF32903009F072E /* river_rafts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = river_rafts.c; sourceTree = "<group>"; };
+		C6BE74D31CF32903009F072E /* river_rapids.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = river_rapids.c; sourceTree = "<group>"; };
+		C6BE74D41CF32903009F072E /* splash_boats.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = splash_boats.c; sourceTree = "<group>"; };
+		C6BE74D51CF32903009F072E /* submarine_ride.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = submarine_ride.c; sourceTree = "<group>"; };
+		C6BE74D61CF32903009F072E /* water_coaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = water_coaster.c; sourceTree = "<group>"; };
+		C6BE75241CF32913009F072E /* banner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = banner.c; sourceTree = "<group>"; };
+		C6BE75251CF32913009F072E /* entrance.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entrance.c; sourceTree = "<group>"; };
+		C6BE75261CF32913009F072E /* fence.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fence.c; sourceTree = "<group>"; };
+		C6BE75271CF32913009F072E /* map_element.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = map_element.c; sourceTree = "<group>"; };
+		C6BE75281CF32913009F072E /* map_element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = map_element.h; sourceTree = "<group>"; };
+		C6BE75291CF32913009F072E /* path.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = path.c; sourceTree = "<group>"; };
+		C6BE752A1CF32913009F072E /* scenery.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scenery.c; sourceTree = "<group>"; };
+		C6BE752B1CF32913009F072E /* scenery_multiple.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scenery_multiple.c; sourceTree = "<group>"; };
+		C6BE752C1CF32913009F072E /* surface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = surface.c; sourceTree = "<group>"; };
+		C6BE752D1CF32913009F072E /* surface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = surface.h; sourceTree = "<group>"; };
+		C6BE752E1CF32913009F072E /* paint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = paint.c; sourceTree = "<group>"; };
+		C6BE752F1CF32913009F072E /* paint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paint.h; sourceTree = "<group>"; };
+		C6BE75311CF32913009F072E /* litter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = litter.c; sourceTree = "<group>"; };
+		C6BE75321CF32913009F072E /* misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = misc.c; sourceTree = "<group>"; };
+		C6BE75331CF32913009F072E /* peep.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = peep.c; sourceTree = "<group>"; };
+		C6BE75341CF32913009F072E /* sprite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sprite.c; sourceTree = "<group>"; };
+		C6BE75351CF32913009F072E /* sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sprite.h; sourceTree = "<group>"; };
+		C6BE75361CF32913009F072E /* supports.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = supports.c; sourceTree = "<group>"; };
+		C6BE75371CF32913009F072E /* supports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = supports.h; sourceTree = "<group>"; };
+		C6BE75461CF32951009F072E /* vehicle_paint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vehicle_paint.c; sourceTree = "<group>"; };
+		C6BE75471CF32951009F072E /* vehicle_paint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vehicle_paint.h; sourceTree = "<group>"; };
+		C6BE75491CF32990009F072E /* track_design_index.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = track_design_index.c; sourceTree = "<group>"; };
+		C6BE754A1CF32990009F072E /* track_design_save.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = track_design_save.c; sourceTree = "<group>"; };
+		C6BE754B1CF32990009F072E /* track_design.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = track_design.c; sourceTree = "<group>"; };
+		C6BE754C1CF32990009F072E /* track_design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = track_design.h; sourceTree = "<group>"; };
+		C6BE75511CF329B6009F072E /* S6Exporter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = S6Exporter.cpp; sourceTree = "<group>"; };
+		C6BE75521CF329B6009F072E /* S6Exporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S6Exporter.h; sourceTree = "<group>"; };
+		C6BE75531CF329B6009F072E /* S6Importer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = S6Importer.cpp; sourceTree = "<group>"; };
+		C6BE75541CF329B6009F072E /* S6Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S6Importer.h; sourceTree = "<group>"; };
+		C6BE757A1CF32A22009F072E /* title */ = {isa = PBXFileReference; lastKnownFileType = folder; name = title; path = data/title; sourceTree = "<group>"; };
+		C6BE757C1CF32A28009F072E /* language */ = {isa = PBXFileReference; lastKnownFileType = folder; path = language; sourceTree = "<group>"; };
+		C6BE75801CF32AE6009F072E /* title */ = {isa = PBXFileReference; lastKnownFileType = folder; path = title; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -728,9 +903,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C670814B1CF33B4A0082221D /* libSDL2.a in Frameworks */,
 				C67FD2471CCBD6500030B465 /* libz.tbd in Frameworks */,
 				C67FD2451CCBD5970030B465 /* libpng.a in Frameworks */,
-				C67FD20E1CCBC4510030B465 /* libSDL2.a in Frameworks */,
 				C67FD2021CCBC3860030B465 /* libjansson.a in Frameworks */,
 				C67FD2051CCBC3860030B465 /* libSDL2_ttf.a in Frameworks */,
 				C6B5D6071CCB8C7400EA35C4 /* libiconv.tbd in Frameworks */,
@@ -751,6 +926,7 @@
 		C65B9A361CCB7ADA008C350A = {
 			isa = PBXGroup;
 			children = (
+				C6BE757A1CF32A22009F072E /* title */,
 				C67FD2461CCBD6500030B465 /* libz.tbd */,
 				C65B9EE91CCB800B008C350A /* Sources */,
 				C65B9A411CCB7ADA008C350A /* Resources */,
@@ -784,93 +960,12 @@
 		C65B9E8E1CCB7D84008C350A /* data */ = {
 			isa = PBXGroup;
 			children = (
+				C6BE75801CF32AE6009F072E /* title */,
+				C6BE757C1CF32A28009F072E /* language */,
 				C65B9E8F1CCB7D84008C350A /* g2.dat */,
-				C65B9E901CCB7D84008C350A /* language */,
-				C65B9EA31CCB7D84008C350A /* title */,
 			);
 			path = data;
 			sourceTree = SOURCE_ROOT;
-		};
-		C65B9E901CCB7D84008C350A /* language */ = {
-			isa = PBXGroup;
-			children = (
-				C65B9E911CCB7D84008C350A /* chinese_simplified.txt */,
-				C65B9E921CCB7D84008C350A /* chinese_traditional.txt */,
-				C65B9E931CCB7D84008C350A /* czech.txt */,
-				C65B9E941CCB7D84008C350A /* dutch.txt */,
-				C65B9E951CCB7D84008C350A /* english_uk.txt */,
-				C65B9E961CCB7D84008C350A /* english_us.txt */,
-				C65B9E971CCB7D84008C350A /* finnish.txt */,
-				C65B9E981CCB7D84008C350A /* french.txt */,
-				C65B9E991CCB7D84008C350A /* german.txt */,
-				C65B9E9A1CCB7D84008C350A /* hungarian.txt */,
-				C65B9E9B1CCB7D84008C350A /* italian.txt */,
-				C65B9E9C1CCB7D84008C350A /* japanese.txt */,
-				C65B9E9D1CCB7D84008C350A /* korean.txt */,
-				C65B9E9E1CCB7D84008C350A /* polish.txt */,
-				C65B9E9F1CCB7D84008C350A /* portuguese_br.txt */,
-				C65B9EA01CCB7D84008C350A /* russian.txt */,
-				C65B9EA11CCB7D84008C350A /* spanish_sp.txt */,
-				C65B9EA21CCB7D84008C350A /* swedish.txt */,
-			);
-			path = language;
-			sourceTree = "<group>";
-		};
-		C65B9EA31CCB7D84008C350A /* title */ = {
-			isa = PBXGroup;
-			children = (
-				C65B9EA41CCB7D84008C350A /* openrct2 */,
-				C65B9EAA1CCB7D84008C350A /* rct1 */,
-				C65B9EAC1CCB7D84008C350A /* rct1aa */,
-				C65B9EAE1CCB7D84008C350A /* rct1aall */,
-				C65B9EB01CCB7D84008C350A /* rct2 */,
-			);
-			path = title;
-			sourceTree = "<group>";
-		};
-		C65B9EA41CCB7D84008C350A /* openrct2 */ = {
-			isa = PBXGroup;
-			children = (
-				C65B9EA51CCB7D84008C350A /* Cypress Grove Title.sv6 */,
-				C65B9EA61CCB7D84008C350A /* Ill Paradise.sv6 */,
-				C65B9EA71CCB7D84008C350A /* script.txt */,
-				C65B9EA81CCB7D84008C350A /* TaCW.sv6 */,
-				C65B9EA91CCB7D84008C350A /* Title Sequence Park 1.sv6 */,
-			);
-			path = openrct2;
-			sourceTree = "<group>";
-		};
-		C65B9EAA1CCB7D84008C350A /* rct1 */ = {
-			isa = PBXGroup;
-			children = (
-				C65B9EAB1CCB7D84008C350A /* script.txt */,
-			);
-			path = rct1;
-			sourceTree = "<group>";
-		};
-		C65B9EAC1CCB7D84008C350A /* rct1aa */ = {
-			isa = PBXGroup;
-			children = (
-				C65B9EAD1CCB7D84008C350A /* script.txt */,
-			);
-			path = rct1aa;
-			sourceTree = "<group>";
-		};
-		C65B9EAE1CCB7D84008C350A /* rct1aall */ = {
-			isa = PBXGroup;
-			children = (
-				C65B9EAF1CCB7D84008C350A /* script.txt */,
-			);
-			path = rct1aall;
-			sourceTree = "<group>";
-		};
-		C65B9EB01CCB7D84008C350A /* rct2 */ = {
-			isa = PBXGroup;
-			children = (
-				C65B9EB11CCB7D84008C350A /* script.txt */,
-			);
-			path = rct2;
-			sourceTree = "<group>";
 		};
 		C65B9EE91CCB800B008C350A /* Sources */ = {
 			isa = PBXGroup;
@@ -912,11 +1007,13 @@
 				C65B9F761CCB800B008C350A /* object_list.c */,
 				C65B9F771CCB800B008C350A /* openrct2.c */,
 				C65B9F781CCB800B008C350A /* openrct2.h */,
+				C6BE75221CF32913009F072E /* paint */,
 				C65B9F791CCB800B008C350A /* peep */,
 				C65B9F7E1CCB800B008C350A /* platform */,
 				C65B9F871CCB800B008C350A /* rct1 */,
 				C65B9F8C1CCB800B008C350A /* rct1.c */,
 				C65B9F8D1CCB800B008C350A /* rct1.h */,
+				C6BE75501CF329B6009F072E /* rct2 */,
 				C65B9F8E1CCB800B008C350A /* rct2.c */,
 				C65B9F8F1CCB800B008C350A /* rct2.h */,
 				C65B9F911CCB800B008C350A /* ride */,
@@ -1008,8 +1105,6 @@
 				C65B9F271CCB800B008C350A /* scrolling_text.c */,
 				C65B9F281CCB800B008C350A /* sprite.c */,
 				C65B9F291CCB800B008C350A /* string.c */,
-				C65B9F2A1CCB800B008C350A /* supports.c */,
-				C65B9F2B1CCB800B008C350A /* supports.h */,
 			);
 			path = drawing;
 			sourceTree = "<group>";
@@ -1139,22 +1234,34 @@
 		C65B9F911CCB800B008C350A /* ride */ = {
 			isa = PBXGroup;
 			children = (
+				C6BE74861CF32903009F072E /* coaster */,
+				C6BE74A71CF32903009F072E /* gentle */,
+				C6BE74B81CF32903009F072E /* shops */,
+				C6BE74BC1CF32903009F072E /* thrill */,
+				C6BE74C81CF32903009F072E /* transport */,
+				C6BE74CE1CF32903009F072E /* water */,
 				C65B9F921CCB800B008C350A /* cable_lift.c */,
 				C65B9F931CCB800B008C350A /* cable_lift.h */,
-				C65B9F941CCB800B008C350A /* ride.c */,
-				C65B9F951CCB800B008C350A /* ride.h */,
 				C65B9F961CCB800B008C350A /* ride_data.c */,
 				C65B9F971CCB800B008C350A /* ride_data.h */,
 				C65B9F981CCB800B008C350A /* ride_ratings.c */,
 				C65B9F991CCB800B008C350A /* ride_ratings.h */,
+				C65B9F941CCB800B008C350A /* ride.c */,
+				C65B9F951CCB800B008C350A /* ride.h */,
 				C65B9F9A1CCB800B008C350A /* station.c */,
 				C65B9F9B1CCB800B008C350A /* station.h */,
-				C65B9F9C1CCB800B008C350A /* track.c */,
-				C65B9F9D1CCB800B008C350A /* track.h */,
 				C65B9F9E1CCB800B008C350A /* track_data.c */,
 				C65B9F9F1CCB800B008C350A /* track_data.h */,
+				C6BE75491CF32990009F072E /* track_design_index.c */,
+				C6BE754A1CF32990009F072E /* track_design_save.c */,
+				C6BE754B1CF32990009F072E /* track_design.c */,
+				C6BE754C1CF32990009F072E /* track_design.h */,
 				C65B9FA01CCB800B008C350A /* track_paint.c */,
 				C65B9FA11CCB800B008C350A /* track_paint.h */,
+				C65B9F9C1CCB800B008C350A /* track.c */,
+				C65B9F9D1CCB800B008C350A /* track.h */,
+				C6BE75461CF32951009F072E /* vehicle_paint.c */,
+				C6BE75471CF32951009F072E /* vehicle_paint.h */,
 				C65B9FA21CCB800B008C350A /* vehicle.c */,
 				C65B9FA31CCB800B008C350A /* vehicle.h */,
 			);
@@ -1338,14 +1445,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C67FD2081CCBC3EB0030B465 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C67FD20D1CCBC3EB0030B465 /* libSDL2.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C67FD2101CCBC54B0030B465 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1353,6 +1452,184 @@
 				C67FD21B1CCBC54B0030B465 /* libpng.dylib */,
 				C67FD21D1CCBC54B0030B465 /* libpng.a */,
 				C67FD21F1CCBC54B0030B465 /* libpng.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6BE74861CF32903009F072E /* coaster */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE74871CF32903009F072E /* air_powered_vertical_coaster.c */,
+				C6BE74881CF32903009F072E /* bobsleigh_coaster.c */,
+				C6BE74891CF32903009F072E /* compact_inverted_coaster.c */,
+				C6BE748A1CF32903009F072E /* corkscrew_roller_coaster.c */,
+				C6BE748B1CF32903009F072E /* flying_roller_coaster.c */,
+				C6BE748C1CF32903009F072E /* giga_coaster.c */,
+				C6BE748D1CF32903009F072E /* heartline_twister_coaster.c */,
+				C6BE748E1CF32903009F072E /* inverted_hairpin_coaster.c */,
+				C6BE748F1CF32903009F072E /* inverted_impulse_coaster.c */,
+				C6BE74901CF32903009F072E /* inverted_roller_coaster.c */,
+				C6BE74911CF32903009F072E /* junior_roller_coaster.c */,
+				C6BE74921CF32903009F072E /* lay_down_roller_coaster.c */,
+				C6BE74931CF32903009F072E /* lim_launched_roller_coaster.c */,
+				C6BE74941CF32903009F072E /* looping_roller_coaster.c */,
+				C6BE74951CF32903009F072E /* mine_ride.c */,
+				C6BE74961CF32903009F072E /* mine_train_coaster.c */,
+				C6BE74971CF32903009F072E /* mini_roller_coaster.c */,
+				C6BE74981CF32903009F072E /* mini_suspended_coaster.c */,
+				C6BE74991CF32903009F072E /* multi_dimension_roller_coaster.c */,
+				C6BE749A1CF32903009F072E /* reverse_freefall_coaster.c */,
+				C6BE749B1CF32903009F072E /* reverser_roller_coaster.c */,
+				C6BE749C1CF32903009F072E /* side_friction_roller_coaster.c */,
+				C6BE749D1CF32903009F072E /* spiral_roller_coaster.c */,
+				C6BE749E1CF32903009F072E /* stand_up_roller_coaster.c */,
+				C6BE749F1CF32903009F072E /* steeplechase.c */,
+				C6BE74A01CF32903009F072E /* suspended_swinging_coaster.c */,
+				C6BE74A11CF32903009F072E /* twister_roller_coaster.c */,
+				C6BE74A21CF32903009F072E /* vertical_drop_roller_coaster.c */,
+				C6BE74A31CF32903009F072E /* virginia_reel.c */,
+				C6BE74A41CF32903009F072E /* wild_mouse.c */,
+				C6BE74A51CF32903009F072E /* wooden_roller_coaster.c */,
+				C6BE74A61CF32903009F072E /* wooden_wild_mouse.c */,
+			);
+			path = coaster;
+			sourceTree = "<group>";
+		};
+		C6BE74A71CF32903009F072E /* gentle */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE74A81CF32903009F072E /* car_ride.c */,
+				C6BE74A91CF32903009F072E /* circus_show.c */,
+				C6BE74AA1CF32903009F072E /* crooked_house.c */,
+				C6BE74AB1CF32903009F072E /* dodgems.c */,
+				C6BE74AC1CF32903009F072E /* ferris_wheel.c */,
+				C6BE74AD1CF32903009F072E /* flying_saucers.c */,
+				C6BE74AE1CF32903009F072E /* ghost_train.c */,
+				C6BE74AF1CF32903009F072E /* haunted_house.c */,
+				C6BE74B01CF32903009F072E /* maze.c */,
+				C6BE74B11CF32903009F072E /* merry_go_round.c */,
+				C6BE74B21CF32903009F072E /* mini_golf.c */,
+				C6BE74B31CF32903009F072E /* mini_helicopters.c */,
+				C6BE74B41CF32903009F072E /* monorail_cycles.c */,
+				C6BE74B51CF32903009F072E /* observation_tower.c */,
+				C6BE74B61CF32903009F072E /* space_rings.c */,
+				C6BE74B71CF32903009F072E /* spiral_slide.c */,
+			);
+			path = gentle;
+			sourceTree = "<group>";
+		};
+		C6BE74B81CF32903009F072E /* shops */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE74B91CF32903009F072E /* facility.c */,
+				C6BE74BA1CF32903009F072E /* misc.c */,
+				C6BE74BB1CF32903009F072E /* shop.c */,
+			);
+			path = shops;
+			sourceTree = "<group>";
+		};
+		C6BE74BC1CF32903009F072E /* thrill */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE74BD1CF32903009F072E /* 3d_cinema.c */,
+				C6BE74BE1CF32903009F072E /* enterprise.c */,
+				C6BE74BF1CF32903009F072E /* go_karts.c */,
+				C6BE74C01CF32903009F072E /* launched_freefall.c */,
+				C6BE74C11CF32903009F072E /* magic_carpet.c */,
+				C6BE74C21CF32903009F072E /* motion_simulator.c */,
+				C6BE74C31CF32903009F072E /* pirate_ship.c */,
+				C6BE74C41CF32903009F072E /* roto_drop.c */,
+				C6BE74C51CF32903009F072E /* swinging_inverter_ship.c */,
+				C6BE74C61CF32903009F072E /* top_spin.c */,
+				C6BE74C71CF32903009F072E /* twist.c */,
+			);
+			path = thrill;
+			sourceTree = "<group>";
+		};
+		C6BE74C81CF32903009F072E /* transport */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE74C91CF32903009F072E /* chairlift.c */,
+				C6BE74CA1CF32903009F072E /* lift.c */,
+				C6BE74CB1CF32903009F072E /* minature_railway.c */,
+				C6BE74CC1CF32903009F072E /* monorail.c */,
+				C6BE74CD1CF32903009F072E /* suspended_monorail.c */,
+			);
+			path = transport;
+			sourceTree = "<group>";
+		};
+		C6BE74CE1CF32903009F072E /* water */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE74CF1CF32903009F072E /* boat_ride.c */,
+				C6BE74D01CF32903009F072E /* dingy_slide.c */,
+				C6BE74D11CF32903009F072E /* log_flume.c */,
+				C6BE74D21CF32903009F072E /* river_rafts.c */,
+				C6BE74D31CF32903009F072E /* river_rapids.c */,
+				C6BE74D41CF32903009F072E /* splash_boats.c */,
+				C6BE74D51CF32903009F072E /* submarine_ride.c */,
+				C6BE74D61CF32903009F072E /* water_coaster.c */,
+			);
+			path = water;
+			sourceTree = "<group>";
+		};
+		C6BE75221CF32913009F072E /* paint */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE75231CF32913009F072E /* map_element */,
+				C6BE752E1CF32913009F072E /* paint.c */,
+				C6BE752F1CF32913009F072E /* paint.h */,
+				C6BE75301CF32913009F072E /* sprite */,
+				C6BE75361CF32913009F072E /* supports.c */,
+				C6BE75371CF32913009F072E /* supports.h */,
+			);
+			path = paint;
+			sourceTree = "<group>";
+		};
+		C6BE75231CF32913009F072E /* map_element */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE75241CF32913009F072E /* banner.c */,
+				C6BE75251CF32913009F072E /* entrance.c */,
+				C6BE75261CF32913009F072E /* fence.c */,
+				C6BE75271CF32913009F072E /* map_element.c */,
+				C6BE75281CF32913009F072E /* map_element.h */,
+				C6BE75291CF32913009F072E /* path.c */,
+				C6BE752A1CF32913009F072E /* scenery.c */,
+				C6BE752B1CF32913009F072E /* scenery_multiple.c */,
+				C6BE752C1CF32913009F072E /* surface.c */,
+				C6BE752D1CF32913009F072E /* surface.h */,
+			);
+			path = map_element;
+			sourceTree = "<group>";
+		};
+		C6BE75301CF32913009F072E /* sprite */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE75311CF32913009F072E /* litter.c */,
+				C6BE75321CF32913009F072E /* misc.c */,
+				C6BE75331CF32913009F072E /* peep.c */,
+				C6BE75341CF32913009F072E /* sprite.c */,
+				C6BE75351CF32913009F072E /* sprite.h */,
+			);
+			path = sprite;
+			sourceTree = "<group>";
+		};
+		C6BE75501CF329B6009F072E /* rct2 */ = {
+			isa = PBXGroup;
+			children = (
+				C6BE75511CF329B6009F072E /* S6Exporter.cpp */,
+				C6BE75521CF329B6009F072E /* S6Exporter.h */,
+				C6BE75531CF329B6009F072E /* S6Importer.cpp */,
+				C6BE75541CF329B6009F072E /* S6Importer.h */,
+			);
+			path = rct2;
+			sourceTree = "<group>";
+		};
+		C6BE75861CF32F98009F072E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C670814A1CF33B4A0082221D /* libSDL2.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1372,6 +1649,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				C67081701CF33B900082221D /* PBXTargetDependency */,
+				C670816E1CF33B6C0082221D /* PBXTargetDependency */,
+				C670816C1CF33B680082221D /* PBXTargetDependency */,
+				C67081681CF33B5F0082221D /* PBXTargetDependency */,
 			);
 			name = OpenRCT2;
 			productName = OpenRCT2;
@@ -1413,7 +1694,7 @@
 					ProjectRef = C67FD20F1CCBC54B0030B465 /* libpng.xcodeproj */;
 				},
 				{
-					ProductGroup = C67FD2081CCBC3EB0030B465 /* Products */;
+					ProductGroup = C6BE75861CF32F98009F072E /* Products */;
 					ProjectRef = C67FD2071CCBC3EB0030B465 /* SDL.xcodeproj */;
 				},
 				{
@@ -1429,6 +1710,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C670814A1CF33B4A0082221D /* libSDL2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDL2.a;
+			remoteRef = C67081491CF33B4A0082221D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C67FD18D1CCBC2A80030B465 /* libSDL2_ttf.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1541,13 +1829,6 @@
 			remoteRef = C67FD1D11CCBC2B50030B465 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C67FD20D1CCBC3EB0030B465 /* libSDL2.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSDL2.a;
-			remoteRef = C67FD20C1CCBC3EB0030B465 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		C67FD2191CCBC54B0030B465 /* libpng.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1583,37 +1864,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C65B9EC81CCB7D84008C350A /* TaCW.sv6 in Resources */,
-				C65B9EBB1CCB7D84008C350A /* german.txt in Resources */,
-				C65B9EB51CCB7D84008C350A /* czech.txt in Resources */,
-				C65B9EB91CCB7D84008C350A /* finnish.txt in Resources */,
 				C65B9A521CCB7ADA008C350A /* LaunchScreen.storyboard in Resources */,
-				C65B9EB71CCB7D84008C350A /* english_uk.txt in Resources */,
-				C65B9EC21CCB7D84008C350A /* russian.txt in Resources */,
 				C65B9A4F1CCB7ADA008C350A /* Assets.xcassets in Resources */,
-				C65B9EC01CCB7D84008C350A /* polish.txt in Resources */,
-				C65B9EBC1CCB7D84008C350A /* hungarian.txt in Resources */,
-				C65B9EBE1CCB7D84008C350A /* japanese.txt in Resources */,
-				C65B9ECA1CCB7D84008C350A /* script.txt in Resources */,
-				C65B9EC41CCB7D84008C350A /* swedish.txt in Resources */,
-				C65B9EC91CCB7D84008C350A /* Title Sequence Park 1.sv6 in Resources */,
-				C65B9EC71CCB7D84008C350A /* script.txt in Resources */,
-				C65B9EBD1CCB7D84008C350A /* italian.txt in Resources */,
-				C65B9EB81CCB7D84008C350A /* english_us.txt in Resources */,
-				C65B9ECD1CCB7D84008C350A /* script.txt in Resources */,
-				C65B9ECC1CCB7D84008C350A /* script.txt in Resources */,
-				C65B9EC51CCB7D84008C350A /* Cypress Grove Title.sv6 in Resources */,
-				C65B9EB61CCB7D84008C350A /* dutch.txt in Resources */,
-				C65B9EB41CCB7D84008C350A /* chinese_traditional.txt in Resources */,
-				C65B9EBF1CCB7D84008C350A /* korean.txt in Resources */,
-				C65B9EB31CCB7D84008C350A /* chinese_simplified.txt in Resources */,
-				C65B9ECB1CCB7D84008C350A /* script.txt in Resources */,
 				C65B9EB21CCB7D84008C350A /* g2.dat in Resources */,
-				C65B9EC61CCB7D84008C350A /* Ill Paradise.sv6 in Resources */,
-				C65B9EC31CCB7D84008C350A /* spanish_sp.txt in Resources */,
-				C65B9EBA1CCB7D84008C350A /* french.txt in Resources */,
 				C67FD2721CCBDC9B0030B465 /* Main.storyboard in Resources */,
-				C65B9EC11CCB7D84008C350A /* portuguese_br.txt in Resources */,
+				C6BE757D1CF32A28009F072E /* language in Resources */,
+				C6BE757B1CF32A22009F072E /* title in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1644,42 +1900,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BE753C1CF32913009F072E /* path.c in Sources */,
 				C65BA0421CCB800B008C350A /* Theme.cpp in Sources */,
+				C6BE74ED1CF32903009F072E /* spiral_roller_coaster.c in Sources */,
+				C6BE74E71CF32903009F072E /* mini_roller_coaster.c in Sources */,
 				C65BA0921CCB800B008C350A /* map_tooltip.c in Sources */,
 				C65BA0B81CCB800B008C350A /* tooltip.c in Sources */,
+				C6BE74DB1CF32903009F072E /* flying_roller_coaster.c in Sources */,
 				C65BA0541CCB800B008C350A /* marketing.c in Sources */,
 				C65BA03B1CCB800B008C350A /* input.c in Sources */,
+				C6BE74E21CF32903009F072E /* lay_down_roller_coaster.c in Sources */,
 				C65BA0821CCB800B008C350A /* editor_main.c in Sources */,
 				C65BA0741CCB800B008C350A /* scenario_list.c in Sources */,
+				C6BE74D71CF32903009F072E /* air_powered_vertical_coaster.c in Sources */,
 				C65BA06C1CCB800B008C350A /* ride_data.c in Sources */,
 				C65BA0371CCB800B008C350A /* editor.c in Sources */,
+				C6BE75001CF32903009F072E /* merry_go_round.c in Sources */,
+				C6BE75381CF32913009F072E /* banner.c in Sources */,
 				C65BA02D1CCB800B008C350A /* drawing.c in Sources */,
 				C65BA05C1CCB800B008C350A /* openrct2.c in Sources */,
+				C6BE75551CF329B6009F072E /* S6Exporter.cpp in Sources */,
+				C6BE753D1CF32913009F072E /* scenery.c in Sources */,
 				C65BA0551CCB800B008C350A /* news_item.c in Sources */,
 				C65BA0721CCB800B008C350A /* vehicle.c in Sources */,
 				C65BA01C1CCB800B008C350A /* CommandLine.cpp in Sources */,
 				C65BA0C81CCB800B008C350A /* mapgen.c in Sources */,
+				C6BE753B1CF32913009F072E /* map_element.c in Sources */,
 				C65BA0CB1CCB800B008C350A /* particle.c in Sources */,
+				C6BE74F81CF32903009F072E /* circus_show.c in Sources */,
 				C65BA0C71CCB800B008C350A /* map_helpers.c in Sources */,
+				C6BE74FB1CF32903009F072E /* ferris_wheel.c in Sources */,
+				C6BE74FE1CF32903009F072E /* haunted_house.c in Sources */,
 				C65BA09E1CCB800B008C350A /* player.c in Sources */,
+				C6BE74E01CF32903009F072E /* inverted_roller_coaster.c in Sources */,
 				C65BA01E1CCB800B008C350A /* RootCommands.cpp in Sources */,
+				C6BE751B1CF32903009F072E /* dingy_slide.c in Sources */,
+				C6BE754D1CF32990009F072E /* track_design_index.c in Sources */,
 				C65BA0191CCB800B008C350A /* audio.c in Sources */,
+				C6BE75041CF32903009F072E /* observation_tower.c in Sources */,
+				C6BE75401CF32913009F072E /* paint.c in Sources */,
 				C65BA0771CCB800B008C350A /* sawyercoding.c in Sources */,
 				C65BA0231CCB800B008C350A /* Console.cpp in Sources */,
 				C65BA0A71CCB800B008C350A /* server_start.c in Sources */,
 				C65BA07F1CCB800B008C350A /* dropdown.c in Sources */,
+				C6BE74F71CF32903009F072E /* car_ride.c in Sources */,
 				C65BA0871CCB800B008C350A /* finances.c in Sources */,
 				C65BA0AA1CCB800B008C350A /* sign.c in Sources */,
+				C6BE75161CF32903009F072E /* lift.c in Sources */,
 				C65BA03D1CCB800B008C350A /* colour.c in Sources */,
 				C65BA02C1CCB800B008C350A /* diagnostic.c in Sources */,
 				C65BA0591CCB800B008C350A /* twitch.cpp in Sources */,
 				C65BA0521CCB800B008C350A /* award.c in Sources */,
 				C65BA05D1CCB800B008C350A /* peep.c in Sources */,
 				C65BA0BD1CCB800B008C350A /* viewport.c in Sources */,
+				C6BE74F51CF32903009F072E /* wooden_roller_coaster.c in Sources */,
+				C6BE750C1CF32903009F072E /* go_karts.c in Sources */,
 				C65BA0211CCB800B008C350A /* cmdline_sprite.c in Sources */,
+				C6BE75561CF329B6009F072E /* S6Importer.cpp in Sources */,
 				C65BA0401CCB800B008C350A /* keyboard_shortcut.c in Sources */,
+				C6BE75431CF32913009F072E /* peep.c in Sources */,
+				C6BE74E91CF32903009F072E /* multi_dimension_roller_coaster.c in Sources */,
 				C65BA0A41CCB800B008C350A /* save_prompt.c in Sources */,
 				C65BA08D1CCB800B008C350A /* land.c in Sources */,
+				C6BE74E51CF32903009F072E /* mine_ride.c in Sources */,
 				C65BA0961CCB800B008C350A /* music_credits.c in Sources */,
 				C65BA0BA1CCB800B008C350A /* track_list.c in Sources */,
 				C65BA04A1CCB800B008C350A /* currency.c in Sources */,
@@ -1690,12 +1973,19 @@
 				C65BA03F1CCB800B008C350A /* graph.c in Sources */,
 				C65BA01B1CCB800B008C350A /* cheats.c in Sources */,
 				C65BA09D1CCB800B008C350A /* park.c in Sources */,
+				C6BE74D81CF32903009F072E /* bobsleigh_coaster.c in Sources */,
 				C65BA0451CCB800B008C350A /* viewport_interaction.c in Sources */,
+				C6BE74E81CF32903009F072E /* mini_suspended_coaster.c in Sources */,
 				C65BA0C61CCB800B008C350A /* map_animation.c in Sources */,
+				C6BE74FD1CF32903009F072E /* ghost_train.c in Sources */,
+				C6BE751E1CF32903009F072E /* river_rapids.c in Sources */,
 				C65BA0281CCB800B008C350A /* Stopwatch.cpp in Sources */,
+				C6BE74FF1CF32903009F072E /* maze.c in Sources */,
 				C65BA0AC1CCB800B008C350A /* staff_fire_prompt.c in Sources */,
 				C65BA06B1CCB800B008C350A /* ride.c in Sources */,
+				C6BE74DA1CF32903009F072E /* corkscrew_roller_coaster.c in Sources */,
 				C65BA0321CCB800B008C350A /* rect.c in Sources */,
+				C6BE74E41CF32903009F072E /* looping_roller_coaster.c in Sources */,
 				C65BA05A1CCB800B008C350A /* object.c in Sources */,
 				C65BA0C31CCB800B008C350A /* footpath.c in Sources */,
 				C65BA0B51CCB800B008C350A /* title_menu.c in Sources */,
@@ -1705,39 +1995,56 @@
 				C65BA05F1CCB800B008C350A /* crash.cpp in Sources */,
 				C65BA0BF1CCB800B008C350A /* balloon.c in Sources */,
 				C65BA03A1CCB800B008C350A /* image_io.c in Sources */,
+				C6BE75421CF32913009F072E /* misc.c in Sources */,
 				C65BA0971CCB800B008C350A /* network_status.c in Sources */,
+				C6BE753E1CF32913009F072E /* scenery_multiple.c in Sources */,
 				C65BA0751CCB800B008C350A /* scenario_sources.c in Sources */,
 				C65BA07A1CCB800B008C350A /* banner.c in Sources */,
 				C65BA0B21CCB800B008C350A /* title_editor.c in Sources */,
 				C65BA0CC1CCB800B008C350A /* scenery.c in Sources */,
+				C6BE75071CF32903009F072E /* facility.c in Sources */,
 				C65BA0A51CCB800B008C350A /* scenery.c in Sources */,
+				C6BE751D1CF32903009F072E /* river_rafts.c in Sources */,
 				C65BA0CD1CCB800B008C350A /* sprite.c in Sources */,
 				C65BA0651CCB800B008C350A /* S4Importer.cpp in Sources */,
 				C65BA0B31CCB800B008C350A /* title_exit.c in Sources */,
+				C6BE75131CF32903009F072E /* top_spin.c in Sources */,
+				C6BE74DE1CF32903009F072E /* inverted_hairpin_coaster.c in Sources */,
 				C65BA0991CCB800B008C350A /* new_ride.c in Sources */,
-				C65BA0361CCB800B008C350A /* supports.c in Sources */,
 				C65BA0661CCB800B008C350A /* tables.cpp in Sources */,
 				C65BA0A91CCB800B008C350A /* shortcut_keys.c in Sources */,
 				C65BA0381CCB800B008C350A /* game.c in Sources */,
 				C65BA0801CCB800B008C350A /* editor_bottom_toolbar.c in Sources */,
 				C65BA04C1CCB800B008C350A /* language.cpp in Sources */,
 				C65BA0791CCB800B008C350A /* about.c in Sources */,
+				C6BE74F01CF32903009F072E /* suspended_swinging_coaster.c in Sources */,
+				C6BE74DD1CF32903009F072E /* heartline_twister_coaster.c in Sources */,
 				C65BA0561CCB800B008C350A /* research.c in Sources */,
+				C6BE751C1CF32903009F072E /* log_flume.c in Sources */,
 				C65BA08C1CCB800B008C350A /* install_track.c in Sources */,
+				C6BE74EB1CF32903009F072E /* reverser_roller_coaster.c in Sources */,
 				C65BA0581CCB800B008C350A /* network.cpp in Sources */,
 				C65BA0331CCB800B008C350A /* scrolling_text.c in Sources */,
+				C6BE751F1CF32903009F072E /* splash_boats.c in Sources */,
+				C6BE75391CF32913009F072E /* entrance.c in Sources */,
+				C6BE74EA1CF32903009F072E /* reverse_freefall_coaster.c in Sources */,
 				C65BA0C41CCB800B008C350A /* fountain.c in Sources */,
 				C65BA0391CCB800B008C350A /* hook.c in Sources */,
 				C65BA08F1CCB800B008C350A /* loadsave.c in Sources */,
 				C65BA08B1CCB800B008C350A /* guest_list.c in Sources */,
+				C6BE74F91CF32903009F072E /* crooked_house.c in Sources */,
 				C65BA06D1CCB800B008C350A /* ride_ratings.c in Sources */,
 				C67FD2701CCBDB250030B465 /* ios.m in Sources */,
 				C65BA06F1CCB800B008C350A /* track.c in Sources */,
 				C65BA0271CCB800B008C350A /* Path.cpp in Sources */,
+				C6BE750F1CF32903009F072E /* motion_simulator.c in Sources */,
+				C6BE753A1CF32913009F072E /* fence.c in Sources */,
+				C6BE74F41CF32903009F072E /* wild_mouse.c in Sources */,
 				C65BA0761CCB800B008C350A /* title.c in Sources */,
 				C65BA0BC1CCB800B008C350A /* track_place.c in Sources */,
 				C65BA0481CCB800B008C350A /* intro.c in Sources */,
 				C65BA03C1CCB800B008C350A /* chat.c in Sources */,
+				C6BE753F1CF32913009F072E /* surface.c in Sources */,
 				C65BA0A61CCB800B008C350A /* server_list.c in Sources */,
 				C65BA05E1CCB800B008C350A /* staff.c in Sources */,
 				C65BA0C21CCB800B008C350A /* duck.c in Sources */,
@@ -1748,56 +2055,93 @@
 				C65BA02A1CCB800B008C350A /* textinputbuffer.c in Sources */,
 				C65BA0841CCB800B008C350A /* editor_objective_options.c in Sources */,
 				C65BA0411CCB800B008C350A /* screenshot.c in Sources */,
+				C6BE750D1CF32903009F072E /* launched_freefall.c in Sources */,
+				C6BE75051CF32903009F072E /* space_rings.c in Sources */,
 				C65BA0B71CCB800B008C350A /* title_scenarioselect.c in Sources */,
 				C65BA0181CCB800B008C350A /* addresses.c in Sources */,
 				C65BA0941CCB800B008C350A /* maze_construction.c in Sources */,
+				C6BE75091CF32903009F072E /* shop.c in Sources */,
 				C65BA05B1CCB800B008C350A /* object_list.c in Sources */,
 				C65BA07E1CCB800B008C350A /* demolish_ride_prompt.c in Sources */,
 				C65BA0711CCB800B008C350A /* track_paint.c in Sources */,
 				C65BA0C11CCB800B008C350A /* climate.c in Sources */,
 				C65BA0B91CCB800B008C350A /* top_toolbar.c in Sources */,
+				C6BE750A1CF32903009F072E /* 3d_cinema.c in Sources */,
 				C65BA0811CCB800B008C350A /* editor_inventions_list.c in Sources */,
 				C65BA02E1CCB800B008C350A /* drawing_fast.cpp in Sources */,
+				C6BE74E31CF32903009F072E /* lim_launched_roller_coaster.c in Sources */,
+				C6BE75081CF32903009F072E /* misc.c in Sources */,
 				C65BA08A1CCB800B008C350A /* guest.c in Sources */,
 				C65BA0781CCB800B008C350A /* util.c in Sources */,
 				C65BA0311CCB800B008C350A /* rain.c in Sources */,
+				C6BE74E11CF32903009F072E /* junior_roller_coaster.c in Sources */,
 				C65BA0A31CCB800B008C350A /* ride_list.c in Sources */,
 				C65BA0C51CCB800B008C350A /* map.c in Sources */,
 				C65BA0681CCB800B008C350A /* rct2.c in Sources */,
+				C6BE754E1CF32990009F072E /* track_design_save.c in Sources */,
+				C6BE75191CF32903009F072E /* suspended_monorail.c in Sources */,
+				C6BE75151CF32903009F072E /* chairlift.c in Sources */,
 				C65BA0461CCB800B008C350A /* widget.c in Sources */,
+				C6BE75171CF32903009F072E /* minature_railway.c in Sources */,
+				C6BE750E1CF32903009F072E /* magic_carpet.c in Sources */,
+				C6BE75141CF32903009F072E /* twist.c in Sources */,
+				C6BE74F21CF32903009F072E /* vertical_drop_roller_coaster.c in Sources */,
+				C6BE75181CF32903009F072E /* monorail.c in Sources */,
+				C6BE75441CF32913009F072E /* sprite.c in Sources */,
+				C6BE74F61CF32903009F072E /* wooden_wild_mouse.c in Sources */,
+				C6BE74F31CF32903009F072E /* virginia_reel.c in Sources */,
+				C6BE75481CF32952009F072E /* vehicle_paint.c in Sources */,
 				C65BA0251CCB800B008C350A /* Guard.cpp in Sources */,
+				C6BE75211CF32903009F072E /* water_coaster.c in Sources */,
 				C65BA0511CCB800B008C350A /* utf8.c in Sources */,
 				C65BA0831CCB800B008C350A /* editor_object_selection.c in Sources */,
 				C65BA01A1CCB800B008C350A /* mixer.cpp in Sources */,
+				C6BE75451CF32913009F072E /* supports.c in Sources */,
 				C65BA0301CCB800B008C350A /* line.c in Sources */,
 				C65BA0501CCB800B008C350A /* user.c in Sources */,
+				C6BE74DC1CF32903009F072E /* giga_coaster.c in Sources */,
 				C65BA0C01CCB800B008C350A /* banner.c in Sources */,
+				C6BE75411CF32913009F072E /* litter.c in Sources */,
 				C65BA0621CCB800B008C350A /* posix.c in Sources */,
 				C65BA0611CCB800B008C350A /* osx.m in Sources */,
+				C6BE74EF1CF32903009F072E /* steeplechase.c in Sources */,
+				C6BE75061CF32903009F072E /* spiral_slide.c in Sources */,
 				C65BA0951CCB800B008C350A /* multiplayer.c in Sources */,
+				C6BE754F1CF32990009F072E /* track_design.c in Sources */,
 				C65BA0881CCB800B008C350A /* footpath.c in Sources */,
+				C6BE74EE1CF32903009F072E /* stand_up_roller_coaster.c in Sources */,
+				C6BE74F11CF32903009F072E /* twister_roller_coaster.c in Sources */,
+				C6BE74EC1CF32903009F072E /* side_friction_roller_coaster.c in Sources */,
 				C65BA0471CCB800B008C350A /* window.c in Sources */,
 				C65BA06A1CCB800B008C350A /* cable_lift.c in Sources */,
+				C6BE75201CF32903009F072E /* submarine_ride.c in Sources */,
 				C65BA0A21CCB800B008C350A /* ride_construction.c in Sources */,
+				C6BE750B1CF32903009F072E /* enterprise.c in Sources */,
 				C65BA0BE1CCB800B008C350A /* water.c in Sources */,
 				C65BA0431CCB800B008C350A /* title_sequences.c in Sources */,
+				C6BE75101CF32903009F072E /* pirate_ship.c in Sources */,
 				C65BA0A81CCB800B008C350A /* shortcut_key_change.c in Sources */,
 				C65BA0861CCB800B008C350A /* error.c in Sources */,
 				C65BA03E1CCB800B008C350A /* console.c in Sources */,
 				C65BA07B1CCB800B008C350A /* changelog.c in Sources */,
+				C6BE75031CF32903009F072E /* monorail_cycles.c in Sources */,
 				C65BA0491CCB800B008C350A /* convert.c in Sources */,
 				C65BA0261CCB800B008C350A /* Json.cpp in Sources */,
 				C65BA08E1CCB800B008C350A /* land_rights.c in Sources */,
 				C65BA0C91CCB800B008C350A /* money_effect.c in Sources */,
 				C65BA0911CCB800B008C350A /* map.c in Sources */,
 				C65BA0891CCB800B008C350A /* game_bottom_toolbar.c in Sources */,
+				C6BE74DF1CF32903009F072E /* inverted_impulse_coaster.c in Sources */,
 				C65BA0671CCB800B008C350A /* rct1.c in Sources */,
+				C6BE74D91CF32903009F072E /* compact_inverted_coaster.c in Sources */,
 				C65BA0241CCB800B008C350A /* Diagnostics.cpp in Sources */,
 				C65BA0931CCB800B008C350A /* mapgen.c in Sources */,
 				C65BA01D1CCB800B008C350A /* ConvertCommand.cpp in Sources */,
 				C65BA02B1CCB800B008C350A /* cursors.c in Sources */,
+				C6BE74E61CF32903009F072E /* mine_train_coaster.c in Sources */,
 				C65BA0AB1CCB800B008C350A /* staff.c in Sources */,
 				C65BA0B41CCB800B008C350A /* title_logo.c in Sources */,
+				C6BE75121CF32903009F072E /* swinging_inverter_ship.c in Sources */,
 				C65BA01F1CCB800B008C350A /* ScreenshotCommands.cpp in Sources */,
 				C65BA0BB1CCB800B008C350A /* track_manage.c in Sources */,
 				C65BA0B61CCB800B008C350A /* title_options.c in Sources */,
@@ -1813,21 +2157,50 @@
 				C65BA0B01CCB800B008C350A /* tile_inspector.c in Sources */,
 				C65BA07D1CCB800B008C350A /* clear_scenery.c in Sources */,
 				C65BA0AD1CCB800B008C350A /* staff_list.c in Sources */,
+				C6BE75021CF32903009F072E /* mini_helicopters.c in Sources */,
 				C65BA0291CCB800B008C350A /* String.cpp in Sources */,
+				C6BE74FA1CF32903009F072E /* dodgems.c in Sources */,
 				C65BA0CA1CCB800B008C350A /* park.c in Sources */,
 				C65BA0731CCB800B008C350A /* scenario.c in Sources */,
 				C65BA04F1CCB800B008C350A /* real_names.c in Sources */,
+				C6BE751A1CF32903009F072E /* boat_ride.c in Sources */,
 				C65BA09B1CCB800B008C350A /* news_options.c in Sources */,
+				C6BE75111CF32903009F072E /* roto_drop.c in Sources */,
+				C6BE75011CF32903009F072E /* mini_golf.c in Sources */,
 				C65BA02F1CCB800B008C350A /* font.c in Sources */,
 				C65BA0901CCB800B008C350A /* main.c in Sources */,
 				C65BA09C1CCB800B008C350A /* options.c in Sources */,
 				C65BA0441CCB800B008C350A /* viewport.c in Sources */,
 				C65BA0221CCB800B008C350A /* config.c in Sources */,
 				C65BA0AF1CCB800B008C350A /* themes.c in Sources */,
+				C6BE74FC1CF32903009F072E /* flying_saucers.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C67081681CF33B5F0082221D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = jansson;
+			targetProxy = C67081671CF33B5F0082221D /* PBXContainerItemProxy */;
+		};
+		C670816C1CF33B680082221D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Static Library";
+			targetProxy = C670816B1CF33B680082221D /* PBXContainerItemProxy */;
+		};
+		C670816E1CF33B6C0082221D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libSDL;
+			targetProxy = C670816D1CF33B6C0082221D /* PBXContainerItemProxy */;
+		};
+		C67081701CF33B900082221D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libpng static (iOS)";
+			targetProxy = C670816F1CF33B900082221D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C65B9A501CCB7ADA008C350A /* LaunchScreen.storyboard */ = {
@@ -1846,7 +2219,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv7;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1864,6 +2237,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1895,7 +2269,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = i386;
+				VALID_ARCHS = "i386 armv7";
 			};
 			name = Debug;
 		};
@@ -1903,7 +2277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv7;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1921,6 +2295,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1944,7 +2319,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = i386;
+				VALID_ARCHS = "i386 armv7";
 			};
 			name = Release;
 		};
@@ -1952,6 +2327,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/distribution/ios/Info.plist";
@@ -1979,9 +2356,13 @@
 					rct2_data,
 					rw,
 					rw,
+					"-segaddr",
+					__TEXT,
+					0x2000000,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = website.openrct2.OpenRCT2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1989,6 +2370,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/distribution/ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2015,9 +2398,13 @@
 					rct2_data,
 					rw,
 					rw,
+					"-segaddr",
+					__TEXT,
+					0x2000000,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = website.openrct2.OpenRCT2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
