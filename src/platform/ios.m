@@ -1,17 +1,22 @@
 
-@import UIKit;
-@import Foundation;
+#import <UIKit/UIKit.h>
+//@import Foundation;
 #include <mach-o/dyld.h>
 #include "platform.h"
 #include "../util/util.h"
+#include "SDL.h"
+#include "SDL_syswm.h"
 
 bool platform_check_steam_overlay_attached() {
     STUB();
+    
     return false;
 }
 
 bool platform_open_common_file_dialog(utf8 *outFilename, file_dialog_desc *desc) {
     STUB();
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
     return false;
 }
 
@@ -40,7 +45,7 @@ void platform_get_exe_path(utf8 *outPath)
 void platform_posix_sub_user_data_path(char *buffer, const char *homedir, const char *separator) {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *basePath = paths.firstObject;
+    NSString *basePath = [paths.firstObject stringByAppendingString:@"/"];
     
     strcpy(buffer, [basePath UTF8String]);
 }
@@ -52,9 +57,8 @@ void platform_show_messagebox(char *message)
 
 utf8 *platform_open_directory_browser(utf8 *title)
 {
-    log_info(title);
-    STUB();
-    return "/sdcard/rct2";
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    return [path stringByAppendingPathComponent:@"rct2.bundle"].UTF8String;
 }
 
 bool platform_get_font_path(TTFFontDescriptor *font, utf8 *buffer)

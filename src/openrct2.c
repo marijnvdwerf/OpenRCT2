@@ -492,7 +492,7 @@ bool openrct2_setup_rct2_segment()
 {
 	// OpenRCT2 on Linux and OS X is wired to have the original Windows PE sections loaded
 	// necessary. Windows does not need to do this as OpenRCT2 runs as a DLL loaded from the Windows PE.
-#if defined(__unix__) || defined(__IPHONEOS__)
+#if defined(__unix__)
 	#define RDATA_OFFSET 0x004A4000
 	#define DATASEG_OFFSET 0x005E2000
 
@@ -528,29 +528,9 @@ bool openrct2_setup_rct2_segment()
 	int len = 0x01429000 - 0x8a4000; // 0xB85000, 12079104 bytes or around 11.5MB
 	int pageSize = getpagesize();
 	int numPages = (len + pageSize - 1) / pageSize;
-	unsigned char *dummy = malloc(numPages);
-    
-    errno = 0;
-    fdData = open("/Users/Marijn/temp/openrct2-data/openrct2_load", O_RDONLY);
-    if (fdData < 0)
-    {
-        log_fatal("(%d)failed to load rct2 data. cat openrct2_text openrct2_data > openrct2_load", errno);
-        exit(1);
-    }
-    
-    
-    errno = 0;
-    // TODO: Figure out why PROT_EXEC doesn't seem to be needed
-    segments = mmap((void *) 0x401000, 16941056, PROT_READ | PROT_WRITE, MAP_FIXED | MAP_PRIVATE, fdData, 0);
-    if (segments != (void *) 0x401000)
-    {
-        log_fatal("(%d) mmap failed", errno);
-        exit(1);
-    }
-    
-    
-	int err = mincore((void *)0x8a4000, len, dummy);
-	bool pagesMissing = false;
+    unsigned char *dummy = malloc(numPages);
+    int err = mincore((void *)0x8a4000, len, dummy);
+    bool pagesMissing = false;
 	if (err != 0)
 	{
 		err = errno;
