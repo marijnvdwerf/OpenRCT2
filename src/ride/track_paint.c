@@ -943,6 +943,7 @@ void track_paint(uint8 direction, int height, rct_map_element *mapElement)
 			}
 		}
 		else {
+#ifdef PLATFORM_X86
 			TRACK_PAINT_FUNCTION **trackTypeList = (TRACK_PAINT_FUNCTION**)RideTypeTrackPaintFunctionsOld[rideType];
 			uint32 *trackDirectionList = (uint32*)trackTypeList[trackType];
 
@@ -957,6 +958,7 @@ void track_paint(uint8 direction, int height, rct_map_element *mapElement)
 				rideIndex * sizeof(rct_ride),
 				trackSequence
 				);
+#endif
 		}
 	}
 
