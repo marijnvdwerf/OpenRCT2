@@ -127,8 +127,8 @@ typedef enum {
 } WALL_SCENERY_2_FLAGS;
 
 typedef struct rct_path_bit_scenery_entry {
-	uint16 var_06;
-	uint8 var_08;
+	uint16 flags;
+	uint8 draw_type;
 	uint8 tool_id;			// 0x09
 	sint16 price;			// 0x0A
 	uint8 scenery_tab_id;	// 0x0C
@@ -165,8 +165,19 @@ typedef struct rct_scenery_set_entry {
 } rct_scenery_set_entry;
 
 enum {
+	PATH_BIT_FLAG_IS_BIN = 1 << 0,
+	PATH_BIT_FLAG_IS_BENCH = 1 << 1,
+	PATH_BIT_FLAG_BREAKABLE = 1 << 2,
 	PATH_BIT_FLAG_JUMPING_FOUNTAIN_WATER = 1 << 4,
-	PATH_BIT_FLAG_JUMPING_FOUNTAIN_SNOW = 1 << 5
+	PATH_BIT_FLAG_JUMPING_FOUNTAIN_SNOW = 1 << 5,
+	PAHT_BIT_FLAG_IS_QUEUE_SCREEN = 1 << 8
+};
+
+enum {
+	PATH_BIT_DRAW_TYPE_LIGHTS,
+	PATH_BIT_DRAW_TYPE_BINS,
+	PATH_BIT_DRAW_TYPE_BENCHES,
+	PATH_BIT_DRAW_TYPE_JUMPING_FOUNTAINS
 };
 
 enum {
