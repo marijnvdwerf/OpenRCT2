@@ -759,6 +759,32 @@ static const uint8 crowded_thoughts[] = {
 	PEEP_THOUGHT_TYPE_NONE,
 };
 
+/** rct2: 0x00982342 */
+static const uint8 peep_item_containers[] = {
+	0xFF,							// PEEP_ITEM_PHOTO2
+	0xFF,							// PEEP_ITEM_PHOTO3
+	0xFF,							// PEEP_ITEM_PHOTO4
+	0xFF,							// PEEP_ITEM_PRETZEL
+	SHOP_ITEM_EMPTY_CUP,			// PEEP_ITEM_CHOCOLATE
+	SHOP_ITEM_EMPTY_CUP,			// PEEP_ITEM_ICED_TEA
+	0xFF,							// PEEP_ITEM_FUNNEL_CAKE
+	0xFF,							// PEEP_ITEM_SUNGLASSES
+	SHOP_ITEM_EMPTY_BOWL_BLUE,		// PEEP_ITEM_BEEF_NOODLES
+	SHOP_ITEM_EMPTY_BOWL_BLUE,		// PEEP_ITEM_FRIED_RICE_NOODLES
+	SHOP_ITEM_EMPTY_BOWL_RED,		// PEEP_ITEM_WONTON_SOUP
+	SHOP_ITEM_EMPTY_BOWL_RED,		// PEEP_ITEM_MEATBALL_SOUP
+	SHOP_ITEM_EMPTY_JUICE_CUP,		// PEEP_ITEM_FRUIT_JUICE
+	SHOP_ITEM_EMPTY_DRINK_CARTON,	// PEEP_ITEM_SOYBEAN_MILK
+	SHOP_ITEM_EMPTY_DRINK_CARTON,	// PEEP_ITEM_SU_JONGKWA
+	0xFF,							// PEEP_ITEM_SUB_SANDWICH
+	0xFF,							// PEEP_ITEM_COOKIE
+	0xFF,							// PEEP_ITEM_EMPTY_BOWL_RED
+	0xFF,							// PEEP_ITEM_EMPTY_DRINK_CARTON
+	0xFF,							// PEEP_ITEM_EMPTY_JUICE_CUP
+	0xFF,							// PEEP_ITEM_ROAST_SAUSAGE
+	0xFF,							// PEEP_ITEM_EMPTY_BOWL_BLUE
+};
+
 /**
  *
  *  rct2: 0x0068F41A
@@ -1115,7 +1141,7 @@ static void sub_68F41A(rct_peep *peep, int index)
 				chosen_food = bitscanforward(peep_has_food_extra_flag(peep));
 				if (chosen_food != -1){
 					peep->item_extra_flags &= ~(1 << chosen_food);
-					uint8 discard_container = RCT2_ADDRESS(0x00982342, uint8)[chosen_food];
+					uint8 discard_container = peep_item_containers[chosen_food];
 					if (discard_container != 0xFF){
 						if (discard_container >= 32)
 							peep->item_extra_flags |= (1 << (discard_container - 32));
