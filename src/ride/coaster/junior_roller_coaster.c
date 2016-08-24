@@ -4482,26 +4482,14 @@ TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direc
 		return paint_junior_rc_station_track;
 	case TRACK_ELEM_25_DEG_UP:
 		return junior_rc_25_deg_up_paint_setup;
-	case TRACK_ELEM_60_DEG_UP:
-		return junior_rc_60_deg_up_paint_setup;
 	case TRACK_ELEM_FLAT_TO_25_DEG_UP:
 		return junior_rc_flat_to_25_deg_up_paint_setup;
-	case TRACK_ELEM_25_DEG_UP_TO_60_DEG_UP:
-		return junior_rc_25_deg_up_to_60_deg_up_paint_setup;
-	case TRACK_ELEM_60_DEG_UP_TO_25_DEG_UP:
-		return junior_rc_60_deg_up_to_25_deg_up_paint_setup;
 	case TRACK_ELEM_25_DEG_UP_TO_FLAT:
 		return junior_rc_25_deg_up_to_flat_paint_setup;
 	case TRACK_ELEM_25_DEG_DOWN:
 		return junior_rc_25_deg_down_paint_setup;
-	case TRACK_ELEM_60_DEG_DOWN:
-		return junior_rc_60_deg_down_paint_setup;
 	case TRACK_ELEM_FLAT_TO_25_DEG_DOWN:
 		return junior_rc_flat_to_25_deg_down_paint_setup;
-	case TRACK_ELEM_25_DEG_DOWN_TO_60_DEG_DOWN:
-		return junior_rc_25_deg_down_to_60_deg_down_paint_setup;
-	case TRACK_ELEM_60_DEG_DOWN_TO_25_DEG_DOWN:
-		return junior_rc_60_deg_down_to_25_deg_down_paint_setup;
 	case TRACK_ELEM_25_DEG_DOWN_TO_FLAT:
 		return junior_rc_25_deg_down_to_flat_paint_setup;
 	case TRACK_ELEM_LEFT_QUARTER_TURN_5_TILES:
@@ -4619,26 +4607,14 @@ TRACK_PAINT_FUNCTION get_track_paint_function_junior_rc(int trackType, int direc
 		return junior_rc_diag_flat_paint_setup;
 	case TRACK_ELEM_DIAG_25_DEG_UP:
 		return junior_rc_diag_25_deg_up_paint_setup;
-	case TRACK_ELEM_DIAG_60_DEG_UP:
-		return junior_rc_diag_60_deg_up_paint_setup;
 	case TRACK_ELEM_DIAG_FLAT_TO_25_DEG_UP:
 		return junior_rc_diag_flat_to_25_deg_up_paint_setup;
-	case TRACK_ELEM_DIAG_25_DEG_UP_TO_60_DEG_UP:
-		return junior_rc_diag_25_deg_up_to_60_deg_up_paint_setup;
-	case TRACK_ELEM_DIAG_60_DEG_UP_TO_25_DEG_UP:
-		return junior_rc_diag_60_deg_up_to_25_deg_up_paint_setup;
 	case TRACK_ELEM_DIAG_25_DEG_UP_TO_FLAT:
 		return junior_rc_diag_25_deg_up_to_flat_paint_setup;
 	case TRACK_ELEM_DIAG_25_DEG_DOWN:
 		return junior_rc_diag_25_deg_down_paint_setup;
-	case TRACK_ELEM_DIAG_60_DEG_DOWN:
-		return junior_rc_diag_60_deg_down_paint_setup;
 	case TRACK_ELEM_DIAG_FLAT_TO_25_DEG_DOWN:
 		return junior_rc_diag_flat_to_25_deg_down_paint_setup;
-	case TRACK_ELEM_DIAG_25_DEG_DOWN_TO_60_DEG_DOWN:
-		return junior_rc_diag_25_deg_down_to_60_deg_down_paint_setup;
-	case TRACK_ELEM_DIAG_60_DEG_DOWN_TO_25_DEG_DOWN:
-		return junior_rc_diag_60_deg_down_to_25_deg_down_paint_setup;
 	case TRACK_ELEM_DIAG_25_DEG_DOWN_TO_FLAT:
 		return junior_rc_diag_25_deg_down_to_flat_paint_setup;
 
