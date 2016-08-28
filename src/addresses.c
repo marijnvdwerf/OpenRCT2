@@ -18,7 +18,7 @@
 
 #if defined(__GNUC__)
 	#ifdef __clang__
-		#define DISABLE_OPT __attribute__((noinline,optnone))
+		#define DISABLE_OPT 
 	#else
 		#define DISABLE_OPT __attribute__((noinline,optimize("O0")))
 	#endif // __clang__
