@@ -937,6 +937,7 @@ static void paint_mini_golf_hole_e(uint8 rideIndex, uint8 trackSequence, uint8 d
 	switch ((direction << 4) | trackSequence) {
 		case 0x01:
 			sub_98197C(imageId, 0, 0, 2, 26, 3, height, 30, 3, height + 4, get_current_rotation());
+			break;
 		case 0x02:
 		case 0x20:
 		case 0x31:
