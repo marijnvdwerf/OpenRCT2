@@ -759,7 +759,7 @@ static void paint_river_rapids_track_whirlpool(uint8 rideIndex, uint8 trackSeque
 		sub_98197C(imageId, 0, 0, 24, 32, 11, height, 4, 0, height, get_current_rotation());
 
 		imageId = (SPR_RIVER_RAPIDS_RAPIDS_WHIRLPOOL_FRAME_0 + frameNum) | RCT2_GLOBAL(0x00F44198, uint32);
-		sub_98197C(imageId, 0, 0, 24, 32, 11, height, 4, 0, height, get_current_rotation());
+		sub_98199C(imageId, 0, 0, 24, 32, 11, height, 4, 0, height, get_current_rotation());
 
 		imageId = (direction == 1 ? SPR_RIVER_RAPIDS_FLAT_FRONT_NW_SE : SPR_RIVER_RAPIDS_FLAT_FRONT_SE_NW) | RCT2_GLOBAL(0x00F44198, uint32);
 		sub_98197C(imageId, 0, 0, 1, 32, 3, height, 27, 0, height + 17, get_current_rotation());
@@ -768,7 +768,7 @@ static void paint_river_rapids_track_whirlpool(uint8 rideIndex, uint8 trackSeque
 		sub_98197C(imageId, 0, 0, 32, 24, 11, height, 0, 4, height, get_current_rotation());
 
 		imageId = (SPR_RIVER_RAPIDS_RAPIDS_WHIRLPOOL_FRAME_0 + frameNum) | RCT2_GLOBAL(0x00F44198, uint32);
-		sub_98197C(imageId, 0, 0, 32, 24, 11, height, 0, 4, height, get_current_rotation());
+		sub_98199C(imageId, 0, 0, 32, 24, 11, height, 0, 4, height, get_current_rotation());
 
 		imageId = (direction == 0 ? SPR_RIVER_RAPIDS_FLAT_FRONT_SW_NE : SPR_RIVER_RAPIDS_FLAT_FRONT_NE_SW) | RCT2_GLOBAL(0x00F44198, uint32);
 		sub_98197C(imageId, 0, 0, 32, 1, 3, height, 0, 27, height + 17, get_current_rotation());
