@@ -110,7 +110,7 @@ static void paint_swinging_inverter_ship_structure(rct_ride * ride, uint8 direct
 		sub_98199C(frameImageId, xOffset, yOffset, boundBox.length_x, boundBox.length_y, 127, height, boundBox.offset_x, boundBox.offset_y, height, get_current_rotation());
 	} else {
 		sub_98197C(frameImageId, xOffset, yOffset, boundBox.length_x, boundBox.length_y, 127, height, boundBox.offset_x, boundBox.offset_y, height, get_current_rotation());
-		sub_98199C(vehicleImageId, xOffset, yOffset, boundBox.length_x, boundBox.length_y, 127, height, boundBox.offset_x, boundBox.offset_y, height, get_current_rotation());
+		sub_98199C(vehicleImageId, xOffset, yOffset, boundBox.length_x, boundBox.length_y, 1, height, boundBox.offset_x, boundBox.offset_y, height, get_current_rotation());
 	}
 
 	g_currently_drawn_item = savedMapElement;
