@@ -169,7 +169,7 @@ static void paint_pirate_ship(uint8 rideIndex, uint8 trackSequence, uint8 direct
 	bool hasFence;
 
 	if (relativeTrackSequence == 1 || relativeTrackSequence == 4) {
-		wooden_a_supports_paint_setup(direction & 1, 0, height, RCT2_GLOBAL(0x00F441A0, uint32), NULL);
+		wooden_a_supports_paint_setup(direction & 1, 0, height, RCT2_GLOBAL(0x00F4419C, uint32), NULL);
 	} else if (direction & 1) {
 		metal_a_supports_paint_setup(0, 6, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
 		metal_a_supports_paint_setup(0, 7, 0, height, RCT2_GLOBAL(0x00F4419C, uint32));
