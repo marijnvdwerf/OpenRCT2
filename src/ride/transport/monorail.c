@@ -708,7 +708,7 @@ static void paint_monorail_track_s_bend_left(uint8 rideIndex, uint8 trackSequenc
 		switch (trackSequence) {
 			case 0: metal_a_supports_paint_setup(3, 4, 0, height, RCT2_GLOBAL(0x00F4419C, uint32)); break;
 			case 1: metal_a_supports_paint_setup(3, 6, 0, height, RCT2_GLOBAL(0x00F4419C, uint32)); break;
-			case 3: metal_a_supports_paint_setup(3, 4, 0, height - 2, RCT2_GLOBAL(0x00F4419C, uint32)); break;
+			case 3: metal_a_supports_paint_setup(3, 4, 0, height, RCT2_GLOBAL(0x00F4419C, uint32)); break;
 		}
 	}
 
@@ -761,7 +761,7 @@ static void paint_monorail_track_s_bend_right(uint8 rideIndex, uint8 trackSequen
 
 		switch (trackSequence) {
 			case 0: metal_a_supports_paint_setup(3, 4, 0, height, RCT2_GLOBAL(0x00F4419C, uint32)); break;
-			case 1: metal_a_supports_paint_setup(3, 8, 0, height - 2, RCT2_GLOBAL(0x00F4419C, uint32)); break;
+			case 1: metal_a_supports_paint_setup(3, 8, 0, height, RCT2_GLOBAL(0x00F4419C, uint32)); break;
 			case 3: metal_a_supports_paint_setup(3, 4, 0, height, RCT2_GLOBAL(0x00F4419C, uint32)); break;
 		}
 	} else {
