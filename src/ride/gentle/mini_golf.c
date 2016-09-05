@@ -692,7 +692,7 @@ static void paint_mini_golf_track_left_quarter_turn_1_tile(uint8 rideIndex, uint
 			paint_util_push_tunnel_left(height, TUNNEL_10);
 			if (!shouldDrawFence) break;
 
-			imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_BACK_SW_NW | RCT2_GLOBAL(0x00F44198, uint32);
+			imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_BACK_SW_NW | RCT2_GLOBAL(0x00F441A0, uint32);
 			sub_98199C(imageId, 0, 0, 26, 24, 1, height, 6, 2, height, get_current_rotation());
 
 			break;
@@ -700,7 +700,7 @@ static void paint_mini_golf_track_left_quarter_turn_1_tile(uint8 rideIndex, uint
 		case 1:
 			if (!shouldDrawFence) break;
 
-			imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_BACK_NW_NE | RCT2_GLOBAL(0x00F44198, uint32);
+			imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_BACK_NW_NE | RCT2_GLOBAL(0x00F441A0, uint32);
 			sub_98199C(imageId, 0, 0, 26, 26, 1, height, 0, 0, height, get_current_rotation());
 			break;
 
@@ -708,7 +708,7 @@ static void paint_mini_golf_track_left_quarter_turn_1_tile(uint8 rideIndex, uint
 			paint_util_push_tunnel_right(height, TUNNEL_10);
 			if (!shouldDrawFence) break;
 
-			imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_BACK_NE_SE | RCT2_GLOBAL(0x00F44198, uint32);
+			imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_BACK_NE_SE | RCT2_GLOBAL(0x00F441A0, uint32);
 			sub_98199C(imageId, 0, 0, 24, 26, 1, height, 2, 6, height, get_current_rotation());
 			break;
 
@@ -717,22 +717,22 @@ static void paint_mini_golf_track_left_quarter_turn_1_tile(uint8 rideIndex, uint
 			paint_util_push_tunnel_right(height, TUNNEL_10);
 			if (!shouldDrawFence) break;
 
-			imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_BACK_SE_SW | RCT2_GLOBAL(0x00F44198, uint32);
+			imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_BACK_SE_SW | RCT2_GLOBAL(0x00F441A0, uint32);
 			sub_98199C(imageId, 0, 0, 24, 24, 1, height, 6, 6, height, get_current_rotation());
 			break;
 	}
 
 	if (shouldDrawFence) {
 		// TODO: The back fence uses the same x/y offsets, but uses another paint function. See if this occurs more often.
-		track_paint_util_left_quarter_turn_1_tile_paint(0, height, 24, direction, RCT2_GLOBAL(0x00F44198, uint32), mini_golf_track_sprites_quarter_turn_1_tile_fence_front, get_current_rotation());
+		track_paint_util_left_quarter_turn_1_tile_paint(0, height, 24, direction, RCT2_GLOBAL(0x00F441A0, uint32), mini_golf_track_sprites_quarter_turn_1_tile_fence_front, get_current_rotation());
 
 		switch (direction) {
 			case 0:
-				imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_INSIDE_SW_NW | RCT2_GLOBAL(0x00F44198, uint32);
+				imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_INSIDE_SW_NW | RCT2_GLOBAL(0x00F441A0, uint32);
 				sub_98197C(imageId, 0, 0, 5, 5, 5, height, 24, 0, height + 2, get_current_rotation());
 				break;
 			case 2:
-				imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_INSIDE_NE_SE | RCT2_GLOBAL(0x00F44198, uint32);
+				imageId = SPR_MINI_GOLF_QUARTER_TURN_1_TILE_FENCE_INSIDE_NE_SE | RCT2_GLOBAL(0x00F441A0, uint32);
 				sub_98197C(imageId, 0, 0, 5, 5, 5, height, 0, 24, height + 2, get_current_rotation());
 				break;
 		}
