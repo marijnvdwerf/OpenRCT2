@@ -220,6 +220,11 @@ if (APPLE)
 	set_source_files_properties(${ORCT2_MM_SOURCES} PROPERTIES COMPILE_FLAGS "-x objective-c -fmodules")
 endif (APPLE)
 
+if (APPLE AND NOT USE_MMAP)
+	set(PIE_FLAG "-fno-pie")
+else ()
+	set(PIE_FLAG "-fpie")
+endif ()
 
 if (APPLE AND NOT USE_MMAP)
 	set(PIE_FLAG "-fno-pie")
