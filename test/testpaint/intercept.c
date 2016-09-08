@@ -479,6 +479,7 @@ bool rideSupportsTrackType(int rideType, int trackType) {
 
 
 extern bool testSupportSegments(uint8 rideType, uint8 trackType);
+extern bool testTunnels(uint8 rideType, uint8 trackType);
 
 static bool testTrackElement(uint8 rideType, uint8 trackType, utf8string *error) {
 	if (rideType == RIDE_TYPE_CHAIRLIFT) {
@@ -523,7 +524,7 @@ static bool testTrackElement(uint8 rideType, uint8 trackType, utf8string *error)
 
 	TRACK_PAINT_FUNCTION_GETTER newPaintGetter = RideTypeTrackPaintFunctions[rideType];
 	int sequenceCount = getTrackSequenceCount(rideType, trackType);
-	for (int currentRotation = 0; currentRotation < 4; currentRotation++) {
+	for (int currentRotation = 0; currentRotation < 0; currentRotation++) {
 		gCurrentRotation = currentRotation;
 		for (int direction = 0; direction < 4; direction++) {
 			TRACK_PAINT_FUNCTION newPaintFunction = newPaintGetter(trackType, direction);
@@ -591,8 +592,13 @@ static bool testTrackElement(uint8 rideType, uint8 trackType, utf8string *error)
 		}
 	}
 
-	bool segmentSuccess = testSupportSegments(rideType, trackType);
+	bool segmentSuccess = true;
 	if (!segmentSuccess) {
+		return false;
+	}
+
+	bool tunnelSuccess = testTunnels(rideType, trackType);
+	if (!tunnelSuccess) {
 		return false;
 	}
 
