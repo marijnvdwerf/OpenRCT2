@@ -524,7 +524,7 @@ static bool testTrackElement(uint8 rideType, uint8 trackType, utf8string *error)
 
 	TRACK_PAINT_FUNCTION_GETTER newPaintGetter = RideTypeTrackPaintFunctions[rideType];
 	int sequenceCount = getTrackSequenceCount(rideType, trackType);
-	for (int currentRotation = 0; currentRotation < 0; currentRotation++) {
+	for (int currentRotation = 0; currentRotation < 4; currentRotation++) {
 		gCurrentRotation = currentRotation;
 		for (int direction = 0; direction < 4; direction++) {
 			TRACK_PAINT_FUNCTION newPaintFunction = newPaintGetter(trackType, direction);
@@ -592,7 +592,7 @@ static bool testTrackElement(uint8 rideType, uint8 trackType, utf8string *error)
 		}
 	}
 
-	bool segmentSuccess = true;
+	bool segmentSuccess = testSupportSegments(rideType, trackType);
 	if (!segmentSuccess) {
 		return false;
 	}
