@@ -17,6 +17,7 @@
 #include "Printer.hpp"
 #include "String.hpp"
 #include "intercept.h"
+#include "../../src/core/Util.hpp"
 
 namespace Printer {
 
@@ -50,6 +51,7 @@ namespace Printer {
 
     std::string PrintFunctionCall(function_call call, uint16 baseHeight) {
         std::string imageId = GetImageIdString(call.supports.colour_flags);
+        assert(call.function < Util::CountOf(functionNames));
         const char *functionName = functionNames[call.function];
 
         switch (call.function) {
