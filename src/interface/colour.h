@@ -73,7 +73,7 @@ enum {
 
 #define NUM_COLOURS 32
 
-typedef struct rct_colour_map_a {
+typedef struct rct_colour_map {
 	uint8 darkest;
 	uint8 darker;
 	uint8 dark;
@@ -82,21 +82,13 @@ typedef struct rct_colour_map_a {
 	uint8 light;
 	uint8 lighter;
 	uint8 lightest;
-} rct_colour_map_a;
-
-typedef struct rct_colour_map_b {
 	uint8 a;
 	uint8 b;
 	uint8 c;
 	uint8 d;
-	uint8 e;
-	uint8 f;
-	uint8 g;
-	uint8 h;
-} rct_colour_map_b;
+} rct_colour_map;
 
-extern rct_colour_map_a ColourMapA[32];
-extern rct_colour_map_b ColourMapB[32];
+extern rct_colour_map ColourMapA[32];
 
 void colours_init_maps();
 

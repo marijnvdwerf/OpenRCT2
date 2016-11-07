@@ -16,26 +16,43 @@
 
 #include "../drawing/drawing.h"
 #include "colour.h"
+#include "../sprites.h"
 
-rct_colour_map_a ColourMapA[32] = { 0 };
-rct_colour_map_b ColourMapB[32] = { 0 };
+rct_colour_map ColourMapA[32] = { 0 };
+
+enum
+{
+	INDEX_DARKEST = 245,
+	INDEX_DARKER = 246,
+	INDEX_DARK = 247,
+	INDEX_MID_DARK = 248,
+	INDEX_MID_LIGHT = 249,
+	INDEX_LIGHT = 250,
+	INDEX_LIGHTER = 251,
+	INDEX_LIGHTEST = 252,
+	INDEX_A = 253,
+	INDEX_B = 254,
+	INDEX_C = 255,
+	INDEX_D = 256,
+};
 
 void colours_init_maps()
 {
 	// Get colour maps from g1
 	for (int i = 0; i < 32; i++) {
-		rct_g1_element *g1Element = &g1Elements[4915 + i];
+		rct_g1_element *g1Element = &g1Elements[SPR_PALETTE_2_START + i];
 
-		uint8 *dstA = (uint8*)&ColourMapA[i];
-		uint8 *dstB = (uint8*)&ColourMapB[i];
-		for (int j = 0; j < 4; j++) {
-			dstA[j] = g1Element->offset[0xF5 + j];
-		}
-		for (int j = 0; j < 4; j++) {
-			dstA[j + 4] = g1Element->offset[0xF9 + j];
-		}
-		for (int j = 0; j < 4; j++) {
-			dstB[j] = g1Element->offset[0xFD + j];
-		}
+		ColourMapA[i].darkest = g1Element->offset[INDEX_DARKEST];
+		ColourMapA[i].darker = g1Element->offset[INDEX_DARKER];
+		ColourMapA[i].dark = g1Element->offset[INDEX_DARK];
+		ColourMapA[i].mid_dark = g1Element->offset[INDEX_MID_DARK];
+		ColourMapA[i].mid_light = g1Element->offset[INDEX_MID_LIGHT];
+		ColourMapA[i].light = g1Element->offset[INDEX_LIGHT];
+		ColourMapA[i].lighter = g1Element->offset[INDEX_LIGHTER];
+		ColourMapA[i].lightest = g1Element->offset[INDEX_LIGHTEST];
+		ColourMapA[i].a = g1Element->offset[INDEX_A];
+		ColourMapA[i].b = g1Element->offset[INDEX_B];
+		ColourMapA[i].c = g1Element->offset[INDEX_C];
+		ColourMapA[i].d = g1Element->offset[INDEX_D];
 	}
 }
