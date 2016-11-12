@@ -212,6 +212,7 @@ bool openrct2_initialise()
 	}
 
 	openrct2_set_exe_path();
+	platform_setup_uri_protocol();
 
 	config_set_defaults();
 	if (!config_open_default()) {

@@ -66,6 +66,7 @@ static utf8 * _userDataPath    = nullptr;
 static utf8 * _openrctDataPath = nullptr;
 static utf8 * _rct2DataPath    = nullptr;
 static bool   _silentBreakpad  = false;
+static utf8 * _uriHandler      = nullptr;
 
 static const CommandLineOptionDefinition StandardOptions[]
 {
@@ -119,15 +120,16 @@ static void PrintLaunchInformation();
 const CommandLineCommand CommandLine::RootCommands[]
 {
     // Main commands
-    DefineCommand("",         "<uri>",                  StandardOptions, HandleNoCommand     ),
-    DefineCommand("edit",     "<uri>",                  StandardOptions, HandleCommandEdit   ),
-    DefineCommand("intro",    "",                       StandardOptions, HandleCommandIntro  ),
+    DefineCommand("",           "<uri>",                  StandardOptions, HandleNoCommand     ),
+    DefineCommand("edit",       "<uri>",                  StandardOptions, HandleCommandEdit   ),
+    DefineCommand("intro",      "",                       StandardOptions, HandleCommandIntro  ),
 #ifndef DISABLE_NETWORK
-    DefineCommand("host",     "<uri>",                  StandardOptions, HandleCommandHost   ),
-    DefineCommand("join",     "<hostname>",             StandardOptions, HandleCommandJoin   ),
+    DefineCommand("host",       "<uri>",                  StandardOptions, HandleCommandHost   ),
+    DefineCommand("join",       "<hostname>",             StandardOptions, HandleCommandJoin   ),
 #endif
-    DefineCommand("set-rct2", "<path>",                 StandardOptions, HandleCommandSetRCT2),
-    DefineCommand("convert",  "<source> <destination>", StandardOptions, CommandLine::HandleCommandConvert),
+    DefineCommand("set-rct2",   "<path>",                 StandardOptions, HandleCommandSetRCT2),
+    DefineCommand("convert",    "<source> <destination>", StandardOptions, CommandLine::HandleCommandConvert),
+    DefineCommand("handle-uri", "openrct2://.../",        StandardOptions, CommandLine::HandleCommandUri),
 
 #if defined(__WINDOWS__) && !defined(__MINGW32__)
     DefineCommand("register-shell", "", RegisterShellOptions, HandleCommandRegisterShell),

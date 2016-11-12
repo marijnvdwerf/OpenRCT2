@@ -41,6 +41,7 @@
     <ClCompile Include="src\cmdline\RootCommands.cpp" />
     <ClCompile Include="src\cmdline\ScreenshotCommands.cpp" />
     <ClCompile Include="src\cmdline\SpriteCommands.cpp" />
+    <ClCompile Include="src\cmdline\UriHandler.cpp" />
     <ClCompile Include="src\cmdline_sprite.c" />
     <ClCompile Include="src\config.c" />
     <ClCompile Include="src\core\Console.cpp" />
