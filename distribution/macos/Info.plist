@@ -16,6 +16,19 @@
 	<string>0.0.5</string>
 	<key>CFBundleSignature</key>
 	<string>ORCT</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLName</key>
+			<string>OpenRCT2 URL</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>openrct2</string>
+			</array>
+		</dict>
+	</array>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>

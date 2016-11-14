@@ -212,7 +212,9 @@ bool openrct2_initialise()
 	}
 
 	openrct2_set_exe_path();
+#ifdef __WINDOWS__
 	platform_setup_uri_protocol();
+#endif // __WINDOWS__
 
 	config_set_defaults();
 	if (!config_open_default()) {

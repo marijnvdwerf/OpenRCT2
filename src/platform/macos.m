@@ -18,11 +18,38 @@
 
 @import AppKit;
 @import Foundation;
+
+@interface MacOSPlatform : NSObject
+@end
+
 #include <mach-o/dyld.h>
 #include "platform.h"
 #include "../util/util.h"
 #include "../localisation/language.h"
 #include "../config.h"
+
+
+@implementation MacOSPlatform
+- (void)handleGetURLEvent:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
+{
+	NSURL *url = [NSURL URLWithString:[[event paramDescriptorForKeyword:keyDirectObject] stringValue]];
+	
+	NSLog(@"%@", url);
+}
+@end
+
+MacOSPlatform *platform;
+
+void macos_init() {
+	@autoreleasepool {
+		platform = [[MacOSPlatform alloc] init];
+		
+		NSAppleEventManager *appleEventManager = [NSAppleEventManager sharedAppleEventManager];
+		[appleEventManager setEventHandler:platform
+							   andSelector:@selector(handleGetURLEvent:withReplyEvent:)
+							 forEventClass:kInternetEventClass andEventID:kAEGetURL];
+	}
+}
 
 bool platform_check_steam_overlay_attached() {
 	STUB();

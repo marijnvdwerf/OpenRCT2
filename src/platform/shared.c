@@ -570,6 +570,10 @@ void platform_init()
 	platform_create_window();
 	gKeysPressed = malloc(sizeof(unsigned char) * 256);
 	memset(gKeysPressed, 0, sizeof(unsigned char) * 256);
+	
+#ifdef __MACOSX__
+	macos_init();
+#endif // __MACOSX__
 
 	// Set the highest palette entry to white.
 	// This fixes a bug with the TT:rainbow road due to the
